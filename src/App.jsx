@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import './App.css';
 
 const App = function() {
@@ -7,7 +7,7 @@ const App = function() {
 
   return (
     <>
-      <h1>App Header</h1>
+      <Link to='/'><h1>App Header</h1></Link>
       <div>
         {label}
       </div>
