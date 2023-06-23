@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import './App.css';
 
 const App = function() {
@@ -15,9 +16,9 @@ const App = function() {
           <input type="text" onInput={(e) => setLabel(e.target.value)}></input>
         </form>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div id="view">
+        <Outlet />
+      </div>
     </>
   )
 }
