@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import './index.css';
+import './index.scss';
 import ErrorPage from './routes/ErrorPage.jsx';
 import { Index } from './routes/index.jsx';
 
@@ -27,6 +27,18 @@ const router = createBrowserRouter([
           { 
             path: 'questions/:questionId',
             element: <div>question placeholder</div>,
+          },
+          { 
+            path: 'questions',
+            element: <div>Start of 20 questions</div>,
+          },
+          { 
+            path: 'lore',
+            element: <div>browse lore</div>,
+          },
+          { 
+            path: 'rules',
+            element: <div>browse rules</div>,
           }
         ]
       }
