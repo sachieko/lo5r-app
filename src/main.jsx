@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import "./index.scss";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { Index } from "./routes/index.jsx";
+import { Questions } from "./routes/Questions.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
           },
           { 
             path: "questions",
-            element: <div>Start of 20 questions</div>,
+            element: <Questions />,
           },
           { 
             path: "lore",
