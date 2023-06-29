@@ -3,7 +3,8 @@
 .card {
   border: $cardBorder;
   margin: 1em;
-
+  background-image: $card-bg;
+  
   .title {
     padding: 8px;
   }
