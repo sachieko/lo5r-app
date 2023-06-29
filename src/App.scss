@@ -16,33 +16,21 @@ nav {
       margin-right: 0.5em;
     }
   }
-  .gradient-border {
-    position: relative;
-    overflow: hidden;
-    padding: 1px;
-    border-radius: 1px;
-  }
   
-  .gradient-border::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 1px;
-    background: linear-gradient(to right, white, purple, red);
-    z-index: -1;
-  }
-
-  .gradient-content {
-    padding-top: 5px;
-    padding-bottom: 0px;
-  }
 }
 
-input[type="text"]:focus {
-  outline: none;
+.search {
+  padding: 1px;
+  border-radius: 3px;
+  border: 1px solid red;
+}
+
+input[type="search"] {
+  color: #bbb;
+  background-color: #222;
+  &:focus {
+    outline: none;
+  }
 }
 
 .title {
