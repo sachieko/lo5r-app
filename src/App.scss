@@ -10,7 +10,39 @@ nav {
 
   form {
     margin: 0.7em;
+    display: flex;
+    flex-direction: row;
+    span {
+      margin-right: 0.5em;
+    }
   }
+  .gradient-border {
+    position: relative;
+    overflow: hidden;
+    padding: 1px;
+    border-radius: 1px;
+  }
+  
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1px;
+    background: linear-gradient(to right, white, red);
+    z-index: -1;
+  }
+
+  .gradient-content {
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
 
 .title {
