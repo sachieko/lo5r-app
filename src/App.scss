@@ -15,8 +15,7 @@ nav {
     span {
       margin-right: 0.5em;
     }
-  }
-  
+  } 
 }
 
 .search {
@@ -41,10 +40,22 @@ input[type="search"] {
 
 .title {
   font-family: $flavorFont;
-  font-size: 2em;
+  font-size: 1.6em;
   color: #ff314d;
   margin: 0;
   &:hover {
     color: #e22c44;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  #view {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .title {
+    font-size: 2em;
   }
 }
