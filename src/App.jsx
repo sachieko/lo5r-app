@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Outlet, Link, useNavigation } from "react-router-dom";
 import "./App.scss";
 import { Search } from "./components/Search";
