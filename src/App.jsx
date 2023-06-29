@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigation } from "react-router-dom";
 import "./App.scss";
 import { Search } from "./components/Search";
 
 const App = function() {
+  const navigation = useNavigation();
 
   return (
     <>
@@ -11,7 +12,9 @@ const App = function() {
         <Link to="/"><p className="title">App Header</p></Link>
         <Search />
       </nav>
-      <div id="view">
+      <div 
+        id="view"
+        className={navigation.state === "loading" ? "loading" : ""}>
         <Outlet />
       </div>
     </>

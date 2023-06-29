@@ -33,6 +33,12 @@ input[type="search"] {
   }
 }
 
+#view.loading {
+  opacity: 0.25;
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+}
+
 .title {
   font-family: $flavorFont;
   font-size: 2em;
