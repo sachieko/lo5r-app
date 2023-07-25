@@ -14,6 +14,7 @@ export const Questions = function() {
         })
         .catch(err => {
           console.error('Error: ', err);
+          setQuestions(<ItemCard key={1} title={'An Error Occurred'} desc={'The server is likely down at the moment.'} />)
         });
     }
 
