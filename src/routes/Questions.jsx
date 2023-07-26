@@ -5,6 +5,18 @@ import { ItemCard } from '../components/ItemCard';
 const APIURL = 'http://localhost:8080/questions'
 
 export const Questions = function() {
+  /*
+  * The questions coming from the API are of the form:
+  * [
+  *   @data = (
+  *   id: 1, 
+  *   title: 'string',
+  *   detail: 'string',
+  *   image_url: 'string'
+  *   ), . . .
+  * ]
+  * 
+  */
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
