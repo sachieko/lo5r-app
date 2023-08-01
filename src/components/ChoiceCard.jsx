@@ -9,7 +9,7 @@ export const ChoiceCard = function({choice, stat, info}) {
         <div className="title">{choice}</div>
         <div className="emphasis">{stat}</div>
         <div className="desc">
-          {info ? parablocks : info}
+          {parablocks}
         </div>
       </div>
     );

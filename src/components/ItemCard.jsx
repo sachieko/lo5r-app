@@ -10,7 +10,7 @@ export const ItemCard = function({title, desc, url}) {
         <div className="title">{title}</div>
       </Link>
       <div className="desc">
-        {parablocks != undefined && parablocks}
+        {parablocks}
       </div>
     </div>
   );

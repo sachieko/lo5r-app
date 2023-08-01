@@ -29,12 +29,14 @@ export const Question = function() {
     if (1) {
       axios.get(APIURL + questionId)
         .then(res => {
-          setQuestion(
-            { 
-              title: res.data[0].title,
-              info: res.data[0].info
-            }
-          );
+          if(res.data[0]) {
+            setQuestion(
+              { 
+                title: res.data[0].title,
+                info: res.data[0].info
+              }
+            );
+          }
           setChoices(res.data.map(choice => (
             <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceinfo} />
           )));
