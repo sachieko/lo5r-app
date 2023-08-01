@@ -23,7 +23,9 @@ export const Questions = function() {
     if (!questions.length) {
       axios.get(APIURL)
         .then(res => {
-          setQuestions(res.data.map(question => <ItemCard key={question.id} title={question.title} desc={question.detail} />));
+          setQuestions(res.data.map(question => (
+          <ItemCard key={question.id} title={question.title} desc={question.detail} url={'/questions/' + question.id} />
+          )));
         })
         .catch(err => {
           console.error('Error: ', err);

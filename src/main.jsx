@@ -6,6 +6,7 @@ import "./index.scss";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { Index } from "./routes/index.jsx";
 import { Questions } from "./routes/Questions.jsx";
+import { Question } from "./routes/Question.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
           },
           { 
             path: "questions/:questionId",
-            element: <div>question placeholder</div>,
+            element: <Question />,
           },
           { 
             path: "questions",
