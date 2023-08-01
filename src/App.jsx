@@ -8,7 +8,7 @@ const App = function() {
   return (
     <>
       <nav>
-        <Link to="/"><p className="title">App Header</p></Link>
+        <Link to="/"><p className="title">L5R SRD</p></Link>
         <Search />
       </nav>
       <div 
