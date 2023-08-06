@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
 import { ItemCard } from '../components/ItemCard';
 import { getQuestions } from '../helpers/questionHelpers';

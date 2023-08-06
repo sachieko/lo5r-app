@@ -6,7 +6,7 @@ import "./index.scss";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { Index } from "./routes/index.jsx";
 import Questions, { loader as questionsLoader }  from "./routes/Questions.jsx";
-import { Question } from "./routes/Question.jsx";
+import Question, { loader as questionLoader } from "./routes/Question.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,11 +34,11 @@ const router = createBrowserRouter([
             path: "questions",
             element: <Questions />,
             loader: questionsLoader,
-            children: [
-              { path: "questions/:questionId", 
-                element: <Question />
-                }
-            ]
+          },
+          { 
+            path: "questions/:questionId", 
+            element: <Question />,
+            loader: questionLoader,
           },
           { 
             path: "lore",

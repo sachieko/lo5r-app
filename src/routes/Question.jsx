@@ -1,59 +1,45 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { ItemCard } from '../components/ItemCard';
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
 import { ChoiceCard } from '../components/ChoiceCard';
-// Change this to url that hosts the API
-const APIURL = 'http://localhost:8080/questions/'
+import { getQuestion, getQuestionNumber } from '../helpers/questionHelpers';
 
-export const Question = function() {
-  const { questionId } = useParams();
-  /*
-  * The data coming from the API are of the form:
-  * [
-  *   @data = (
-  *   id: 1, 
-  *   title: 'string',
-  *   info: 'string',
-  *   choice: 'string',
-  *   stat: 'string',
-  *   choiceinfo: 'string'
-  *   ), . . .
-  * ]
-  * 
-  */
-  const [question, setQuestion] = useState({});
-  const [choices, setChoices] = useState([]);
+export async function loader({ params }) {
+  const question = await getQuestion(params.questionId);
+  return  question;
+}
 
-  useEffect(() => {
-    if (1) {
-      axios.get(APIURL + questionId)
-        .then(res => {
-          if(res.data[0]) {
-            setQuestion(
-              { 
-                title: res.data[0].title,
-                info: res.data[0].info
-              }
-            );
-          }
-          setChoices(res.data.map(choice => (
-            <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceinfo} />
-          )));
-        })
-        .catch(err => {
-          console.error('Error: ', err);
-          setQuestion(<ItemCard key={1} title={'An Error Occurred'} desc={'The server is likely down at the moment.'} />)
-        });
-    }
-  },[]);
+export default function Question() {
+  const question = useLoaderData();
+
+  const choices = question.map(choice => {
+    return ( 
+      <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.info} />
+    );
+  });
+
+  const questionNav = getQuestionNumber(20).map(number => {
+    return (
+      <div className='navLink'>
+        <NavLink 
+          to={`/questions/${number}`}
+          className={({ isActive, isPending }) => 
+          isActive ? "active" : isPending ? "pending" : ""} 
+        >
+        <Link to={`/questions/${number}`} >
+          {number}
+        </Link>
+        </NavLink>
+      </div>
+    )
+  })
 
   return (
       <>
+      <nav>
+        {questionNav}
+      </nav>
       <div className="card">
-        <div className="title">{question.title}</div>
+        <div className="title"></div>
       <div className="desc">
-        {question.info}
       </div>
       {choices}
     </div>
