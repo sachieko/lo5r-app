@@ -2,11 +2,13 @@
 
 .questionNav {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
 
   .navLink {
     display: flex;
     background-color: $navLinkBg;
+    font-family: $plainFont;
+    font-weight: 700;
     width: 2em;
     height: 2em;
     border: 1px solid $accentRed;
