@@ -7,6 +7,25 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  .navLink {
+    display: flex;
+    background-color: $navLinkBg;
+    width: 2em;
+    height: 2em;
+    border: 1px solid $accentRed;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active {
+    color: $activeLink;
+  }
+
+  .pending {
+    color: $pendingLink;
+  }
 
   form {
     margin: 0.7em;

@@ -51,7 +51,7 @@ export async function getQuestion(id) {
 
 export const getQuestionNumber = function(int) {
   const result = [];
-  for (let i = 0; i < int; i++) {
+  for (let i = 1; i < int +1; i++) {
     result.push(`${i}`);
   }
   return result;

@@ -4,4 +4,10 @@ $flavorFont: 'Shadows Into Light', 'Noto Sans JP', serif;
 $plainFont: 'Spectral', 'Noto Sans JP', serif;
 $card-bg: url('../assets/soft-kill.png');
 
-$cardBorder: 3px double #dd1334;
+$accentRed: #dd1334;
+
+$navLinkBg: #301e1e;
+$cardBorder: 3px double $accentRed;
+
+$activeLink: orange;
+$pendingLink: green;
