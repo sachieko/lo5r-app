@@ -52,15 +52,12 @@ input[type="search"] {
   font-size: 1.6em;
   color: $accentRed;
   margin: 0;
-  &:hover {
-    color: $hoverLink;
-  }
+  padding: 1em;
 }
 
 #view {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 

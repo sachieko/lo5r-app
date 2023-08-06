@@ -14,6 +14,11 @@
     border: 1px solid $accentRed;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+      color: $hoverLink;
+      border: 1px solid $hoverLink;
+    }
   }
 
   .active {
