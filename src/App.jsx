@@ -7,7 +7,7 @@ const App = function() {
 
   return (
     <>
-      <nav>
+      <nav className="topNav">
         <Link to="/"><p className="title">L5R SRD</p></Link>
         <Search />
       </nav>

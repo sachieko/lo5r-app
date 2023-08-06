@@ -1,6 +1,7 @@
-import { Link, NavLink, useLoaderData } from 'react-router-dom';
+import { NavLink, useLoaderData } from 'react-router-dom';
 import { ChoiceCard } from '../components/ChoiceCard';
 import { getQuestion, getQuestionNumber } from '../helpers/questionHelpers';
+import './Question.scss'
 // This is currently static at 20 but if it ever changes, just adjust this number.
 const questionAmount = 20;
 
@@ -24,21 +25,22 @@ export default function Question() {
 
   const questionNav = getQuestionNumber(questionAmount).map(number => {
     return (
-      <div className='navLink' key={number}>
-        <NavLink 
+      <NavLink 
+          key={number}
           to={`/questions/${number}`}
           className={({ isActive, isPending }) => 
           isActive ? "active" : isPending ? "pending" : ""} 
         >
+      <div className='navLink'>
           {number}
-        </NavLink>
       </div>
+        </NavLink>
     )
   })
 
   return (
       <>
-      <nav>
+      <nav className="questionNav">
         {questionNav}
       </nav>
       <div className="card">
