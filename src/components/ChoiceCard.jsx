@@ -1,8 +1,9 @@
 import './ItemCard.scss';
+import FetchedParagraphs from '../helpers/LinkParser';
 
 export const ChoiceCard = function({choice, stat, info}) {
   if (info) {
-    const parablocks = info.split('\n').map((para, index) => <p key={index}>{para}</p>);
+    const parablocks = FetchedParagraphs(info.split("\n"));
 
     return (
       <div className="card">

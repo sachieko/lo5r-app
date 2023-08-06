@@ -25,7 +25,7 @@ const replaceKeywordsWithLinks = (paragraph) => {
   });
 };
 
-const FetchedParagraphs = ({ paragraphs }) => {
+const FetchedParagraphs = ( paragraphs ) => {
   return (
     <div>
       {paragraphs.map((paragraph, index) => (
