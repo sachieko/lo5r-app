@@ -40,12 +40,12 @@ nav {
 .search {
   padding: 1px;
   border-radius: 3px;
-  border: 1px solid red;
+  border: 1px solid $accentRed;
 }
 
 input[type="search"] {
-  color: #bbb;
-  background-color: #222;
+  color: $hoverLink;
+  background-color: $bgColor;
   &:focus {
     outline: none;
   }
@@ -60,10 +60,10 @@ input[type="search"] {
 .title {
   font-family: $flavorFont;
   font-size: 1.6em;
-  color: #ff314d;
+  color: $accentRed;
   margin: 0;
   &:hover {
-    color: #e22c44;
+    color: $hoverLink;
   }
 }
 

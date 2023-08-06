@@ -5,9 +5,12 @@ $plainFont: 'Spectral', 'Noto Sans JP', serif;
 $card-bg: url('../assets/soft-kill.png');
 
 $accentRed: #dd1334;
+$bgColor: #242424;
+$textColor: rgba(255, 255, 255, 0.87);
 
 $navLinkBg: #301e1e;
 $cardBorder: 3px double $accentRed;
 
 $activeLink: orange;
+$hoverLink: silver;
 $pendingLink: green;
