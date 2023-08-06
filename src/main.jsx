@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "./index.scss";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import { Index } from "./routes/index.jsx";
-import { Questions } from "./routes/Questions.jsx";
+import Questions, { loader as questionsLoader }  from "./routes/Questions.jsx";
 import { Question } from "./routes/Question.jsx";
 
 const router = createBrowserRouter([
@@ -26,13 +26,19 @@ const router = createBrowserRouter([
             path: "rules/:ruleId",
             element: <div>rule placeholder</div>,
           },
-          { 
-            path: "questions/:questionId",
-            element: <Question />,
-          },
+          // { 
+          //   path: "questions/:questionId",
+          //   element: <Question />,
+          // },
           { 
             path: "questions",
             element: <Questions />,
+            loader: questionsLoader,
+            children: [
+              { path: "questions/:questionId", 
+                element: <Question />
+                }
+            ]
           },
           { 
             path: "lore",
