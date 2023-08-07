@@ -1,5 +1,5 @@
 import { ItemCard } from "../components/ItemCard";
-import menucards from '../assets/menu.json';
+import menucards from "../assets/menu.json";
 
 export const Index = function() {
     const items = menucards.map((item, index) => {

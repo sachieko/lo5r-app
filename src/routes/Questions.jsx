@@ -1,8 +1,8 @@
-import { useLoaderData } from 'react-router-dom';
-import { ItemCard } from '../components/ItemCard';
-import { getQuestions } from '../helpers/questionHelpers';
+import { useLoaderData } from "react-router-dom";
+import { ItemCard } from "../components/ItemCard";
+import { getQuestions } from "../helpers/questionHelpers";
 // Change this to url that hosts the API
-const APIURL = 'http://localhost:8080/questions'
+const APIURL = "http://localhost:8080/questions"
 
 export async function loader({ params }) {
   const questions = await getQuestions();
@@ -14,7 +14,7 @@ export default function Questions() {
 
   const questionsView = questions.map(question => {
     return (
-     <ItemCard key={question.id} title={question.title} desc={question.detail} url={'/questions/' + question.id} />
+     <ItemCard key={question.id} title={question.title} desc={question.detail} url={"/questions/" + question.id} />
     );
   });
 

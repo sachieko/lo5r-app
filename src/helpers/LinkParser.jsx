@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const keywordToUrlMap = {
-  bushido: '/lore/2',
-  crab: '/lore/1'
+  bushido: "/bushido-page",
+  crab: "/lore/1"
 };
 
 const replaceKeywordsWithLinks = (paragraph) => {
-  const words = paragraph.split(' ');
+  const words = paragraph.split(" ");
 
   return words.map((word, index) => {
     // Remove punctuation from the word to check against the keyword map
@@ -16,16 +16,16 @@ const replaceKeywordsWithLinks = (paragraph) => {
     if (keywordToUrlMap[cleanedWord]) {
       return (
         <Link key={index} to={keywordToUrlMap[cleanedWord]}>
-          {word}{' '}
+          {word}{" "}
         </Link>
       );
     } else {
-      return word + ' ';
+      return word + " ";
     }
   });
 };
 
-const FetchedParagraphs = ( paragraphs ) => {
+const FetchedParagraphs = ({ paragraphs }) => {
   return (
     <div>
       {paragraphs.map((paragraph, index) => (

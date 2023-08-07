@@ -1,7 +1,7 @@
-import { NavLink, useLoaderData } from 'react-router-dom';
-import { ChoiceCard } from '../components/ChoiceCard';
-import { getQuestion, getQuestionNumber } from '../helpers/questionHelpers';
-import './Question.scss'
+import { NavLink, useLoaderData } from "react-router-dom";
+import { ChoiceCard } from "../components/ChoiceCard";
+import { getQuestion, getQuestionNumber } from "../helpers/questionHelpers";
+import "./Question.scss"
 // This is currently static at 20 but if it ever changes, just adjust this number.
 const questionAmount = 20;
 
@@ -31,7 +31,7 @@ export default function Question() {
           className={({ isActive, isPending }) => 
           isActive ? "active" : isPending ? "pending" : ""} 
         >
-      <div className='navLink'>
+      <div className="navLink">
           {number}
       </div>
         </NavLink>

@@ -8,7 +8,7 @@ const App = function() {
   return (
     <>
       <nav className="topNav">
-        <Link to="/"><p className="title">L5R SRD</p></Link>
+        <Link to="/"><p className="title">L5RSRD</p></Link>
         <Search />
       </nav>
       <div 
@@ -17,7 +17,7 @@ const App = function() {
         <Outlet />
       </div>
     </>
-  )
-}
+  );
+};
 
 export default App

@@ -1,5 +1,5 @@
-import './ItemCard.scss';
-import FetchedParagraphs from '../helpers/LinkParser';
+import "./ItemCard.scss";
+import FetchedParagraphs from "../helpers/LinkParser";
 
 export const ChoiceCard = function({choice, stat, info}) {
   if (info) {
