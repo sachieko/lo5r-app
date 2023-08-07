@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
-import "./index.scss";
-import ErrorPage from "./routes/ErrorPage.jsx";
-import { Index } from "./routes/index.jsx";
-import Questions, { loader as questionsLoader }  from "./routes/Questions.jsx";
-import Question, { loader as questionLoader } from "./routes/Question.jsx";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import './index.scss';
+import ErrorPage from './routes/ErrorPage.jsx';
+import { Index } from './routes/index.jsx';
+import Questions, { loader as questionsLoader }  from './routes/Questions.jsx';
+import Question, { loader as questionLoader } from './routes/Question.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
@@ -19,33 +19,33 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Index /> },
           { 
-            path: "lore/:loreId",
+            path: 'lore/:loreId',
             element: <div>lore placeholder</div>,
           },
           { 
-            path: "rules/:ruleId",
+            path: 'rules/:ruleId',
             element: <div>rule placeholder</div>,
           },
           // { 
-          //   path: "questions/:questionId",
+          //   path: 'questions/:questionId',
           //   element: <Question />,
           // },
           { 
-            path: "questions",
+            path: 'questions',
             element: <Questions />,
             loader: questionsLoader,
           },
           { 
-            path: "questions/:questionId", 
+            path: 'questions/:questionId', 
             element: <Question />,
             loader: questionLoader,
           },
           { 
-            path: "lore",
+            path: 'lore',
             element: <div>browse lore</div>,
           },
           { 
-            path: "rules",
+            path: 'rules',
             element: <div>browse rules</div>,
           }
         ]
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,

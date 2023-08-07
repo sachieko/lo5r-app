@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 const APIURL = 'http://localhost:8080/questions/';
 
 /*
@@ -19,7 +19,7 @@ export async function getQuestions() {
     const questions = results.data;
     return questions;
   } catch (error) {
-    console.error("Error parsing JSON:", error);
+    console.error('Error parsing JSON:', error);
     return [];
   }
 };
@@ -44,7 +44,7 @@ export async function getQuestion(id) {
     const question = results.data;
     return question;
   } catch (error) {
-    console.error("Error parsing JSON:", error);
+    console.error('Error parsing JSON:', error);
     return [];
   }
 };

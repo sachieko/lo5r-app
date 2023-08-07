@@ -1,15 +1,15 @@
-import "./ItemCard.scss";
-import FetchedParagraphs from "../helpers/LinkParser";
+import './ItemCard.scss';
+import FetchedParagraphs from '../helpers/LinkParser';
 
 export const ChoiceCard = function({choice, stat, info}) {
   if (info) {
-    const parablocks = FetchedParagraphs(info.split("\n"));
+    const parablocks = FetchedParagraphs(info.split('\n'));
 
     return (
-      <div className="card">
-        <div className="title">{choice}</div>
-        <div className="emphasis">{stat}</div>
-        <div className="desc">
+      <div className='card'>
+        <div className='title'>{choice}</div>
+        <div className='emphasis'>{stat}</div>
+        <div className='desc'>
           {parablocks}
         </div>
       </div>
@@ -17,9 +17,9 @@ export const ChoiceCard = function({choice, stat, info}) {
   }
 
   return (
-    <div className="card">
-        <div className="title">{choice}</div>
-        <div className="emphasis">{stat}</div>
+    <div className='card'>
+        <div className='title'>{choice}</div>
+        <div className='emphasis'>{stat}</div>
     </div>
   );
 };
