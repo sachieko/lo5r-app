@@ -18,6 +18,10 @@
     }
   } 
 
+  .title:hover {
+    color: $hoverLink;
+  }
+
   .active {
     color: $activeLink;
   }
