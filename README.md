@@ -1,6 +1,6 @@
 #LO5R App
 
-This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings by Fantasy Flight Games](https://www.fantasyflightgames.com/en/legend-of-the-five-rings-roleplaying-game/).
+This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio and Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
 Those interested in the game should reference the core rulebook and rely on experience in other tabletop roleplaying games if planning to run the game, but this app is supposed to serve as a resource to help a storyteller (GM) run the game for the players and allow players to have a quick reference.
 
