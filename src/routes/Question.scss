@@ -12,6 +12,7 @@
     width: 2em;
     height: 2em;
     border: 1px solid $accentRed;
+    border-radius: 0.3em;
     justify-content: center;
     align-items: center;
 
@@ -24,10 +25,12 @@
   .active {
     color: $activeLink;
     border: 1px solid $activeLink;
+    border-radius: 0.3em;
   }
 
   .pending {
     color: $pendingLink;
     border: 1px solid $pendingLink;
+    border-radius: 0.3em;
   }
 }
