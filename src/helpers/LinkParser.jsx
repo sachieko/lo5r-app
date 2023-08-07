@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const keywordToUrlMap = {
-  bushido: '/bushido-page',
+  bushido: '/lore/2',
   crab: '/lore/1'
 };
 
@@ -25,7 +25,7 @@ const replaceKeywordsWithLinks = (paragraph) => {
   });
 };
 
-const FetchedParagraphs = ({ paragraphs }) => {
+const FetchedParagraphs = ( paragraphs ) => {
   return (
     <div>
       {paragraphs.map((paragraph, index) => (
