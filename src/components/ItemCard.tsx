@@ -2,7 +2,13 @@ import { Link } from 'react-router-dom';
 import './ItemCard.scss';
 import FetchedParagraphs from '../helpers/LinkParser';
 
-export const ItemCard = function({title, desc, url}) {
+interface IitemProps {
+  title: string;
+  desc: string;
+  url: string;
+}
+
+export const ItemCard = function({title, desc, url}: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split('\n'));
   
   return (

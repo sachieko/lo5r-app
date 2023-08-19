@@ -1,6 +1,8 @@
 import { useState } from 'react';
+
 export const Search = function() {
-  const [searchItem, setSearchItem] = useState('');
+  // TO DO: Use search term to fetch results with axios
+  const [, setSearchItem] = useState<string>('');
 
   return(
     <form onSubmit={(e) => e.preventDefault()}>
@@ -8,7 +10,7 @@ export const Search = function() {
         <input 
           type='search' 
           className='search' 
-          onInput={(e) => setSearchItem(e.target.value)} 
+          onInput={(e) => setSearchItem(e.currentTarget.value)} 
           spellCheck='false'
             />
     </form>

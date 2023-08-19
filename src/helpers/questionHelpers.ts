@@ -1,5 +1,5 @@
 import axios from 'axios';
-const APIURL = 'http://localhost:8080/questions/';
+const APIURL: string = 'http://localhost:8080/questions/'; // TO DO: Refactor when deployed
 
 /*
   * The questions coming from the API are of the form:
@@ -38,7 +38,7 @@ export async function getQuestions() {
   * ]
   * 
   */
-export async function getQuestion(id) {
+export async function getQuestion(id: string | undefined) {
   try {
     const results = await axios.get(APIURL + id);
     const question = results.data;
@@ -49,7 +49,7 @@ export async function getQuestion(id) {
   }
 };
 
-export const getQuestionNumber = function(int) {
+export const getQuestionNumber = function(int: number) {
   const result = [];
   for (let i = 1; i < int +1; i++) {
     result.push(`${i}`);

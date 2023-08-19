@@ -1,7 +1,13 @@
 import './ItemCard.scss';
 import FetchedParagraphs from '../helpers/LinkParser';
 
-export const ChoiceCard = function({choice, stat, info}) {
+interface IchoiceProps {
+  choice: string;
+  stat: string;
+  info: string;
+}
+
+export const ChoiceCard = function({choice, stat, info}: IchoiceProps) {
   if (info) {
     const parablocks = FetchedParagraphs(info.split('\n'));
 

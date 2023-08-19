@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import './index.scss';
-import ErrorPage from './routes/ErrorPage.jsx';
-import { Index } from './routes/index.jsx';
-import Questions, { loader as questionsLoader }  from './routes/Questions.jsx';
-import Question, { loader as questionLoader } from './routes/Question.jsx';
+import ErrorPage from './routes/ErrorPage';
+import { Index } from './routes/index';
+import Questions, { loader as questionsLoader }  from './routes/Questions.js';
+import Question, { loader as questionLoader } from './routes/Question.js';
 
 const router = createBrowserRouter([
   {
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,

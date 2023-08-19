@@ -1,12 +1,15 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const keywordToUrlMap = {
+interface IkeywordToUrlMap {
+  [key: string]: string;
+}
+
+const keywordToUrlMap: IkeywordToUrlMap = {
   bushido: '/lore/2',
   crab: '/lore/1'
 };
 
-const replaceKeywordsWithLinks = (paragraph) => {
+const replaceKeywordsWithLinks = (paragraph: string) => {
   const words = paragraph.split(' ');
 
   return words.map((word, index) => {
@@ -25,7 +28,7 @@ const replaceKeywordsWithLinks = (paragraph) => {
   });
 };
 
-const FetchedParagraphs = ( paragraphs ) => {
+const FetchedParagraphs = ( paragraphs: string[] ) => {
   return (
     <div>
       {paragraphs.map((paragraph, index) => (
