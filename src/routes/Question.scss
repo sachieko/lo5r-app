@@ -15,6 +15,7 @@
     border-radius: 0.3em;
     justify-content: center;
     align-items: center;
+    color: $accentRed;
 
     &:hover {
       color: $hoverLink;
@@ -26,11 +27,18 @@
     color: $activeLink;
     border: 1px solid $activeLink;
     border-radius: 0.3em;
+
+    .navLink {
+      color: $activeLink;
+    }
   }
 
   .pending {
     color: $pendingLink;
     border: 1px solid $pendingLink;
     border-radius: 0.3em;
+    .navLink {
+      color: $pendingLink;
+    }
   }
 }

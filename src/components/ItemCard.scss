@@ -10,12 +10,15 @@
   flex-direction: column;
 
   .title {
-    padding: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0;
+    padding-top: 0.5em;
   }
 
   a div {
     background-color: #1d1d1d;
     border-bottom: 1px solid #fff;
+    color: $accentOrange;
 
     &:hover {
       color: $hoverLink;
@@ -25,11 +28,18 @@
   .emphasis {
     font-weight: 700;
     margin: 1em;
+    padding-left: 1em;
   }
 
   .card {
     width: 95%;
   }
+}
+
+.desc, p {
+  padding: 1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media only screen and (min-width: 780px) {
@@ -38,6 +48,3 @@
   }
 }
 
-.desc {
-  padding: 1.5em;
-}
