@@ -1,5 +1,5 @@
 import axios from 'axios';
-const APIURL: string = 'http://localhost:8080/lore/'; // TO DO: Refactor when deployed'
+const APIURL: string = import.meta.env.VITE_API_URL;
 
   /*
   * The data coming from the API are of the form:
@@ -17,7 +17,7 @@ const APIURL: string = 'http://localhost:8080/lore/'; // TO DO: Refactor when de
   */
 export async function getLore(id: string | undefined) {
   try {
-    const results = await axios.get(APIURL + id);
+    const results = await axios.get(`${APIURL}/lore/${id}`);
     const lore = results.data;
     return lore;
   } catch (error) {

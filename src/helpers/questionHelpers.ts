@@ -1,5 +1,5 @@
 import axios from 'axios';
-const APIURL: string = 'http://localhost:8080/questions/'; // TO DO: Refactor when deployed
+const APIURL: string = import.meta.env.VITE_API_URL;
 
 /*
   * The questions coming from the API are of the form:
@@ -15,7 +15,7 @@ const APIURL: string = 'http://localhost:8080/questions/'; // TO DO: Refactor wh
   */
 export async function getQuestions() {
   try {
-    const results = await axios.get(APIURL);
+    const results = await axios.get(`${APIURL}/questions`);
     const questions = results.data;
     return questions;
   } catch (error) {
@@ -40,7 +40,7 @@ export async function getQuestions() {
   */
 export async function getQuestion(id: string | undefined) {
   try {
-    const results = await axios.get(APIURL + id);
+    const results = await axios.get(`${APIURL}/questions/${id}`);
     const question = results.data;
     return question;
   } catch (error) {
