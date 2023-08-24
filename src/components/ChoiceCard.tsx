@@ -5,7 +5,7 @@ interface IchoiceProps {
   choice: string;
   stat: string;
   info: string;
-}
+};
 
 export const ChoiceCard = function({choice, stat, info}: IchoiceProps) {
   if (info) {
