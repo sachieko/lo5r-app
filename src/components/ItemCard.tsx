@@ -6,7 +6,7 @@ interface IitemProps {
   title: string;
   desc: string;
   url: string | null;
-}
+};
 
 export const ItemCard = function({title, desc, url}: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split('\n'));
