@@ -6,7 +6,8 @@ interface IkeywordToUrlMap {
 
 const keywordToUrlMap: IkeywordToUrlMap = {
   bushido: '/lore/2',
-  crab: '/lore/1'
+  crab: '/lore/1',
+  skill: '/rules/3'
 };
 
 const replaceKeywordsWithLinks = (paragraph: string) => {

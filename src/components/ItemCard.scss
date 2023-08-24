@@ -22,10 +22,6 @@
     }
   }
 
-  .desc {
-    padding: 8px;
-  }
-
   .emphasis {
     font-weight: 700;
     margin: 1em;
@@ -40,4 +36,8 @@
   .card {
     width: 45%;
   }
+}
+
+.desc {
+  padding: 1.5em;
 }

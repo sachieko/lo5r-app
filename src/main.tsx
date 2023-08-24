@@ -5,8 +5,10 @@ import App from './App.jsx';
 import './index.scss';
 import ErrorPage from './routes/ErrorPage';
 import { Index } from './routes/index';
-import Questions, { loader as questionsLoader }  from './routes/Questions.js';
-import Question, { loader as questionLoader } from './routes/Question.js';
+import Questions, { loader as questionsLoader }  from './routes/Questions';
+import Question, { loader as questionLoader } from './routes/Question';
+import Rule, { loader as ruleLoader } from './routes/Rule';
+import Lore, { loader as loreLoader } from './routes/Lore';
 
 const router = createBrowserRouter([
   {
@@ -18,18 +20,6 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
           { index: true, element: <Index /> },
-          { 
-            path: 'lore/:loreId',
-            element: <div>lore placeholder</div>,
-          },
-          { 
-            path: 'rules/:ruleId',
-            element: <div>rule placeholder</div>,
-          },
-          // { 
-          //   path: 'questions/:questionId',
-          //   element: <Question />,
-          // },
           { 
             path: 'questions',
             element: <Questions />,
@@ -45,8 +35,18 @@ const router = createBrowserRouter([
             element: <div>browse lore</div>,
           },
           { 
+            path: 'lore/:loreId',
+            element: <Lore />,
+            loader: loreLoader,
+          },
+          { 
             path: 'rules',
             element: <div>browse rules</div>,
+          },
+          {
+            path: 'rules/:ruleId',
+            element: <Rule />,
+            loader: ruleLoader,
           }
         ]
       }

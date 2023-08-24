@@ -5,7 +5,7 @@ import FetchedParagraphs from '../helpers/LinkParser';
 interface IitemProps {
   title: string;
   desc: string;
-  url: string;
+  url: string | null;
 }
 
 export const ItemCard = function({title, desc, url}: IitemProps) {
@@ -13,9 +13,9 @@ export const ItemCard = function({title, desc, url}: IitemProps) {
   
   return (
     <div className='card'>
-      <Link to={url}>
+      {url ? <Link to={url}>
         <div className='title'>{title}</div>
-      </Link>
+      </Link> : <div className='title'>{title}</div>}
       <div className='desc'>
         {parablocks}
       </div>
