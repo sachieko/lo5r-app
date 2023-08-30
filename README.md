@@ -12,12 +12,11 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
   * Site has character creation details ✅
     1. 20 questions are referenced from database ✅
     2. Character sheet changes are noted ✅
-    3. Detailed information is included
+    3. Detailed information is included (School information is a to do at a later date)
     4. Allow users to quickly navigate between questions ✅
-  * Site has rule pages
+  * Site has rule pages ✅
     1. Rules can be viewed in a list (sort by type?)
     2. Clicking a rule allows users to view it without hiding list
-    3. Keywords can be mapped to their RESTful route for quick navigation ✅
   * Convert app to Typescript as the project is getting large ✅
     1. Create replacements for JSX/JS files ✅
     2. Future: Create separate interface file
@@ -25,10 +24,15 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     1. API returns the correct resources based on the search
     2. The site displays them appropriately in a dropdown view
     3. Ensure consistency with mobile views
-  * Site has basic lore pages to explain concepts integral to L5R
-    1. Explain bushido, small snippets for clans, Japanese terms
+  * Site has basic lore pages to explain concepts integral to L5R ✅
+    1. Explain bushido ✅, small snippets for clans, Japanese terms
+  * Site has technique pages where techniques are sorted by type
+    1. Techniques can be quickly filtered by type
+    2. Can be searched for in a box, and clicking one opens the view conveniently!
 * Advanced features
-  * Create admin suite for quick insertion of new values into database
+  * Keywords can be mapped to their RESTful route for quick navigation ✅
+    1. Improve the mapping for certain words. This will take review once the site is functional.
+  * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert rules or lore resources
   * Other things as I think of them
