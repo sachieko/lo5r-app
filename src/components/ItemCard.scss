@@ -2,8 +2,8 @@
 
 .card {
   border: $cardBorder;
-  margin: 1em;
-  background-image: $card-bg;
+  margin: 0.5em;
+  background: $bgColor;
   width: 95%;
   display: flex;
   align-self: center;

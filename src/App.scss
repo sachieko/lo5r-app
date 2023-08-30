@@ -1,4 +1,9 @@
 @import './styles/variables';
+$card-bg: url('./assets/soft-kill.png');
+
+html {
+  background-image: $card-bg;
+}
 
 .topNav {
   width: 100%;
@@ -8,6 +13,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: $bgColor;
 
   form {
     margin: 0.7em;
