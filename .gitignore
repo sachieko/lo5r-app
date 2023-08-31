@@ -15,8 +15,6 @@ dist-ssr
 # Set Host URL
 .env
 
-/src/assets/*
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

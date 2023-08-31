@@ -1,0 +1,22 @@
+[
+  {
+    "title": "20 Questions Character Creation",
+    "desc": "Creating a new character?\nThe 20 questions process runs you through the how-to of making a new character step by step.",
+    "url": "/questions"
+  },
+  {
+    "title": "Lore and Setting",
+    "desc": "Contains information about the lore and setting of the game.\nThis includes information about clans, schools, creatures, and places in the world.",
+    "url": "/lore"
+  },
+  {
+    "title": "Rules and Mechanics",
+    "desc": "Contains rules or mechanics of the game, such as how dice rolls work or what techniques and skills do.\nThis section helps figure out the how of playing Legend of the Five Rings.",
+    "url": "/rules"
+  },
+  {
+    "title": "About This App",
+    "desc": "Designed by Sachieko!",
+    "url": "/"
+  }
+]
