@@ -14,3 +14,26 @@ $cardBorder: 3px double $accentRed;
 $activeLink: orange;
 $hoverLink: silver;
 $pendingLink: green;
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $bgColor;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 0.4rem;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: darkred;
+  }
+}

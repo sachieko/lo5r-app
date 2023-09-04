@@ -5,46 +5,48 @@
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  width: 30em;
-  height: 20em;
-  border-bottom: 1px solid grey;
+  width: 400px;
+  max-height: 20em;
+  border: 1px solid grey;
+  @include custom-scrollbar;
 
-  .navLink, .active, .pending {
+  a {
     display: flex;
-    background-color: $navLinkBg;
-    font-family: $plainFont;
+    height: 30px;
+    border-bottom: 1px solid grey;
+    padding: 5px;
     font-size: 12px;
-    height: 4em;
-    border-radius: 0.3em;
+    font-family: $plainFont;
+    background-color: $navLinkBg;
+    color: $accentRed;
     justify-content: start;
     align-items: center;
-    color: $accentRed;
+  }
+
+  a.active {
+    border-bottom: 1px solid $accentOrange;
+  }
+
+  .navLink, .active, .pending {
+    border-radius: 0.3em;
 
     &:hover {
       color: $hoverLink;
-      border: 1px solid $hoverLink;
     }
-  }
-
-  .navLink {
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 6px;
-    
   }
 
   .active {
     color: $activeLink;
-    border: none;
-
+    
     .navLink {
       color: $activeLink;
+      border-bottom: 1px solid $activeLink;
     }
   }
 
-  .pending {
+  a.pending {
     color: $pendingLink;
-    border: 1px solid $pendingLink;
+    border-bottom: 1px solid $pendingLink;
     border-radius: 0.3em;
     .navLink {
       color: $pendingLink;
@@ -52,9 +54,19 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .questionNav {
+    width: 300px;
+
+    a {
+      height: 40px;
+    }
+  }
+}
+
 @media only screen and (min-width: 780px) {
   .questionNav {
-    height: 50em;
+    max-height: 50em;
     border-right: 1px solid white;
     width: 400px;
   }
