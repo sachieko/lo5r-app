@@ -11,7 +11,7 @@ export async function loader() {
   return  questions;
 };
 
-export default function Question({ params }: { params: Params<string>}) {
+export default function Question() {
   const questions = useLoaderData() as IQuestion[];
   const questionId = Number(params.id);
   const currentQuestion = questions[questionId - 1]; // Id in database does not include 0 so shift array left 1
