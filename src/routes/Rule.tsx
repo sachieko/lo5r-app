@@ -2,15 +2,9 @@ import { useLoaderData, Params } from 'react-router-dom';
 import { ItemCard } from '../components/ItemCard';
 import { getRule } from '../helpers/ruleHelpers';
 import FetchedParagraphs from '../helpers/LinkParser';
+import { IRule } from '../helpers/interfaces';
 
-interface Iloader {
-  id: number;
-  title: string;
-  detail: string;
-  image: string | null;
-  header: string;
-  content: string;
-};
+interface Iloader extends IRule {};
 
 export async function loader({ params }: { params: Params<string>}) {
   const ruleData = await getRule(params.ruleId);
@@ -24,7 +18,7 @@ export default function Rule() {
   const title = rule[0].title;
   const details = FetchedParagraphs(rule[0].detail.split('\n'));
 
-  const cards = rule.map(card => {
+  const cards = rule[0].cards.map(card => {
     return ( 
       <ItemCard key={card.id} title={card.header} desc={card.content} url={''} />
     );

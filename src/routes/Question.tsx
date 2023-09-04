@@ -4,22 +4,9 @@ import { getQuestion, getQuestionNumber } from '../helpers/questionHelpers';
 import './Question.scss'
 // This is currently static at 20 but if it ever changes in future editions, just adjust this number.
 const questionAmount: number = 20;
+import { IQuestion } from '../helpers/interfaces';
 
-interface Icard {
-  id: number;
-  stat: string | null;
-  choice: string | null;
-  choiceInfo: string | null;
-};
-
-interface Iloader {
-  title: string;
-  info: string;
-  detail: string;
-  id: number;
-  image: string | null;
-  choices: Icard[];
-};
+interface Iloader extends IQuestion {};
 
 export async function loader({ params }: { params: Params<string>}) {
   const question = await getQuestion(params.questionId);
