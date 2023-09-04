@@ -1,57 +1,52 @@
 import { NavLink, useLoaderData, Params } from 'react-router-dom';
 import { ChoiceCard } from '../components/ChoiceCard';
-import { getQuestion, getQuestionNumber } from '../helpers/questionHelpers';
+import { getQuestions } from '../helpers/questionHelpers';
 import './Question.scss'
-// This is currently static at 20 but if it ever changes in future editions, just adjust this number.
-const questionAmount: number = 20;
+// This is static at 20 but if it ever changes in future editions, just adjust this number.
 import { IQuestion } from '../helpers/interfaces';
+import { ItemCard } from '../components/ItemCard';
 
-interface Iloader extends IQuestion {};
-
-export async function loader({ params }: { params: Params<string>}) {
-  const question = await getQuestion(params.questionId);
-  return  question;
+export async function loader() {
+  const questions = await getQuestions();
+  return  questions;
 };
 
-export default function Question() {
-  const question = useLoaderData() as Iloader[];
-  // All questions have the title and info sent back, but this is inefficient and will be refactored later on the API end.
-  const title = question[0].title;
-  const desc = question[0].info;
+export default function Question({ params }: { params: Params<string>}) {
+  const questions = useLoaderData() as IQuestion[];
+  const questionId = Number(params.id);
+  const currentQuestion = questions[questionId - 1]; // Id in database does not include 0 so shift array left 1
+  const { title, info, detail, id, image } = currentQuestion;
 
-  const choices = question[0].choices.map(choice => {
-    return ( 
-      <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceInfo} />
-    );
-  });
-
-  const questionNav = getQuestionNumber(questionAmount).map(number => {
+  const questionNav = questions.map(question => {
     return (
       <NavLink 
-          key={number}
-          to={`/questions/${number}`}
+          key={question.id}
+          to={`/questions/${question.id}`}
           className={({ isActive, isPending }) => 
           isActive ? 'active' : isPending ? 'pending' : ''} 
         >
       <div className='navLink'>
-          {number}
+          {question.id}
       </div>
         </NavLink>
     )
   })
+
+  const choices = currentQuestion.choices.map(choice => {
+    return (
+      <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceInfo} />
+    )
+  }) 
 
   return (
       <>
       <nav className='questionNav'>
         {questionNav}
       </nav>
-      <div className='card'>
-        <div className='title'>{title}</div>
-      <div className='desc'>
-        {desc}
-      </div>
+      {questionId && <ItemCard title={title} desc={detail} url={null} />}
+      <div>
       {choices}
-    </div>
-      </>
+      </div>
+    </>
   );
 };
