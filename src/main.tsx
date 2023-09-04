@@ -5,7 +5,6 @@ import App from './App.jsx';
 import './index.scss';
 import ErrorPage from './routes/ErrorPage';
 import { Index } from './routes/index';
-import Questions, { loader as questionsLoader }  from './routes/Questions';
 import Question, { loader as questionLoader } from './routes/Question';
 import Rule, { loader as ruleLoader } from './routes/Rule';
 import Lore, { loader as loreLoader } from './routes/Lore';
@@ -20,11 +19,6 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
           { index: true, element: <Index /> },
-          { 
-            path: 'questions',
-            element: <Questions />,
-            loader: questionsLoader,
-          },
           { 
             path: 'questions/:questionId', 
             element: <Question />,

@@ -4,9 +4,8 @@
   border: $cardBorder;
   margin: 0.5em;
   background: $bgColor;
-  width: 95%;
+  width: 90%;
   display: flex;
-  align-self: center;
   flex-direction: column;
 
   .title {
@@ -33,6 +32,7 @@
 
   .card {
     width: 95%;
+    border-color: grey;
   }
 }
 

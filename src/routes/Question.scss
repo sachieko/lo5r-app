@@ -2,18 +2,21 @@
 
 .questionNav {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 30em;
+  height: 20em;
+  border-bottom: 1px solid grey;
 
-  .navLink {
+  .navLink, .active, .pending {
     display: flex;
     background-color: $navLinkBg;
     font-family: $plainFont;
-    font-weight: 700;
-    width: 2em;
-    height: 2em;
-    border: 1px solid $accentRed;
+    font-size: 12px;
+    height: 4em;
     border-radius: 0.3em;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: $accentRed;
 
@@ -23,10 +26,16 @@
     }
   }
 
+  .navLink {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 6px;
+    
+  }
+
   .active {
     color: $activeLink;
-    border: 1px solid $activeLink;
-    border-radius: 0.3em;
+    border: none;
 
     .navLink {
       color: $activeLink;
@@ -40,5 +49,13 @@
     .navLink {
       color: $pendingLink;
     }
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .questionNav {
+    height: 50em;
+    border-right: 1px solid white;
+    width: 400px;
   }
 }
