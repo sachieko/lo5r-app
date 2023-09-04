@@ -36,18 +36,23 @@ export default function Question() {
   const choices = currentQuestion.choices.map(choice => {
     return (
       <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceInfo} />
-    )
-  }) 
+    );
+  }) ;
 
   return (
       <>
       <nav className='questionNav'>
         {questionNav}
       </nav>
-      <div className='card' >
-      {questionId && <ItemCard title={title} desc={detail} url={null} />}
-      {choices}
-      </div>
+      {questionId && (
+        <div className='card' >
+          <div className='title'>{title}</div>
+          <div className='desc'>
+            {detail}
+            {choices}
+          </div>
+        </div>
+      )}
     </>
   );
 };
