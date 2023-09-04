@@ -9,7 +9,7 @@ interface Icard {
   id: number;
   stat: string | null;
   choice: string | null;
-  choiceinfo: string | null;
+  choiceInfo: string | null;
 };
 
 interface Iloader {
