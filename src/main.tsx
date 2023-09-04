@@ -5,7 +5,7 @@ import App from './App.jsx';
 import './index.scss';
 import ErrorPage from './routes/ErrorPage';
 import { Index } from './routes/index';
-import Question, { loader as questionLoader } from './routes/Question';
+import Question from './routes/Question';
 import Rule, { loader as ruleLoader } from './routes/Rule';
 import Lore, { loader as loreLoader } from './routes/Lore';
 
@@ -22,7 +22,6 @@ const router = createBrowserRouter([
           { 
             path: 'questions/:questionId', 
             element: <Question />,
-            loader: questionLoader,
           },
           { 
             path: 'lore',
