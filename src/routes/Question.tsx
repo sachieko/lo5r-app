@@ -1,4 +1,4 @@
-import { NavLink, useLoaderData, Params } from 'react-router-dom';
+import { NavLink, useLoaderData, useParams } from 'react-router-dom';
 import { ChoiceCard } from '../components/ChoiceCard';
 import { getQuestions } from '../helpers/questionHelpers';
 import './Question.scss'
@@ -13,9 +13,10 @@ export async function loader() {
 
 export default function Question() {
   const questions = useLoaderData() as IQuestion[];
-  const questionId = Number(params.id);
-  const currentQuestion = questions[questionId - 1]; // Id in database does not include 0 so shift array left 1
-  const { title, info, detail, id, image } = currentQuestion;
+  const { questionId } = useParams();
+  const index = Number(questionId); // Originally fetched as a string from the url.
+  const currentQuestion = questions[index - 1]; // Id in database does not include 0 so shift array left 1
+  const { title, info, detail, image } = currentQuestion;
 
   const questionNav = questions.map(question => {
     return (
@@ -43,8 +44,8 @@ export default function Question() {
       <nav className='questionNav'>
         {questionNav}
       </nav>
+      <div className='card' >
       {questionId && <ItemCard title={title} desc={detail} url={null} />}
-      <div>
       {choices}
       </div>
     </>
