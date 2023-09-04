@@ -5,13 +5,20 @@ import './Question.scss'
 // This is currently static at 20 but if it ever changes in future editions, just adjust this number.
 const questionAmount: number = 20;
 
+interface Icard {
+  id: number;
+  stat: string | null;
+  choice: string | null;
+  choiceinfo: string | null;
+};
+
 interface Iloader {
   title: string;
   info: string;
+  detail: string;
   id: number;
-  choice: string;
-  stat: string;
-  choiceinfo: string;
+  image: string | null;
+  choices: Icard[];
 };
 
 export async function loader({ params }: { params: Params<string>}) {
@@ -21,14 +28,13 @@ export async function loader({ params }: { params: Params<string>}) {
 
 export default function Question() {
   const question = useLoaderData() as Iloader[];
-
   // All questions have the title and info sent back, but this is inefficient and will be refactored later on the API end.
   const title = question[0].title;
   const desc = question[0].info;
 
-  const choices = question.map(choice => {
+  const choices = question[0].choices.map(choice => {
     return ( 
-      <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceinfo} />
+      <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceInfo} />
     );
   });
 

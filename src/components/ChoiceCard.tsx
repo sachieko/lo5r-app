@@ -2,9 +2,9 @@ import './ItemCard.scss';
 import FetchedParagraphs from '../helpers/LinkParser';
 
 interface IchoiceProps {
-  choice: string;
-  stat: string;
-  info: string;
+  choice: string | null;
+  stat: string | null;
+  info: string | null;
 };
 
 export const ChoiceCard = function({choice, stat, info}: IchoiceProps) {
