@@ -4,21 +4,19 @@ import { getRule } from '../helpers/ruleHelpers';
 import FetchedParagraphs from '../helpers/LinkParser';
 import { IRule } from '../helpers/interfaces';
 
-interface Iloader extends IRule {};
-
 export async function loader({ params }: { params: Params<string>}) {
   const ruleData = await getRule(params.ruleId);
   return  ruleData;
 };
 
 export default function Rule() {
-  const rule = useLoaderData() as Iloader[];
+  const rule = useLoaderData() as IRule;
 
   // All rules have the title and info sent back, but this is inefficient and will be refactored later on the API end.
-  const title = rule[0].title;
-  const details = FetchedParagraphs(rule[0].detail.split('\n'));
+  const title = rule.title;
+  const details = FetchedParagraphs(rule.detail.split('\n'));
 
-  const cards = rule[0].cards.map(card => {
+  const cards = rule.cards.map(card => {
     return ( 
       <ItemCard key={card.id} title={card.header} desc={card.content} url={''} />
     );

@@ -4,21 +4,19 @@ import { getLore } from '../helpers/loreHelpers';
 import FetchedParagraphs from '../helpers/LinkParser';
 import { ILore } from '../helpers/interfaces';
 
-interface Iloader extends ILore {};
-
 export async function loader({ params }: { params: Params<string>}) {
   const loreData = await getLore(params.loreId);
   return  loreData;
 };
 
 export default function Lore() {
-  const lore = useLoaderData() as Iloader[];
+  const lore = useLoaderData() as ILore;
 
   // All lore will have the title and detail sent back, but this is inefficient and will be refactored later on the API end.
-  const title = lore[0].title;
-  const details = FetchedParagraphs(lore[0].detail.split('\n'));
+  const title = lore.title;
+  const details = FetchedParagraphs(lore.detail.split('\n'));
 
-  const cards = lore[0].cards.map(card => {
+  const cards = lore.cards.map(card => {
     return ( 
       <ItemCard key={card.id} title={card.header} desc={card.content} url={''} />
     );
