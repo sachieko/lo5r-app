@@ -37,20 +37,6 @@ html {
   }
 }
 
-.search {
-  padding: 1px;
-  border-radius: 3px;
-  border: 1px solid $accentRed;
-}
-
-input[type="search"] {
-  color: $hoverLink;
-  background-color: $bgColor;
-  &:focus {
-    outline: none;
-  }
-}
-
 #view.loading {
   opacity: 0.25;
   transition: opacity 200ms;
