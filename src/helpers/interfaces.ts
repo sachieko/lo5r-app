@@ -42,3 +42,30 @@ export interface ISearch {
   title: string;
   detail: string;
 };
+
+export interface ITechnique {
+  id: number;
+  name: string;
+  prerequisite: string;
+  rank: string;
+  type: string;
+  description: string;
+  activation: string;
+  effect: string;
+};
+
+export interface IOpportunity {
+  id: number;
+  technique_id: number;
+  ring: string;
+  category: string;
+  cost: string;
+  effect: string;
+  name: string;
+  prerequisite: string;
+  rank: string;
+  type: string;
+  description: string;
+  activation: string;
+  technique_effect: string;
+};
