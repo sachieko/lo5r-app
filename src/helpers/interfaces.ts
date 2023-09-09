@@ -36,3 +36,9 @@ export interface IRule {
   image: string | null;
   cards: Icard[];
 };
+
+export interface ISearch {
+  link: string;
+  title: string;
+  detail: string;
+};
