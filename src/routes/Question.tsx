@@ -30,14 +30,14 @@ export default function Question() {
         </div>
 
       </NavLink>
-    )
-  })
+    );
+  });
   // Create a card for the current question's choices
   const choices = currentQuestion.choices.map(choice => {
     return (
       <ChoiceCard key={choice.id} choice={choice.choice} stat={choice.stat} info={choice.choiceInfo} />
     );
-  }) ;
+  });
 
   return (
       <>
