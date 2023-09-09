@@ -1,0 +1,59 @@
+@import '../styles/variables';
+
+.search-container { 
+  position: relative;
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $bgColor;
+  border: 1px solid grey;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.search-detail {
+  border-bottom: 1px solid $textColor;
+  font-size: 0.8em;
+}
+
+.search-results.visible {
+  display: block;
+
+  &:hover {
+    background-color: $darkbgRed;
+  }
+}
+
+.search {
+  padding: 1px;
+  border-radius: 3px;
+  border: 1px solid $accentRed;
+}
+
+input[type="search"] {
+  color: $hoverLink;
+  background-color: $bgColor;
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-item:hover {
+  color: $accentOrange;
+}
+
+.search-detail {
+  color: $textColor;
+
+  &:hover {
+    color: $textColor;
+  }
+}
