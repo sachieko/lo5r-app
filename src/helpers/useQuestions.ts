@@ -14,7 +14,7 @@ export const useQuestions = function() {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-    }
+    };
     getQuestions();
   }, []);
   return questions;
