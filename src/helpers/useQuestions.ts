@@ -19,11 +19,3 @@ export const useQuestions = function() {
   }, []);
   return questions;
 };
-
-export const getQuestionNumber = function(int: number) {
-  const result = [];
-  for (let i = 1; i < int +1; i++) {
-    result.push(`${i}`);
-  }
-  return result;
-};
