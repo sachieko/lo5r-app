@@ -8,6 +8,7 @@ import { Index } from './routes/index';
 import Question from './routes/Question';
 import Rule, { loader as ruleLoader } from './routes/Rule';
 import Lore, { loader as loreLoader } from './routes/Lore';
+import { Opportunity } from './routes/Opportunity.js';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             path: 'rules/:ruleId',
             element: <Rule />,
             loader: ruleLoader,
+          },
+          {
+            path: 'opps/',
+            element: <Opportunity />
           }
         ]
       }
