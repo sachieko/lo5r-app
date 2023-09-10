@@ -1,11 +1,9 @@
-import { useParams } from "react-router-dom";
 import { useOpportunities } from "../helpers/useOpportunities";
 import { IOpportunity } from "../helpers/interfaces";
 import { Table, TableColumn } from "../components/Table";
 import './Opportunity.scss';
 
 export const Opportunity = function() {
-  const { oppId } = useParams();
   const opps = useOpportunities();
 
   // Define the columns we'd like for the table from the opportunity data type
