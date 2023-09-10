@@ -28,14 +28,14 @@
   display: block;
 
   &:hover {
-    background-color: $darkbgRed;
+    background-color: $darkAccent;
   }
 }
 
 .search {
   padding: 1px;
   border-radius: 3px;
-  border: 1px solid $accentRed;
+  border: 1px solid $accentColor;
 }
 
 input[type="search"] {
@@ -47,7 +47,7 @@ input[type="search"] {
 }
 
 .search-item:hover {
-  color: $accentOrange;
+  color: $brightAccent;
 }
 
 .search-detail {

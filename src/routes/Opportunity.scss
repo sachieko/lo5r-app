@@ -1,0 +1,88 @@
+@import '../styles/variables';
+
+
+.table-container {
+  width: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include custom-scrollbar;
+  background-color: $bgColor;
+  font-size: 0.8em;
+  border-radius: 5px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-container {
+  background: $bpGradient;
+}
+
+.row {
+  border-bottom: 1px solid $darkAccent2;
+
+  &:hover {
+    background: $darkAccent;
+  }
+}
+
+.row, .column-container{
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+.row-0, .col-0 {
+  width: 3em;
+}
+
+.row-1, .col-1 {
+  width: 5em;
+}
+
+.row-2, .col-2 {
+  width: 3em;
+}
+
+.row-3, .col-3 {
+  width: 20em;
+}
+
+.row-4, .col-4 {
+  width: 5em;
+}
+
+.column {
+  min-width: 40px;
+  color: white;
+  padding: 5%;
+}
+
+@media only screen and (min-width: 780px) {
+  .table-container {
+    border-bottom: 1px solid white;
+    width: 800px;
+  }
+
+  .row-0, .col-0 {
+    width: 6em;
+  }
+  
+  .row-1, .col-1 {
+    width: 10em;
+  }
+  
+  .row-2, .col-2 {
+    width: 6em;
+  }
+  
+  .row-3, .col-3 {
+    width: 30em;
+  }
+  
+  .row-4, .col-4 {
+    width: 6em;
+  }
+}

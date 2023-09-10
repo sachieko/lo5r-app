@@ -13,7 +13,7 @@
 }
 
 a {
-  color: $accentOrange;
+  color: $brightAccent;
   text-decoration: inherit;
 }
 a:hover {
@@ -22,6 +22,8 @@ a:hover {
 
 body {
   margin: 0;
+  overflow-y: auto;
+  @include custom-scrollbar;
 }
 
 button {
@@ -36,7 +38,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: $accentRed;
+  border-color: $accentColor;
 }
 button:focus,
 button:focus-visible {

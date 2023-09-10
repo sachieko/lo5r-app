@@ -3,18 +3,22 @@
 $flavorFont: 'Shadows Into Light', 'Noto Sans JP', serif;
 $plainFont: 'Spectral', 'Noto Sans JP', serif;
 
-$accentRed: #dd1334;
-$darkbgRed: #1f0207;
-$accentOrange: rgb(255, 81, 0);
+$accentColor: #9900ff;
+$darkAccent: #4B2B82;
+$darkAccent2: #4E60D0;
+$brightAccent: #58CDFF;
 $bgColor: #242424;
+$bgDark: #1d1d1d;
 $textColor: rgba(255, 255, 255, 0.87);
 
 $navLinkBg: #301e1e;
-$cardBorder: 3px double $accentRed;
+$cardBorder: 3px double $accentColor;
 
-$activeLink: orange;
+$activeLink: rgb(0, 247, 255);
 $hoverLink: silver;
 $pendingLink: green;
+
+$bpGradient: linear-gradient(to top, $darkAccent2, $darkAccent);
 
 @mixin custom-scrollbar {
   &::-webkit-scrollbar {
@@ -23,18 +27,18 @@ $pendingLink: green;
   
   /* Track */
   &::-webkit-scrollbar-track {
-    background: $bgColor;
+    background: $bgDark;
     border-radius: 0.4rem;
   }
   
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: grey;
+    background: $accentColor;
     border-radius: 0.4rem;
   }
   
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: darkred;
+    background: $brightAccent;
   }
 }

@@ -12,12 +12,13 @@
     padding-left: 1em;
     padding-bottom: 0;
     padding-top: 0.5em;
+    color: $brightAccent;
   }
 
   a div {
-    background-color: #1d1d1d;
-    border-bottom: 1px solid #fff;
-    color: $accentOrange;
+    background-color: $bgDark;
+    border-bottom: 1px solid $darkAccent;
+    color: $brightAccent;
 
     &:hover {
       color: $hoverLink;
@@ -36,7 +37,7 @@
   }
 }
 
-.desc, p {
+.desc p {
   padding: 1em;
   padding-top: 5px;
   padding-bottom: 5px;
