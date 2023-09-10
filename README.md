@@ -17,21 +17,24 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
   * Site has rule pages ✅
     1. Rules can be viewed in a list (sort by type?)
     2. Clicking a rule allows users to view it without hiding list
-  * Convert app to Typescript as the project is getting large ✅
-    1. Create replacements for JSX/JS files ✅
-    2. Future: Create separate interface file
+  * Convert app to Typescript (Front end only) ✅
   * Site can search for resources using the search bar
-    1. API returns the correct resources based on the search
-    2. The site displays them appropriately in a dropdown view
+    1. API returns the correct resources based on the search ✅
+    2. The site displays them appropriately in a dropdown view ✅
     3. Ensure consistency with mobile views
+    4. Can find: rules ✅, lore ✅, techniques ✅, keywords (such as opportunities)
   * Site has basic lore pages to explain concepts integral to L5R ✅
     1. Explain bushido ✅, small snippets for clans, Japanese terms
+    2. Explain currency (koku) ✅
   * Site has technique pages where techniques are sorted by type
     1. Techniques can be quickly filtered by type
-    2. Can be searched for in a box, and clicking one opens the view conveniently!
+    2. Can be searched for in a box, and clicking one allows you to view the details for the technique.
+  * Site has opportunities page where opportunities are displayed in a table ✅
+    1. Allow users to filter results in the table by ring, category, etc.
+    2. Allow users to view techniques related to opportunities on this page by clicking it in the table.
 * Advanced features
   * Keywords can be mapped to their RESTful route for quick navigation ✅
-    1. Improve the mapping for certain words. This will take review once the site is functional.
+    1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this possibly instead of the hacky solution I use now.
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert rules or lore resources
