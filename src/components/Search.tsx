@@ -44,7 +44,7 @@ export const Search = function() {
     setSearchItem(newSearchItem);
   };
 
-  return(
+  return (
     <div className='search-container'>
     <form onSubmit={(e) => e.preventDefault()}>
       <span>Search: </span>
