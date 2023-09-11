@@ -2,22 +2,29 @@
 
 
 .table-container {
-  width: 500px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  @include custom-scrollbar;
+  width: 38em;
   background-color: $bgColor;
-  font-size: 0.8em;
+  font-size: 0.5em;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 .table {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include custom-scrollbar;
 }
 
 .column-container {
   background: $bpGradient;
+
+  p:hover {
+    color: $brightAccent;
+    cursor: pointer;
+  }
 }
 
 .row {
@@ -35,7 +42,7 @@
 }
 
 .row-0, .col-0 {
-  width: 3em;
+  width: 4em;
 }
 
 .row-1, .col-1 {
@@ -47,23 +54,22 @@
 }
 
 .row-3, .col-3 {
-  width: 20em;
+  width: 15em;
 }
 
 .row-4, .col-4 {
-  width: 5em;
-}
-
-.column {
-  min-width: 40px;
-  color: white;
-  padding: 5%;
+  width: 2em;
 }
 
 @media only screen and (min-width: 780px) {
   .table-container {
     border-bottom: 1px solid white;
     width: 800px;
+    font-size: 0.8em;
+  }
+
+  .table {
+    max-height: 800px;
   }
 
   .row-0, .col-0 {
