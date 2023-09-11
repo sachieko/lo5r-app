@@ -4,10 +4,10 @@ import { ISearch } from '../helpers/interfaces';
 const APIURL: string = import.meta.env.VITE_API_URL;
 import SearchList from './SearchList';
 import './Search.scss';
-
+import { SearchBar } from './SearchBar';
 
 export const Search = function() {
-  // TO DO: Use search term to fetch results with axios
+  // Todo: use single state object
   const [searchItem, setSearchItem] = useState<string>('');
   const [searchData, setSearchData] = useState<ISearch[]>([]);
   const [searchFocused, setSearchFocused] = useState<boolean>(false);
@@ -27,13 +27,14 @@ export const Search = function() {
   useEffect(() => {
     const timer = setTimeout(() => { // Use a timeout to debounce the API call
       setSearchData([]);
-      if (searchItem.trim() !== '') {
-        search(searchItem); // If the search item isn't empty, make the API call
+      const newSearchItem = searchItem.trim();
+      if (newSearchItem !== '') {
+        search(newSearchItem); // If the search item isn't empty, make the API call
       }
-      if (searchItem.trim() === '') {
+      if (newSearchItem === '') {
         setSearchData([]); // Set to empty results if empty
       }
-    }, 800);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [searchItem]);
@@ -46,18 +47,13 @@ export const Search = function() {
 
   return (
     <div className='search-container'>
-    <form onSubmit={(e) => e.preventDefault()}>
-      <span>Search: </span>
-        <input 
-          type='search' 
-          className='search' 
-          onChange={(e) => handleInput(e)}
-          onFocus={() => setSearchFocused(true)}
-          onBlur={() => setTimeout(() => {setSearchFocused(false)}, 300)} // Delay is used to allow search links to be clicked before disabling them
-          value={searchItem}
-          spellCheck='false'
-            />
-    </form>
+      <SearchBar 
+        title='Search:'
+        onChange={handleInput}
+        onFocus={() => setSearchFocused(true)}
+        onBlur={() => setTimeout(() => {setSearchFocused(false)}, 300)} 
+        value={searchItem}
+        />
       {searchItem ? (<SearchList searchItems={searchData} focused={searchFocused} />) : (<></>)}
     </div>
   );
