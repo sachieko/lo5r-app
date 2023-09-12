@@ -9,7 +9,7 @@ export const Opportunity = function() {
   const [filterWord, setFilterWord] = useState<string>('');
   const opps = useOpportunities();
 
-  // Define the columns we'd like for the table from the opportunity data type
+  // Define the columns we'd like for the table from the opportunity data type, header is the Column's visible title
   const columns: TableColumn<IOpportunity, keyof IOpportunity>[] = [
     {
       key: 'ring',
@@ -32,6 +32,7 @@ export const Opportunity = function() {
       header: 'Technique'
     }
   ];
+  // This filters the total data for the table locally rather than querying the API again
   const filterTable = (arr: any[], keyword: string): IOpportunity[] => {
     const result = arr.filter(opportunity => {
       for (const element of columns) {
@@ -43,7 +44,7 @@ export const Opportunity = function() {
     });
     return result;
   };
-
+  // Grab the string from the event value to make typescript happy about types
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newFilterWord = event.target.value;
     setFilterWord(newFilterWord);
