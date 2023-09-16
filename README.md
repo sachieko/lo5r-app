@@ -15,23 +15,23 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     3. Detailed information is included (School information is a to do at a later date)
     4. Allow users to quickly navigate between questions ✅
   * Site has rule pages ✅
-    1. Rules can be viewed in a list (sort by type?)
-    2. Clicking a rule allows users to view it without hiding list
+    1. Rules can be viewed in a list
+    2. Clicking a rule allows users to view it without hiding lis
   * Convert app to Typescript (Front end only) ✅
   * Site can search for resources using the search bar
     1. API returns the correct resources based on the search ✅
     2. The site displays them appropriately in a dropdown view ✅
-    3. Ensure consistency with mobile views
+    3. Ensure consistency with mobile views ✅
     4. Can find: rules ✅, lore ✅, techniques ✅, keywords (such as opportunities)
   * Site has basic lore pages to explain concepts integral to L5R ✅
     1. Explain bushido ✅, small snippets for clans, Japanese terms
     2. Explain currency (koku) ✅
   * Site has technique pages where techniques are sorted by type
-    1. Techniques can be quickly filtered by type
+    1. Techniques can be quickly filtered by type 
     2. Can be searched for in a box, and clicking one allows you to view the details for the technique.
   * Site has opportunities page where opportunities are displayed in a table ✅
-    1. Allow users to filter results in the table by ring, category, etc.
-    2. Allow users to view techniques related to opportunities on this page by clicking it in the table.
+    1. Allow users to filter results in the table by ring, category, etc. ✅
+    2. Allow users to view techniques related to opportunities on this page by clicking it in the table. 
 * Advanced features
   * Keywords can be mapped to their RESTful route for quick navigation ✅
     1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this possibly instead of the hacky solution I use now.
@@ -39,3 +39,20 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     1. Use authorization via username & password
     2. Allow admin to insert rules or lore resources
   * Other things as I think of them
+
+  ## Dependencies 
+
+Frontend:
+  * Developed using node v20.5.1, VITE v4.4.9 using React + Typescript
+  * Axios 1.4.0
+  * Sass 1.66.1
+  * React-Router 6.15
+
+Backend: 
+  * Developed using node v20.5.1, Express v4.18.2 with a PostgreSQL database
+  * @netlify/functions
+  * cors
+  * dotenv
+  * pg
+  * serverless-http
+  * chalk (debugging dependency)
