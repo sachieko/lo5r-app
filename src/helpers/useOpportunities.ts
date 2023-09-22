@@ -6,7 +6,7 @@ const APIURL: string = import.meta.env.VITE_API_URL;
 export const useOpportunities = function() {
   const [opportunities, setOpportunities] = useState<IOpportunity[]>([]);
   useEffect(() => {
-    async function getOpps() {
+    const getOpps = async function() {
       try {
         const results = await axios.get(`${APIURL}/opp/`);
         const data: IOpportunity[] = results.data; // Assuming the API response is an array of IOpportunity
@@ -16,6 +16,6 @@ export const useOpportunities = function() {
       }
     };
     getOpps();
-  }, []);
+  }, [APIURL]);
   return opportunities;
 };
