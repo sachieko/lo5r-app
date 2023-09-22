@@ -1,14 +1,14 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { ISearch } from '../helpers/interfaces';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { ISearch } from "../helpers/interfaces";
 const APIURL: string = import.meta.env.VITE_API_URL;
-import SearchList from './SearchList';
-import './Search.scss';
-import { SearchBar } from './SearchBar';
+import SearchList from "./SearchList";
+import "./Search.scss";
+import { SearchBar } from "./SearchBar";
 
-export const Search = function() {
+export const Search = function () {
   // Todo: use single state object
-  const [searchItem, setSearchItem] = useState<string>('');
+  const [searchItem, setSearchItem] = useState<string>("");
   const [searchData, setSearchData] = useState<ISearch[]>([]);
   const [searchFocused, setSearchFocused] = useState<boolean>(false);
 
@@ -20,18 +20,19 @@ export const Search = function() {
       setSearchData(data); // Set data as the new search data
       setSearchFocused(true);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => { // Use a timeout to debounce the API call
+    const timer = setTimeout(() => {
+      // Use a timeout to debounce the API call
       setSearchData([]);
       const newSearchItem = searchItem.trim();
-      if (newSearchItem !== '') {
+      if (newSearchItem !== "") {
         search(newSearchItem); // If the search item isn't empty, make the API call
       }
-      if (newSearchItem === '') {
+      if (newSearchItem === "") {
         setSearchData([]); // Set to empty results if empty
       }
     }, 500);
@@ -46,15 +47,23 @@ export const Search = function() {
   };
 
   return (
-    <div className='search-container'>
-      <SearchBar 
-        title='Search:'
+    <div className="search-container">
+      <SearchBar
+        title="Search:"
         onChange={handleInput}
         onFocus={() => setSearchFocused(true)}
-        onBlur={() => setTimeout(() => {setSearchFocused(false)}, 300)} 
+        onBlur={() =>
+          setTimeout(() => {
+            setSearchFocused(false);
+          }, 300)
+        }
         value={searchItem}
-        />
-      {searchItem ? (<SearchList searchItems={searchData} focused={searchFocused} />) : (<></>)}
+      />
+      {searchItem ? (
+        <SearchList searchItems={searchData} focused={searchFocused} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

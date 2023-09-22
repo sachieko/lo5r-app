@@ -1,5 +1,4 @@
-@import '../styles/variables';
-
+@import "../styles/variables";
 
 .table-container {
   width: 38em;
@@ -35,29 +34,35 @@
   }
 }
 
-.row, .column-container{
+.row,
+.column-container {
   display: flex;
   flex-direction: row;
   padding-left: 10px;
 }
 
-.row-0, .col-0 {
+.row-0,
+.col-0 {
   width: 4em;
 }
 
-.row-1, .col-1 {
+.row-1,
+.col-1 {
   width: 5em;
 }
 
-.row-2, .col-2 {
+.row-2,
+.col-2 {
   width: 3em;
 }
 
-.row-3, .col-3 {
+.row-3,
+.col-3 {
   width: 15em;
 }
 
-.row-4, .col-4 {
+.row-4,
+.col-4 {
   width: 2em;
 }
 
@@ -72,23 +77,28 @@
     max-height: 800px;
   }
 
-  .row-0, .col-0 {
+  .row-0,
+  .col-0 {
     width: 6em;
   }
-  
-  .row-1, .col-1 {
+
+  .row-1,
+  .col-1 {
     width: 10em;
   }
-  
-  .row-2, .col-2 {
+
+  .row-2,
+  .col-2 {
     width: 6em;
   }
-  
-  .row-3, .col-3 {
+
+  .row-3,
+  .col-3 {
     width: 30em;
   }
-  
-  .row-4, .col-4 {
+
+  .row-4,
+  .col-4 {
     width: 6em;
   }
 }

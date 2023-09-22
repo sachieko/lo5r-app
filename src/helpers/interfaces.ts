@@ -3,7 +3,7 @@ export interface Ichoice {
   stat: string | null;
   choice: string | null;
   choiceInfo: string | null;
-};
+}
 
 export interface IQuestion {
   title: string;
@@ -12,13 +12,13 @@ export interface IQuestion {
   id: number;
   image: string | null;
   choices: Ichoice[];
-};
+}
 
 export interface Icard {
   id: number;
   header: string;
   content: string;
-};
+}
 
 export interface ILore {
   id: number;
@@ -26,7 +26,7 @@ export interface ILore {
   detail: string;
   image: string | null;
   cards: Icard[];
-};
+}
 
 export interface IRule {
   id: number;
@@ -35,13 +35,13 @@ export interface IRule {
   detail: string;
   image: string | null;
   cards: Icard[];
-};
+}
 
 export interface ISearch {
   link: string;
   title: string;
   detail: string;
-};
+}
 
 export interface IOpportunity {
   id: number;
@@ -57,7 +57,7 @@ export interface IOpportunity {
   description: string;
   activation: string;
   technique_effect: string;
-};
+}
 /*
   Technique Data Format:
   [{
@@ -86,7 +86,7 @@ interface ITechOpportunity {
   category: string;
   cost: string;
   effect: string;
-};
+}
 
 export interface ITechnique {
   id: number;
@@ -98,4 +98,4 @@ export interface ITechnique {
   activation: string;
   effect: string;
   opportunities: ITechOpportunity[];
-};
+}

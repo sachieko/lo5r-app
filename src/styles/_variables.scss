@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Shadows+Into+Light&family=Spectral&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Shadows+Into+Light&family=Spectral&display=swap");
 
-$flavorFont: 'Shadows Into Light', 'Noto Sans JP', serif;
-$plainFont: 'Spectral', 'Noto Sans JP', serif;
+$flavorFont: "Shadows Into Light", "Noto Sans JP", serif;
+$plainFont: "Spectral", "Noto Sans JP", serif;
 
 $accentColor: #9900ff;
-$darkAccent: #4B2B82;
-$darkAccent2: #4E60D0;
-$brightAccent: #58CDFF;
+$darkAccent: #4b2b82;
+$darkAccent2: #4e60d0;
+$brightAccent: #58cdff;
 $bgColor: #242424;
 $bgDark: #1d1d1d;
 $textColor: rgba(255, 255, 255, 0.87);
@@ -24,19 +24,19 @@ $bpGradient: linear-gradient(to top, $darkAccent2, $darkAccent);
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
-  
+
   /* Track */
   &::-webkit-scrollbar-track {
     background: $bgDark;
     border-radius: 0.4rem;
   }
-  
+
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $accentColor;
     border-radius: 0.4rem;
   }
-  
+
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: $brightAccent;

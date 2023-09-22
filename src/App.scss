@@ -1,5 +1,5 @@
-@import './styles/variables';
-$card-bg: url('./assets/soft-kill.png');
+@import "./styles/variables";
+$card-bg: url("./assets/soft-kill.png");
 
 html {
   background-image: $card-bg;
@@ -22,7 +22,7 @@ html {
     span {
       margin-right: 0.5em;
     }
-  } 
+  }
 
   .title:hover {
     color: $hoverLink;

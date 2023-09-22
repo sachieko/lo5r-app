@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 const APIURL: string = import.meta.env.VITE_API_URL;
 
 /*
@@ -25,7 +25,7 @@ export async function getLore(id: string | undefined) {
     const lore = results.data;
     return lore;
   } catch (error) {
-    console.error('Error parsing JSON:', error);
+    console.error("Error parsing JSON:", error);
     return [];
   }
-};
+}

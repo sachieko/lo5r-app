@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import "../styles/variables";
 
 .questionNav {
   display: flex;
@@ -23,7 +23,9 @@
     align-items: center;
   }
 
-  .navLink, .active, .pending {
+  .navLink,
+  .active,
+  .pending {
     border-radius: 0.3em;
 
     &:hover {
@@ -33,7 +35,7 @@
 
   .active {
     color: $activeLink;
-    
+
     .navLink {
       color: $activeLink;
       border-bottom: 1px solid $activeLink;

@@ -1,28 +1,29 @@
-import { Link } from 'react-router-dom';
-import { ISearch } from '../helpers/interfaces';
+import { Link } from "react-router-dom";
+import { ISearch } from "../helpers/interfaces";
 
-const SearchList = function({searchItems, focused}: { searchItems: ISearch[]; focused: boolean;}) {
-
+const SearchList = function ({
+  searchItems,
+  focused,
+}: {
+  searchItems: ISearch[];
+  focused: boolean;
+}) {
   const listComponent = searchItems.map((item, index) => {
     return (
-      <Link 
-          key={index}
-          to={item.link}
-          className='search-item' 
-        >
-        <div className='search-item-title'>
-          {item.title} 
-        </div>
-        <div className='search-detail'>
-          {[item.detail.slice(0, 50)]}...
-        </div>
+      <Link key={index} to={item.link} className="search-item">
+        <div className="search-item-title">{item.title}</div>
+        <div className="search-detail">{[item.detail.slice(0, 50)]}...</div>
       </Link>
     );
   });
 
   return (
-    <div className={`search-results ${focused ? 'visible' : ''}`}>
-    {searchItems.length > 0 ? (listComponent) : (<div className='search-item'>No results found.</div>)}
+    <div className={`search-results ${focused ? "visible" : ""}`}>
+      {searchItems.length > 0 ? (
+        listComponent
+      ) : (
+        <div className="search-item">No results found.</div>
+      )}
     </div>
   );
 };
