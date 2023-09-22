@@ -43,17 +43,6 @@ export interface ISearch {
   detail: string;
 };
 
-export interface ITechnique {
-  id: number;
-  name: string;
-  prerequisite: string;
-  rank: string;
-  type: string;
-  description: string;
-  activation: string;
-  effect: string;
-};
-
 export interface IOpportunity {
   id: number;
   technique_id: number;
@@ -68,4 +57,45 @@ export interface IOpportunity {
   description: string;
   activation: string;
   technique_effect: string;
+};
+/*
+  Technique Data Format:
+  [{
+  id: number,
+  name: string,
+  prerequisuite: string,
+  rank: number, 
+  type: string,
+  description: string,
+  activation: string,
+  effect: string,
+  opportunities: [{
+      id: number,
+      ring: string,
+      category: string;
+      cost: string;
+      effect: string
+    }, ...]
+  }]
+
+*/
+
+interface ITechOpportunity {
+  id: number;
+  ring: string;
+  category: string;
+  cost: string;
+  effect: string;
+};
+
+export interface ITechnique {
+  id: number;
+  name: string;
+  prerequisite: string;
+  rank: string;
+  type: string;
+  description: string;
+  activation: string;
+  effect: string;
+  opportunities: ITechOpportunity[];
 };
