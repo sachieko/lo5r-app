@@ -6,7 +6,7 @@ import "./Opportunity.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
 
-export const Opportunity = function () {
+export const Technique = function () {
   const [filterWord, setFilterWord] = useState<string>("");
   const techniques = useTechniques();
 

@@ -7,21 +7,26 @@
   {
     "title": "Lore and Setting",
     "desc": "Contains information about the lore and setting of the game.\nThis includes information about clans, schools, creatures, and places in the world.",
-    "url": "/lore"
+    "url": "/lore/"
   },
   {
     "title": "Rules and Mechanics",
     "desc": "Contains rules or mechanics of the game, such as how dice rolls work or what techniques and skills do.\nThis section helps figure out the how of playing Legend of the Five Rings.",
-    "url": "/rules"
+    "url": "/rules/"
   },
   {
     "title": "Opportunities",
-    "desc": "Contains a list of examples of how one can spend opportunity. These are all examples relating to those that are standard in the core rulebook, and can give you a good idea of how to go from there.",
-    "url": "/opps"
+    "desc": "Contains a list of examples of how one can spend opportunity. These are examples as well as opportunities that can be used with standard actions or techniques, and can give you a good idea of using opportunity narratively.",
+    "url": "/opps/"
+  },
+  {
+    "title": "Techniques",
+    "desc": "Contains a list of techniques for your convenience.",
+    "url": "/techniques/"
   },
   {
     "title": "About This App",
-    "desc": "Designed by Sachieko!\nThis is a personal non-profit project, but if you would like to contribute assistance to improving the site in some way, feel free to get in touch with me.",
+    "desc": "Designed by Sachieko!\nThis is a personal non-profit project, but if you would like to contribute assistance to improving the site in some way, feel free to get in touch or open an issue on Github.",
     "url": "/"
   }
 ]

@@ -37,6 +37,12 @@ html {
   }
 }
 
+.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 #view.loading {
   opacity: 0.25;
   transition: opacity 200ms;
@@ -64,6 +70,12 @@ html {
     justify-content: space-around;
     align-items: start;
   }
+
+  .menu {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
 
   .title {
     font-size: 1.6em;

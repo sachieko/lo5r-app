@@ -9,6 +9,7 @@ import Question from "./routes/Question";
 import Rule, { loader as ruleLoader } from "./routes/Rule";
 import Lore, { loader as loreLoader } from "./routes/Lore";
 import { Opportunity } from "./routes/Opportunity.js";
+import { Technique } from "./routes/Technique.js";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
           {
             path: "opps/",
             element: <Opportunity />,
+          },
+          {
+            path: "techniques/",
+            element: <Technique />,
           },
         ],
       },

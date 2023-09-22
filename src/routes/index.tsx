@@ -13,5 +13,5 @@ export const Index = function () {
     );
   });
 
-  return <>{items}</>;
+  return <div className="menu">{items}</div>;
 };
