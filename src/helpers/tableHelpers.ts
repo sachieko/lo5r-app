@@ -9,12 +9,22 @@ the object of arr, it will be included in the result array. This allows the clie
 
 Note: It is case sensitive because smart users will be able to use it more effectively and I want to reward them over naive users.
 */
-export const filterTable = <T, K extends keyof T>(arr: T[], keyword: string, columns: TableColumn<T, K>[]): T[] => {
+export const filterTable = <T, K extends keyof T>(
+  arr: T[],
+  keywords: string[],
+  columns: TableColumn<T, K>[]
+): T[] => {
   const result = arr.filter((tableRow) => {
+    let truthCount = 0;
     for (const property of columns) {
-      if (tableRow[property.key]?.toString().includes(keyword)) {
-        return true;
+      for (const keyword of keywords) {
+        if (tableRow[property.key]?.toString().includes(keyword)) {
+          truthCount++;
+        }
       }
+    }
+    if (truthCount === keywords.length) {
+      return true;
     }
     return false;
   });

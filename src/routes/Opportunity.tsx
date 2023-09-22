@@ -50,7 +50,11 @@ export const Opportunity = function () {
         onBlur={() => {}}
       />
       <Table
-        data={filterWord ? filterTable(opps, filterWord, columns) : opps}
+        data={
+          filterWord
+            ? filterTable(opps, filterWord.trim().split(" "), columns)
+            : opps
+        }
         columns={columns}
       />
     </div>
