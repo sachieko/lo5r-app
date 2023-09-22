@@ -4,6 +4,7 @@ import { IOpportunity } from "../helpers/interfaces";
 import { Table, TableColumn } from "../components/Table";
 import "./Opportunity.scss";
 import { SearchBar } from "../components/SearchBar";
+import { filterTable } from "../helpers/tableHelpers";
 
 export const Opportunity = function () {
   const [filterWord, setFilterWord] = useState<string>("");
@@ -32,18 +33,7 @@ export const Opportunity = function () {
       header: "Technique",
     },
   ];
-  // This filters the total data for the table locally rather than querying the API again
-  const filterTable = (arr: any[], keyword: string): IOpportunity[] => {
-    const result = arr.filter((opportunity) => {
-      for (const element of columns) {
-        if (opportunity[element.key]?.toLowerCase().includes(keyword)) {
-          return true;
-        }
-      }
-      return false;
-    });
-    return result;
-  };
+
   // Grab the string from the event value to make typescript happy about types
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newFilterWord = event.target.value;
@@ -60,7 +50,7 @@ export const Opportunity = function () {
         onBlur={() => {}}
       />
       <Table
-        data={filterWord ? filterTable(opps, filterWord.toLowerCase()) : opps}
+        data={filterWord ? filterTable(opps, filterWord, columns) : opps}
         columns={columns}
       />
     </div>
