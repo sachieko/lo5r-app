@@ -58,27 +58,6 @@ export interface IOpportunity {
   activation: string;
   technique_effect: string;
 }
-/*
-  Technique Data Format:
-  [{
-  id: number,
-  name: string,
-  prerequisuite: string,
-  rank: number, 
-  type: string,
-  description: string,
-  activation: string,
-  effect: string,
-  opportunities: [{
-      id: number,
-      ring: string,
-      category: string;
-      cost: string;
-      effect: string
-    }, ...]
-  }]
-
-*/
 
 interface ITechOpportunity {
   id: number;
