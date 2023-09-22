@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTechniques } from "../helpers/useTechniques";
 import { ITechnique } from "../helpers/interfaces";
 import { Table, TableColumn } from "../components/Table";
-import "./Opportunity.scss";
+import "./Technique.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
 
@@ -17,17 +17,21 @@ export const Technique = function () {
       header: "Technique",
     },
     {
-      key: "prerequisite",
-      header: "Req",
-    },
-    {
       key: "rank",
       header: "Rank",
     },
     {
-      key: "effect",
-      header: "Effect",
+      key: "type",
+      header: "Type",
     },
+    {
+      key: "description",
+      header: "Description",
+    },
+    {
+      key: "prerequisite",
+      header: "Req",
+    }
   ];
 
   // Grab the string from the event value to make typescript happy about types
