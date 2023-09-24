@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useOpportunities } from "../helpers/useOpportunities";
-import { IOpportunity } from "../helpers/interfaces";
+import { TOpportunity } from "../helpers/types";
 import { Table, TableColumn } from "../components/Table";
 import "./Opportunity.scss";
 import { SearchBar } from "../components/SearchBar";
@@ -11,7 +11,7 @@ export const Opportunity = function () {
   const opps = useOpportunities();
 
   // Define the columns we'd like for the table from the opportunity data type, header is the Column's visible title
-  const columns: TableColumn<IOpportunity, keyof IOpportunity>[] = [
+  const columns: TableColumn<TOpportunity, keyof TOpportunity>[] = [
     {
       key: "ring",
       header: "Ring",
