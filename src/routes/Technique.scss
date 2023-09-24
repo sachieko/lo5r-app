@@ -14,13 +14,16 @@
     margin-top: 10px;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 600px;
+    max-height: 300px;
     @include custom-scrollbar;
   }
   
   .column-container {
     background: $bpGradient;
-  
+    position: sticky;
+    top: 0;
+    height: 3em;
+    width: 36em;
     p:hover {
       color: $brightAccent;
       cursor: pointer;
@@ -29,7 +32,6 @@
   
   .row {
     border-bottom: 1px solid $darkAccent2;
-  
     &:hover {
       background: $darkAccent;
     }
@@ -76,8 +78,12 @@
     width: 700px;
     font-size: 0.8em;
 
+    .column-container {
+      width: 54em;
+    }
+
     .table {
-      max-height: 800px;
+      max-height: 400px;
     }
   
     .row-0,
@@ -106,6 +112,14 @@
     .col-4 {
       margin-left: 1em;
       width: 6em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tech-table {
+    .table {
+      max-height: 800px;
     }
   }
 }
