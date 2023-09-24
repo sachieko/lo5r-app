@@ -1,11 +1,11 @@
-export interface Ichoice {
+export type Ichoice = {
   id: number;
   stat: string | null;
   choice: string | null;
   choiceInfo: string | null;
 }
 
-export interface IQuestion {
+export type IQuestion = {
   title: string;
   info: string;
   detail: string;
@@ -14,13 +14,13 @@ export interface IQuestion {
   choices: Ichoice[];
 }
 
-export interface Icard {
+export type Icard = {
   id: number;
   header: string;
   content: string;
 }
 
-export interface ILore {
+export type ILore = {
   id: number;
   title: string;
   detail: string;
@@ -28,7 +28,7 @@ export interface ILore {
   cards: Icard[];
 }
 
-export interface IRule {
+export type IRule = {
   id: number;
   title: string;
   category: string;
@@ -37,13 +37,13 @@ export interface IRule {
   cards: Icard[];
 }
 
-export interface ISearch {
+export type ISearch = {
   link: string;
   title: string;
   detail: string;
 }
 
-export interface IOpportunity {
+export type IOpportunity = {
   id: number;
   technique_id: number;
   ring: string;
@@ -59,7 +59,7 @@ export interface IOpportunity {
   technique_effect: string;
 }
 
-interface ITechOpportunity {
+type ITechOpportunity = {
   id: number;
   ring: string;
   category: string;
@@ -67,7 +67,7 @@ interface ITechOpportunity {
   effect: string;
 }
 
-export interface ITechnique {
+export type ITechnique = {
   id: number;
   name: string;
   prerequisite: string;
