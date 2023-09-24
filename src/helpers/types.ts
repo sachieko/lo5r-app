@@ -1,49 +1,49 @@
-export type Ichoice = {
+export type Tchoice = {
   id: number;
   stat: string | null;
   choice: string | null;
   choiceInfo: string | null;
 }
 
-export type IQuestion = {
+export type TQuestion = {
   title: string;
   info: string;
   detail: string;
   id: number;
   image: string | null;
-  choices: Ichoice[];
+  choices: Tchoice[];
 }
 
-export type Icard = {
+export type TCard = {
   id: number;
   header: string;
   content: string;
 }
 
-export type ILore = {
+export type TLore = {
   id: number;
   title: string;
   detail: string;
   image: string | null;
-  cards: Icard[];
+  cards: TCard[];
 }
 
-export type IRule = {
+export type TRule = {
   id: number;
   title: string;
   category: string;
   detail: string;
   image: string | null;
-  cards: Icard[];
+  cards: TCard[];
 }
 
-export type ISearch = {
+export type TSearch = {
   link: string;
   title: string;
   detail: string;
 }
 
-export type IOpportunity = {
+export type TOpportunity = {
   id: number;
   technique_id: number;
   ring: string;
@@ -59,7 +59,7 @@ export type IOpportunity = {
   technique_effect: string;
 }
 
-type ITechOpportunity = {
+type TTechOpportunity = {
   id: number;
   ring: string;
   category: string;
@@ -67,7 +67,7 @@ type ITechOpportunity = {
   effect: string;
 }
 
-export type ITechnique = {
+export type TTechnique = {
   id: number;
   name: string;
   prerequisite: string;
@@ -76,5 +76,5 @@ export type ITechnique = {
   description: string;
   activation: string;
   effect: string;
-  opportunities: ITechOpportunity[];
+  opportunities: TTechOpportunity[];
 }
