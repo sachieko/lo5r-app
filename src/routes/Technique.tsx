@@ -65,6 +65,7 @@ export const Technique = function () {
     );
   };
 
+  //Format the description for the selected technique to be displayed
   const formatTechString = (tech: TTechnique) => {
     const { description, activation, effect } = tech;
     const opportunityStrings = tech.opportunities.map((opp) => {
@@ -99,7 +100,9 @@ export const Technique = function () {
       </div>
       {technique ? (
         <ItemCard
-          title={technique.name + ` - ${technique.type} (Rank ${technique.rank})`}
+          title={
+            technique.name + ` - ${technique.type} (Rank ${technique.rank})`
+          }
           desc={formatTechString(technique)}
         />
       ) : null}
