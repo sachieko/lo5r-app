@@ -21,7 +21,10 @@ export const filterTable = <T, K extends keyof T>(
     return keywords.every((keyword) => {
       return columns.some((column) => {
         const columnValue = row[column.key];
-        if (typeof columnValue === "string" && columnValue.toLowerCase().includes(keyword.toLowerCase())) {
+        if (
+          typeof columnValue === "string" &&
+          columnValue.toLowerCase().includes(keyword.toLowerCase())
+        ) {
           return true;
         }
         return false;
