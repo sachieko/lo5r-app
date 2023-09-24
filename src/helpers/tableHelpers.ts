@@ -14,19 +14,11 @@ export const filterTable = <T, K extends keyof T>(
   keywords: string[],
   columns: TableColumn<T, K>[]
 ): T[] => {
+  // Create a regular expression from the keywords
   const result = arr.filter((tableRow) => {
-    let truthCount = 0;
-    for (const property of columns) {
-      for (const keyword of keywords) {
-        if (tableRow[property.key]?.toString().includes(keyword)) {
-          truthCount++;
-        }
-      }
-    }
-    if (truthCount === keywords.length) {
-      return true;
-    }
-    return false;
+    return keywords.every(word => {
+      
+    });
   });
   return result;
 };
