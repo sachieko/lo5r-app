@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { ISearch } from "../helpers/interfaces";
+import { TSearch } from "../helpers/types";
 const APIURL: string = import.meta.env.VITE_API_URL;
 import SearchList from "./SearchList";
 import "./Search.scss";
@@ -9,14 +9,14 @@ import { SearchBar } from "./SearchBar";
 export const Search = function () {
   // Todo: use single state object
   const [searchItem, setSearchItem] = useState<string>("");
-  const [searchData, setSearchData] = useState<ISearch[]>([]);
+  const [searchData, setSearchData] = useState<TSearch[]>([]);
   const [searchFocused, setSearchFocused] = useState<boolean>(false);
 
   const search = async (query: string) => {
     setSearchData([]);
     try {
       const response = await axios.get(`${APIURL}/search?q=${query}`);
-      const data: ISearch[] = response.data; // Response should match ISearch[]
+      const data: TSearch[] = response.data; // Response should match ISearch[]
       setSearchData(data); // Set data as the new search data
       setSearchFocused(true);
     } catch (error) {
