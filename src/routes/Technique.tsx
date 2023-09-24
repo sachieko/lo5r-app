@@ -1,4 +1,4 @@
-import { useTechniques } from "../helpers/useTechniques";
+import { useTechniques, formatTechString } from "../helpers/useTechniques";
 import { TTechnique } from "../helpers/types";
 import { Table, TableColumn } from "../components/Table";
 import "./Technique.scss";
@@ -63,19 +63,6 @@ export const Technique = function () {
       },
       { replace: true }
     );
-  };
-
-  //Format the description for the selected technique to be displayed
-  const formatTechString = (tech: TTechnique) => {
-    const { description, activation, effect } = tech;
-    const opportunityStrings = tech.opportunities.map((opp) => {
-      const { cost, effect } = opp;
-      return `${cost} ${effect}`;
-    });
-    const result = `${description}\n${activation}\n${effect}\nOpportunities:\n${opportunityStrings.join(
-      "\n"
-    )}`;
-    return result;
   };
 
   return (
