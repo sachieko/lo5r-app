@@ -1,24 +1,24 @@
 import { ReactNode } from "react";
 
 // Extends key of T creates a link between obj[key] and the key which is useful for row[column.key] later in the IDE
-export interface TableColumn<T, K extends keyof T> {
+export type TableColumn<T, K extends keyof T> = {
   key: K;
   header: string;
-}
+};
 
-export interface TableProps<T, K extends keyof T> {
+export type TableProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
-}
+};
 
-interface TableRowProps<T, K extends keyof T> {
+type TableRowProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
-}
+};
 
-interface TableColProps<T, K extends keyof T> {
+type TableColProps<T, K extends keyof T> = {
   columns: Array<TableColumn<T, K>>;
-}
+};
 
 // Create headers for each column of the table
 const TableHeader = <T, K extends keyof T>({

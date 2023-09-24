@@ -9,16 +9,23 @@ the object of arr, it will be included in the result array. This allows the clie
 
 Note: It is case sensitive because smart users will be able to use it more effectively and I want to reward them over naive users.
 */
+
 export const filterTable = <T, K extends keyof T>(
   arr: T[],
   keywords: string[],
   columns: TableColumn<T, K>[]
 ): T[] => {
   // Create a regular expression from the keywords
-  const result = arr.filter((tableRow) => {
-    return keywords.every(word => {
-      
+  return arr.filter((row) => {
+    // Check if at least one keyword is contained in any of the columns
+    return keywords.every((keyword) => {
+      return columns.some((column) => {
+        const columnValue = row[column.key];
+        if (typeof columnValue === "string" && columnValue.toLowerCase().includes(keyword.toLowerCase())) {
+          return true;
+        }
+        return false;
+      });
     });
   });
-  return result;
 };
