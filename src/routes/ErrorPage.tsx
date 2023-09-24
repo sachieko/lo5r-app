@@ -1,4 +1,5 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { ItemCard } from "../components/ItemCard";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -16,11 +17,10 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page">
-      <h1>Oops! Were you expecting something else?</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{errorMessage}</i>
-      </p>
+      <ItemCard
+        title={"Oops! Were you expecting something else?"}
+        desc={`Sorry, an unexpected error occurred: \n${errorMessage}`}
+      />
     </div>
   );
 }
