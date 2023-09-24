@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { ISearch } from "../helpers/interfaces";
+import { TSearch } from "../helpers/types";
 
 const SearchList = function ({
   searchItems,
   focused,
 }: {
-  searchItems: ISearch[];
+  searchItems: TSearch[];
   focused: boolean;
 }) {
   const listComponent = searchItems.map((item, index) => {

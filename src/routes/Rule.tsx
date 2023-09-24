@@ -2,7 +2,7 @@ import { useLoaderData, Params } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { getRule } from "../helpers/ruleHelpers";
 import FetchedParagraphs from "../helpers/LinkParser";
-import { IRule } from "../helpers/interfaces";
+import { TRule } from "../helpers/types";
 
 export async function loader({ params }: { params: Params<string> }) {
   const ruleData = await getRule(params.ruleId);
@@ -10,7 +10,7 @@ export async function loader({ params }: { params: Params<string> }) {
 }
 
 export default function Rule() {
-  const rule = useLoaderData() as IRule;
+  const rule = useLoaderData() as TRule;
 
   // All rules have the title and info sent back, but this is inefficient and will be refactored later on the API end.
   const title = rule.title;
@@ -22,7 +22,6 @@ export default function Rule() {
         key={card.id}
         title={card.header}
         desc={card.content}
-        url={""}
       />
     );
   });

@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { ITechnique } from "./interfaces";
+import { TTechnique } from "./types";
 const APIURL: string = import.meta.env.VITE_API_URL;
 
 export const useTechniques = function () {
-  const [techniques, setTechniques] = useState<ITechnique[]>([]);
+  const [techniques, setTechniques] = useState<TTechnique[]>([]);
 
   useEffect(() => {
     const getTechniques = async function () {
       try {
         const results = await axios.get(`${APIURL}/techniques/`);
-        const data: ITechnique[] = results.data;
+        const data: TTechnique[] = results.data;
         setTechniques(data); // Update the state with the resolved data
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -20,4 +20,18 @@ export const useTechniques = function () {
   }, [APIURL]);
 
   return techniques;
+};
+
+
+//Format the description for the selected technique to be displayed
+export const formatTechString = (tech: TTechnique) => {
+  const { description, activation, effect } = tech;
+  const opportunityStrings = tech.opportunities.map((opp) => {
+    const { cost, effect } = opp;
+    return `${cost} ${effect}`;
+  });
+  const result = `${description}\n${activation}\n${effect}\nOpportunities:\n${opportunityStrings.join(
+    "\n"
+  )}`;
+  return result;
 };

@@ -9,11 +9,13 @@ export type TableColumn<T, K extends keyof T> = {
 export type TableProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
+  rowClick?: (row: T) => void;
 };
 
 type TableRowProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
+  rowClick?: (row: T) => void;
 };
 
 type TableColProps<T, K extends keyof T> = {
@@ -39,11 +41,22 @@ const TableHeader = <T, K extends keyof T>({
 const TableRows = <T, K extends keyof T>({
   data,
   columns,
+  rowClick,
 }: TableRowProps<T, K>): JSX.Element => {
   // Create rows from the data
   const rows = data.map((row, index) => {
     return (
-      <div key={`row-${index}`} className={`row`}>
+      <div
+        key={`row-${index}`}
+        className={`row`}
+        onClick={
+          rowClick
+            ? () => {
+                rowClick(row);
+              }
+            : () => {}
+        }
+      >
         {columns.map((column, index2) => {
           // For each row, we want to loop over the columns and only use the keys for the
           // columns we wish to add to our table in order to find the value in that cell
@@ -63,11 +76,12 @@ const TableRows = <T, K extends keyof T>({
 export function Table<T, K extends keyof T>({
   data,
   columns,
+  rowClick
 }: TableProps<T, K>): JSX.Element {
   return (
     <div className="table">
       <TableHeader columns={columns} />
-      <TableRows data={data} columns={columns} />
+      <TableRows data={data} columns={columns} rowClick={rowClick}/>
     </div>
   );
 }

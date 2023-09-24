@@ -5,7 +5,7 @@ import FetchedParagraphs from "../helpers/LinkParser";
 interface IitemProps {
   title: string;
   desc: string;
-  url: string | null;
+  url?: string;
 }
 
 export const ItemCard = function ({ title, desc, url }: IitemProps) {
