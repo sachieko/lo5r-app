@@ -1,105 +1,105 @@
 @import "../styles/variables";
 
-.table-container {
+.opp-table {
   width: 38em;
   background-color: $bgColor;
   font-size: 0.5em;
   border-radius: 5px;
   margin-top: 10px;
-}
-
-.table {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  @include custom-scrollbar;
-}
-
-.column-container {
-  background: $bpGradient;
-
-  p:hover {
-    color: $brightAccent;
-    cursor: pointer;
-  }
-}
-
-.row {
-  border-bottom: 1px solid $darkAccent2;
-
-  &:hover {
-    background: $darkAccent;
-  }
-}
-
-.row,
-.column-container {
-  display: flex;
-  flex-direction: row;
-  padding-left: 10px;
-}
-
-.row-0,
-.col-0 {
-  width: 4em;
-}
-
-.row-1,
-.col-1 {
-  width: 5em;
-}
-
-.row-2,
-.col-2 {
-  width: 3em;
-}
-
-.row-3,
-.col-3 {
-  width: 10em;
-}
-
-.row-4,
-.col-4 {
-  width: 2em;
-}
-
-@media only screen and (min-width: 780px) {
-  .table-container {
-    border-bottom: 1px solid white;
-    width: 780px;
-    font-size: 0.8em;
-  }
+  border-bottom: 1px solid $accentColor;
 
   .table {
-    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include custom-scrollbar;
+  }
+
+  .column-container {
+    background: $bpGradient;
+
+    p:hover {
+      color: $brightAccent;
+      cursor: pointer;
+    }
+  }
+
+  .row {
+    border-bottom: 1px solid $darkAccent2;
+
+    &:hover {
+      background: $darkAccent;
+    }
+  }
+
+  .row,
+  .column-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
   }
 
   .row-0,
   .col-0 {
-    width: 6em;
+    width: 4em;
   }
 
   .row-1,
   .col-1 {
-    width: 10em;
+    width: 5em;
   }
 
   .row-2,
   .col-2 {
-    width: 6em;
+    width: 3em;
   }
 
   .row-3,
   .col-3 {
-    width: 20em;
+    width: 10em;
   }
 
   .row-4,
   .col-4 {
-    width: 6em;
-    margin-left: 1em;
+    width: 2em;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .opp-table {
+    width: 700px;
+    font-size: 0.8em;
+
+    .table {
+      max-height: 800px;
+    }
+
+    .row-0,
+    .col-0 {
+      width: 5em;
+    }
+
+    .row-1,
+    .col-1 {
+      width: 7em;
+    }
+
+    .row-2,
+    .col-2 {
+      width: 6em;
+    }
+
+    .row-3,
+    .col-3 {
+      width: 22em;
+    }
+
+    .row-4,
+    .col-4 {
+      width: 10em;
+      margin-left: 1em;
+    }
   }
 }

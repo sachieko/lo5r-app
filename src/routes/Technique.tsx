@@ -41,7 +41,7 @@ export const Technique = function () {
   };
 
   return (
-    <div className="table-container">
+    <div className="tech-table">
       <SearchBar
         title="Filter:"
         value={filterWord}

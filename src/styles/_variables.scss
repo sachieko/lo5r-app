@@ -33,12 +33,12 @@ $bpGradient: linear-gradient(to top, $darkAccent2, $darkAccent);
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $accentColor;
+    background: $darkAccent;
     border-radius: 0.4rem;
   }
 
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
-    background: $brightAccent;
+    background: $accentColor;
   }
 }
