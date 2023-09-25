@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { TOpportunity } from "./types";
+import { TableColumn } from "../components/Table";
 const APIURL: string = import.meta.env.VITE_API_URL;
 
 export const useOpportunities = function () {
@@ -19,3 +20,27 @@ export const useOpportunities = function () {
   }, [APIURL]);
   return opportunities;
 };
+
+  // Define the columns we'd like for the table from the opportunity data type, header is the Column's visible title
+  export const columns: TableColumn<TOpportunity, keyof TOpportunity>[] = [
+    {
+      key: "ring",
+      header: "Ring",
+    },
+    {
+      key: "category",
+      header: "Category",
+    },
+    {
+      key: "cost",
+      header: "Cost",
+    },
+    {
+      key: "effect",
+      header: "Effect",
+    },
+    {
+      key: "name",
+      header: "Technique",
+    },
+  ];

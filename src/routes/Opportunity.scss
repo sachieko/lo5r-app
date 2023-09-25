@@ -20,7 +20,8 @@
 
   .column-container {
     background: $bpGradient;
-
+    position: sticky;
+    top: 0;
     p:hover {
       color: $brightAccent;
       cursor: pointer;
@@ -32,6 +33,7 @@
 
     &:hover {
       background: $darkAccent;
+      cursor: default;
     }
   }
 
