@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import "./ItemCard.scss";
 import FetchedParagraphs from "../helpers/LinkParser";
 
@@ -12,7 +12,7 @@ export const ItemCard = function ({ title, desc, url }: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split("\n"));
 
   return (
-    <div className="card">
+    <div className={`card`}>
       {url ? (
         <Link to={url}>
           <div className="title">{title}</div>
