@@ -59,7 +59,7 @@ export type TOpportunity = {
   technique_effect: string;
 }
 
-type TTechOpportunity = {
+export type TTechOpportunity = {
   id: number;
   ring: string;
   category: string;
