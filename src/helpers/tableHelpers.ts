@@ -1,4 +1,4 @@
-import { TableColumn } from "../components/Table";
+import { TableColumn } from "./types";
 
 /*
 This function takes in an array of object (usually from the API), a keyword to filter by, and columns array to search in

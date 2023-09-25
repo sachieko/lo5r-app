@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { TableColumn, TableProps } from "../helpers/types";
+
 type TableRowProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
