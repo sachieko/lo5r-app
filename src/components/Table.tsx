@@ -10,12 +10,14 @@ export type TableProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
   rowClick?: (row: T) => void;
+  selected?: number | null;
 };
 
 type TableRowProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
   rowClick?: (row: T) => void;
+  selected?: number | null;
 };
 
 type TableColProps<T, K extends keyof T> = {
@@ -42,13 +44,14 @@ const TableRows = <T, K extends keyof T>({
   data,
   columns,
   rowClick,
+  selected
 }: TableRowProps<T, K>): JSX.Element => {
   // Create rows from the data
   const rows = data.map((row, index) => {
     return (
       <div
         key={`row-${index}`}
-        className={`row`}
+        className={`row ${index === selected ? "focusRow" : ""}`}
         onClick={
           rowClick
             ? () => {
@@ -76,12 +79,13 @@ const TableRows = <T, K extends keyof T>({
 export function Table<T, K extends keyof T>({
   data,
   columns,
-  rowClick
+  rowClick,
+  selected,
 }: TableProps<T, K>): JSX.Element {
   return (
     <div className="table">
       <TableHeader columns={columns} />
-      <TableRows data={data} columns={columns} rowClick={rowClick}/>
+      <TableRows data={data} columns={columns} rowClick={rowClick} selected={selected}/>
     </div>
   );
 }
