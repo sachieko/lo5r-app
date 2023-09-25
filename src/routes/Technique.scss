@@ -2,7 +2,7 @@
 
 .tech-table {
   width: 38em;
-  background-color: $bgColor;
+  background-color: $cardbgColor;
   font-size: 0.5em;
   border-radius: 5px;
   margin-top: 10px;
@@ -35,6 +35,10 @@
     &:hover {
       background: $darkAccent;
     }
+  }
+
+  .focusRow {
+    background: $darkAccent3;
   }
   
   .row,

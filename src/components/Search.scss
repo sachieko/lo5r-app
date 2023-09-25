@@ -39,7 +39,10 @@
 .search {
   padding: 1px;
   border-radius: 3px;
-  border: 1px solid $accentColor;
+  border: 1px solid $darkAccent;
+  &:focus {
+    border-color: $accentColor;
+  }
 }
 
 input[type="search"] {
