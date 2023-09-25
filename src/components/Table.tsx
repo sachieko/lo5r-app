@@ -76,12 +76,12 @@ const TableRows = <T, K extends keyof T>({
 export function Table<T, K extends keyof T>({
   data,
   columns,
-  rowClick
+  rowClick,
 }: TableProps<T, K>): JSX.Element {
   return (
     <div className="table">
       <TableHeader columns={columns} />
-      <TableRows data={data} columns={columns} rowClick={rowClick}/>
+      <TableRows data={data} columns={columns} rowClick={rowClick} />
     </div>
   );
 }
