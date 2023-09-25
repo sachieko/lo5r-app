@@ -51,16 +51,8 @@ button:focus-visible {
   width: 90%;
   display: flex;
   justify-content: center;
-  margin-top: 1em;
 }
 
 .fadeElement.fade {
   opacity: 1;
-}
-
-@media only screen and (min-width: 1024px) {
-  .fadeElement {
-    width: 30em;
-    max-height: 800px;
-  }
 }

@@ -60,7 +60,7 @@ export const Technique = function () {
   };
 
   // If a particular row is clicked, it should set the url param to be the techniques ID so it can be found in the array later
-  const handleRowclick = (row: TTechnique) => {
+  const handleRowClick = (row: TTechnique) => {
     const techId = row.id;
     if (techId === Number(searchParams.get("tech"))) {
       return;
@@ -80,22 +80,24 @@ export const Technique = function () {
 
   return (
     <>
-      <div className="tech-table">
-        <SearchBar
-          title="Filter:"
-          value={filterWords}
-          onChange={handleChange}
-          onFocus={() => {}}
-          onBlur={() => {}}
-        />
+      <div className="tech-table table-container">
+        <div className="search-container">
+          <SearchBar
+            title="Filter:"
+            value={filterWords}
+            onChange={handleChange}
+            onFocus={() => {}}
+            onBlur={() => {}}
+          />
+        </div>
         <Table
           data={filteredTechniques}
           columns={columns}
-          rowClick={handleRowclick}
+          rowClick={handleRowClick}
           selected={techIndex}
         />
       </div>
-      <div className={`fadeElement ${fadeIn ? "fade" : ""}`}>
+      <div className={`tech-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {technique ? (
           <ItemCard
             title={

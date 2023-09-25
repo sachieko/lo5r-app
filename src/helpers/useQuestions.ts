@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { TQuestion } from "./types";
+import { TQuestion, TableColumn } from "./types";
 const APIURL: string = import.meta.env.VITE_API_URL;
 
 export const useQuestions = function () {
@@ -19,3 +19,10 @@ export const useQuestions = function () {
   }, [APIURL]);
   return questions;
 };
+
+export const columns: TableColumn<TQuestion, keyof TQuestion>[] = [
+  {
+    key: "title",
+    header: "Question",
+  },
+];

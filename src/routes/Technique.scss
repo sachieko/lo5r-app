@@ -1,80 +1,50 @@
 @import "../styles/variables";
 
 .tech-table {
-  width: 38em;
-  background-color: $cardbgColor;
-  font-size: 0.5em;
-  border-radius: 5px;
-  margin-top: 10px;
-  border-bottom: 1px solid $accentColor;
-
+  margin-bottom: 1em;
   .table {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
     max-height: 300px;
-    @include custom-scrollbar;
-  }
-  
-  .column-container {
-    background: $bpGradient;
-    position: sticky;
-    top: 0;
-    height: 3em;
-    width: 36em;
-    p:hover {
-      color: $brightAccent;
-      cursor: pointer;
-    }
-  }
-  
-  .row {
-    border-bottom: 1px solid $darkAccent2;
-    &:hover {
-      background: $darkAccent;
-    }
   }
 
-  .focusRow {
-    background: $darkAccent3;
+  .search-continer {
+    background-color: $cardbgColor;
   }
-  
-  .row,
+
   .column-container {
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
+    width: 36em;
   }
-  
+
   .row-0,
   .col-0 {
     width: 5em;
   }
-  
+
   .row-1,
   .col-1 {
     margin-left: 1em;
     width: 5em;
   }
-  
+
   .row-2,
   .col-2 {
     width: 4.5em;
   }
-  
+
   .row-3,
   .col-3 {
     margin-left: 1em;
     width: 14em;
   }
-  
+
   .row-4,
   .col-4 {
     margin-left: 1em;
     width: 3em;
   }
+}
+
+.tech-card {
+  width: 300px;
 }
 
 @media only screen and (min-width: 780px) {
@@ -89,41 +59,51 @@
     .table {
       max-height: 400px;
     }
-  
+
     .row-0,
     .col-0 {
       width: 10em;
     }
-  
+
     .row-1,
     .col-1 {
       width: 3em;
     }
-  
+
     .row-2,
     .col-2 {
       width: 5em;
     }
-  
+
     .row-3,
     .col-3 {
       width: 25em;
       margin-left: 1em;
-  
     }
-  
+
     .row-4,
     .col-4 {
       margin-left: 1em;
       width: 6em;
     }
   }
+
+  .tech-card {
+    width: 700px;
+  }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1080px) {
   .tech-table {
     .table {
-      max-height: 800px;
+      max-height: 80dvh;
     }
+  }
+
+  .tech-card {
+    max-height: 84dvh;
+    width: auto;
+    max-width: calc(100dvw - 800px);
+    margin-right: 2em;
   }
 }

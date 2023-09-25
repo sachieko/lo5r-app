@@ -1,4 +1,4 @@
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ItemCard.scss";
 import FetchedParagraphs from "../helpers/LinkParser";
 

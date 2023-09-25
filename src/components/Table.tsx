@@ -1,18 +1,5 @@
 import { ReactNode } from "react";
-
-// Extends key of T creates a link between obj[key] and the key which is useful for row[column.key] later in the IDE
-export type TableColumn<T, K extends keyof T> = {
-  key: K;
-  header: string;
-};
-
-export type TableProps<T, K extends keyof T> = {
-  data: Array<T>;
-  columns: Array<TableColumn<T, K>>;
-  rowClick?: (row: T) => void;
-  selected?: number | null;
-};
-
+import { TableColumn, TableProps } from "../helpers/types";
 type TableRowProps<T, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;

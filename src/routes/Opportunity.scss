@@ -1,27 +1,12 @@
 @import "../styles/variables";
 
 .opp-table {
-  width: 38em;
-  background-color: $cardbgColor;
-  font-size: 0.5em;
-  border-radius: 5px;
-  margin-top: 10px;
-  border-bottom: 1px solid $accentColor;
 
   .table {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
     max-height: 600px;
-    @include custom-scrollbar;
   }
 
   .column-container {
-    background: $bpGradient;
-    position: sticky;
-    top: 0;
     p:hover {
       color: $brightAccent;
       cursor: pointer;
@@ -32,7 +17,7 @@
     border-bottom: 1px solid $darkAccent2;
 
     &:hover {
-      background: $darkAccent;
+      background-color: $darkAccent;
       cursor: default;
     }
   }
@@ -77,7 +62,7 @@
     font-size: 0.8em;
 
     .table {
-      max-height: 800px;
+      max-height: 80dvh;
     }
 
     .row-0,

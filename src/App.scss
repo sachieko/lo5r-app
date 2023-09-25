@@ -14,6 +14,10 @@ html {
   justify-content: space-between;
   align-items: center;
   background: $bgColor;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 1em;
 
   form {
     margin: 0.7em;
@@ -41,12 +45,71 @@ html {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  .card {
+    width: 20em;
+    min-height: 10em;
+    margin-bottom: 1em;
+  }
+}
+
+.menu.fade {
+  opacity: 1;
 }
 
 #view.loading {
   opacity: 0.25;
   transition: opacity 200ms;
   transition-delay: 200ms;
+}
+.table-container {
+  width: 38em;
+  background-color: $cardbgColor;
+  font-size: 0.5em;
+  border-radius: 5px;
+  border-bottom: 1px solid $accentColor;
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 300px;
+    @include custom-scrollbar;
+  }
+
+  .column-container {
+    background: $bpGradient;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 3em;
+    p:hover {
+      color: $brightAccent;
+      cursor: default;
+    }
+  }
+
+  .row,
+  .column-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .focusRow {
+    background-color: $darkAccent3;
+  }
+
+  .row {
+    border-bottom: 1px solid $darkAccent2;
+    &:hover {
+      background-color: $darkAccent;
+      cursor: pointer;
+    }
+  }
 }
 
 .title {
@@ -61,23 +124,44 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1em;
 }
 
-@media only screen and (min-width: 1024px) {
-  #view {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    align-items: start;
-  }
+#view .menu .card {
+  width: 20em;
+}
 
+@media only screen and (min-width: 780px) {
   .menu {
     flex-flow: row wrap;
     justify-content: space-around;
-  }
-  
 
+    .card {
+      min-height: 15em;
+    }
+  }
+
+  #view .card {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .title {
     font-size: 1.6em;
+  }
+
+  .table-container {
+    margin-left: 2em;
+  }
+
+  .table-container .table {
+    max-height: 80dvh;
+  }
+
+  #view {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }

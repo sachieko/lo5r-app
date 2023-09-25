@@ -2,11 +2,13 @@
 
 .search-container {
   position: relative;
-  display: inline-block;
+  display: flex;
   margin-right: 100px;
+  flex-direction: row;
   span {
     font-family: $flavorFont;
     font-size: 0.8em;
+    margin-right: 10px;
   }
 }
 

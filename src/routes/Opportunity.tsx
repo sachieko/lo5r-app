@@ -16,7 +16,7 @@ export const Opportunity = function () {
   };
 
   return (
-    <div className="opp-table">
+    <div className="opp-table table-container">
       <SearchBar
         title="Filter:"
         value={filterWord}

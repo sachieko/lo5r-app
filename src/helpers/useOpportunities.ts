@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { TOpportunity } from "./types";
-import { TableColumn } from "../components/Table";
+import { TOpportunity, TableColumn } from "./types";
 const APIURL: string = import.meta.env.VITE_API_URL;
 
 export const useOpportunities = function () {
