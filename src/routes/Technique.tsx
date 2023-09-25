@@ -109,7 +109,7 @@ export const Technique = function () {
           <ItemCard
             title={"Select a Technique from the Table"}
             desc={
-              "Opportunity spending options are represented by 💮 in the description."
+              "If the table is empty, try a less strict filter. \nOpportunity spending options are represented by 💮 in the description."
             }
           />
         )}

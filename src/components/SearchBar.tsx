@@ -25,6 +25,7 @@ export const SearchBar = ({
         onBlur={onBlur} // Delay is used to allow search links to be clicked before disabling them
         value={value} // Necessary to cast as string
         spellCheck="false"
+        autoComplete="off"
       />
     </>
   );
