@@ -2,11 +2,11 @@
 
 .card {
   border: $cardBorder;
-  margin: 0.5em;
-  background: $bgColor;
-  width: 90%;
+  background: $cardbgColor;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  @include custom-scrollbar;
 
   .title {
     padding-left: 1em;
@@ -36,15 +36,8 @@
     border-color: grey;
   }
 }
-
 .desc p {
   padding: 1em;
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-@media only screen and (min-width: 1024px) {
-  .card {
-    width: 45%;
-  }
 }

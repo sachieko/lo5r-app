@@ -16,7 +16,7 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     4. Allow users to quickly navigate between questions ✅
   * Site has rule pages ✅
     1. Rules can be viewed in a list
-    2. Clicking a rule allows users to view it without hiding lis
+    2. Clicking a rule allows users to view it without hiding list
   * Convert app to Typescript (Front end only) ✅
   * Site can search for resources using the search bar
     1. API returns the correct resources based on the search ✅
@@ -26,18 +26,25 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
   * Site has basic lore pages to explain concepts integral to L5R ✅
     1. Explain bushido ✅, small snippets for clans, Japanese terms
     2. Explain currency (koku) ✅
-  * Site has technique pages where techniques are sorted by type
-    1. Techniques can be quickly filtered by type 
-    2. Can be searched for in a box, and clicking one allows you to view the details for the technique.
+  * Site has technique pages where techniques are sorted by type ✅
+    1. Techniques can be quickly filtered by type  ✅
+    2. Can be searched for in a box, and clicking one allows you to view the details for the technique. ✅
   * Site has opportunities page where opportunities are displayed in a table ✅
     1. Allow users to filter results in the table by ring, category, etc. ✅
     2. Allow users to view techniques related to opportunities on this page by clicking it in the table. 
+  * Site has equipment pages for weapons, armor, etc
+    1. Allow users to filter results in the tables by category, type, damage, etc.
+    2. Weapons table
+    3. Armor table
+    4. Item table
+    5. Qualities table
+  * Site has conditions page for conditions
 * Advanced features
   * Keywords can be mapped to their RESTful route for quick navigation ✅
-    1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this possibly instead of the hacky solution I use now.
+    1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this instead of the hacky solution I use now.
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
-    2. Allow admin to insert rules or lore resources
+    2. Allow admin to insert resources
   * Other things as I think of them
 
   ## Dependencies 

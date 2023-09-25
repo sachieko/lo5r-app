@@ -6,13 +6,15 @@ $plainFont: "Spectral", "Noto Sans JP", serif;
 $accentColor: #9900ff;
 $darkAccent: #4b2b82;
 $darkAccent2: #4e60d0;
+$darkAccent3: #303a81;
 $brightAccent: #58cdff;
-$bgColor: #242424;
+$bgColor: #262626;
+$cardbgColor: #222222;
 $bgDark: #1d1d1d;
 $textColor: rgba(255, 255, 255, 0.87);
 
 $navLinkBg: #301e1e;
-$cardBorder: 3px double $accentColor;
+$cardBorder: 1px solid $darkAccent;
 
 $activeLink: rgb(0, 247, 255);
 $hoverLink: silver;

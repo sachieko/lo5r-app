@@ -1,71 +1,56 @@
 @import "../styles/variables";
 
-.questionNav {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  overflow-x: hidden;
-  width: 400px;
-  max-height: 20em;
-  border: 1px solid grey;
-  @include custom-scrollbar;
+.question-table {
+  width: 300px;
+  font-size: 0.7em;
+  margin-top: 0;
 
-  a {
+  .row {
+    &:hover {
+      background-color: $darkAccent3;
+    }
+  }
+
+  .focusRow {
+    background-color: $darkAccent;
+  }
+
+  .table {
+    margin-top: 0;
+  }
+}
+
+.question-card {
+  margin-top: 1em;
+  width: 300px;
+
+  .desc {
     display: flex;
-    height: 30px;
-    border-bottom: 1px solid grey;
-    padding: 5px;
-    font-size: 12px;
-    font-family: $plainFont;
-    background-color: $bgDark;
-    color: $brightAccent;
-    justify-content: start;
+    flex-direction: column;
     align-items: center;
   }
+  .card {
+    margin-bottom: 1em;
+  }
+}
 
-  .navLink,
-  .active,
-  .pending {
-    border-radius: 0.3em;
-
-    &:hover {
-      color: $hoverLink;
-    }
+@media only screen and (min-width: 780px) {
+  .question-table {
+    width: 700px;
   }
 
-  .active {
-    color: $activeLink;
-
-    .navLink {
-      color: $activeLink;
-      border-bottom: 1px solid $activeLink;
-    }
-  }
-
-  a.pending {
-    color: $pendingLink;
-    border-bottom: 1px solid $pendingLink;
-    border-radius: 0.3em;
-    .navLink {
-      color: $pendingLink;
+  #view .question-card {
+    width: 700px;
+    .card {
+      width: 95%;
     }
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .questionNav {
-    width: 300px;
-
-    a {
-      height: 40px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .questionNav {
-    max-height: 50em;
-    border-right: 1px solid white;
-    width: 400px;
+@media only screen and (min-width: 1080px) {
+  .question-card {
+    max-width: calc(100dvw - 600px);
+    margin-top: 0;
+    max-height: 80dvh;
   }
 }

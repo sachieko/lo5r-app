@@ -17,6 +17,7 @@ export const SearchBar = ({
     <>
       <span>{title as React.ReactNode} </span>
       <input
+        name="search"
         type="search"
         className="search"
         onChange={onChange}

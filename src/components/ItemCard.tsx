@@ -12,7 +12,7 @@ export const ItemCard = function ({ title, desc, url }: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split("\n"));
 
   return (
-    <div className="card">
+    <div className={`card`}>
       {url ? (
         <Link to={url}>
           <div className="title">{title}</div>

@@ -1,14 +1,18 @@
-import { useTechniques, formatTechString } from "../helpers/useTechniques";
+import {
+  useTechniques,
+  formatTechString,
+  columns,
+} from "../helpers/useTechniques";
 import { TTechnique } from "../helpers/types";
-import { Table, TableColumn } from "../components/Table";
+import { Table } from "../components/Table";
 import "./Technique.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
 import { useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
+import { useEffect, useState } from "react";
 
 export const Technique = function () {
-  // const [filterWord, setFilterWord] = useState<string>("");
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
     tech: "1",
@@ -16,30 +20,32 @@ export const Technique = function () {
   const filterWords = searchParams.get("filter") || "";
   const techId = searchParams.get("tech") || "1";
   const techniques = useTechniques();
-  const technique = techniques.find((tech) => tech.id === Number(techId));
-  // Define the columns we'd like for the table from the opportunity data type, header is the Column's visible title
-  const columns: TableColumn<TTechnique, keyof TTechnique>[] = [
-    {
-      key: "name",
-      header: "Technique",
-    },
-    {
-      key: "rank",
-      header: "Rank",
-    },
-    {
-      key: "type",
-      header: "Type",
-    },
-    {
-      key: "description",
-      header: "Description",
-    },
-    {
-      key: "prerequisite",
-      header: "Req",
-    },
-  ];
+  const [fadeIn, setFadeIn] = useState(true);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    setFadeIn(false);
+    const timeoutId = setTimeout(() => {
+      const newTech = params.get("tech") || "1";
+      setSearchParams((prev) => {
+        prev.set("tech", newTech);
+        return prev;
+      });
+      setFadeIn(true);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
+  }, [searchParams, setSearchParams]);
+
+  // Make a new array if it should be filtered using the filterTable helper
+  // This means whether a user filters it or not we will always correctly display the selected element
+  const filteredTechniques = filterWords
+    ? filterTable(techniques, filterWords.trim().split(" "), columns)
+    : techniques;
+  const techIndex = filteredTechniques.findIndex(
+    (tech) => tech.id === Number(techId)
+  );
+  const technique = techniques[techIndex];
 
   // Grab the string from the event value to make typescript happy about types
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,45 +60,60 @@ export const Technique = function () {
   };
 
   // If a particular row is clicked, it should set the url param to be the techniques ID so it can be found in the array later
-  const handleRowclick = (row: TTechnique) => {
+  const handleRowClick = (row: TTechnique) => {
     const techId = row.id;
-    setSearchParams(
-      (prev) => {
-        prev.set("tech", techId.toString());
-        return prev;
-      },
-      { replace: true }
-    );
+    if (techId === Number(searchParams.get("tech"))) {
+      return;
+    }
+    setFadeIn(false); // Hide the current element
+    // Set the searchParam after the current element has been hidden
+    setTimeout(() => {
+      setSearchParams(
+        (prev) => {
+          prev.set("tech", techId.toString());
+          return prev;
+        },
+        { replace: true }
+      );
+    }, 300);
   };
 
   return (
     <>
-      <div className="tech-table">
-        <SearchBar
-          title="Filter:"
-          value={filterWords}
-          onChange={handleChange}
-          onFocus={() => {}}
-          onBlur={() => {}}
-        />
+      <div className="tech-table table-container">
+        <div className="search-container">
+          <SearchBar
+            title="Filter:"
+            value={filterWords}
+            onChange={handleChange}
+            onFocus={() => {}}
+            onBlur={() => {}}
+          />
+        </div>
         <Table
-          data={
-            filterWords
-              ? filterTable(techniques, filterWords.trim().split(" "), columns)
-              : techniques
-          }
+          data={filteredTechniques}
           columns={columns}
-          rowClick={handleRowclick}
+          rowClick={handleRowClick}
+          selected={techIndex}
         />
       </div>
-      {technique ? (
-        <ItemCard
-          title={
-            technique.name + ` - ${technique.type} (Rank ${technique.rank})`
-          }
-          desc={formatTechString(technique)}
-        />
-      ) : null}
+      <div className={`tech-card fadeElement ${fadeIn ? "fade" : ""}`}>
+        {technique ? (
+          <ItemCard
+            title={
+              technique.name + ` - ${technique.type} (Rank ${technique.rank})`
+            }
+            desc={formatTechString(technique)}
+          />
+        ) : (
+          <ItemCard
+            title={"Select a Technique from the Table"}
+            desc={
+              "Opportunity spending options are represented by 💮 in the description."
+            }
+          />
+        )}
+      </div>
     </>
   );
 };
