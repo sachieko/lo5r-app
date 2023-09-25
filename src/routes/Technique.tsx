@@ -105,8 +105,10 @@ export const Technique = function () {
           />
         ) : (
           <ItemCard
-            title={"Select a Technique"}
-            desc={"Opportunities are represented by 💮 in the description."}
+            title={"Select a Technique from the Table"}
+            desc={
+              "Opportunity spending options are represented by 💮 in the description."
+            }
           />
         )}
       </div>
