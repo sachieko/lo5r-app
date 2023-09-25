@@ -44,3 +44,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.fadeElement {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.fadeElement.fade {
+  opacity: 1;
+}

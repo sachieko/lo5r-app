@@ -65,7 +65,8 @@ export const Technique = function () {
     if (techId === Number(searchParams.get("tech"))) {
       return;
     }
-    setFadeIn(false);
+    setFadeIn(false); // Hide the current element
+    // Set the searchParam after the current element has been hidden
     setTimeout(() => {
       setSearchParams(
         (prev) => {
