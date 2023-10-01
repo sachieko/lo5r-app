@@ -1,0 +1,33 @@
+@import '../styles/variables';
+
+.lore-table {
+  margin-bottom: 1em;
+  .table {
+    max-height: 300px;
+  }
+
+  .search-continer {
+    background-color: $cardbgColor;
+  }
+
+  .row-0,
+  .col-0 {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .lore-table {
+    width: 600px;
+    font-size: 0.8em;
+  }
+
+}
+
+@media only screen and (min-width: 1080px) {
+  .lore-table {
+    .table {
+      max-height: 80dvh;
+    }
+  }
+}

@@ -60,7 +60,7 @@ export default function Question() {
           data={questions}
           columns={columns}
           rowClick={handleRowClick}
-          selected={Number(questionId) - 1}
+          selected={Number(questionId)}
         />
       </div>
       <div className={`fadeElement ${fadeIn ? "fade" : ""}`}>

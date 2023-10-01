@@ -48,6 +48,9 @@
 }
 
 @media only screen and (min-width: 1080px) {
+  .question-table {
+    width: 500px;
+  }
   .question-card {
     max-width: calc(100dvw - 600px);
     margin-top: 0;

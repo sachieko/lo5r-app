@@ -20,11 +20,10 @@ export const Technique = function () {
   const filterWords = searchParams.get("filter") || "";
   const techId = searchParams.get("tech") || "1";
   const techniques = useTechniques();
-  const [fadeIn, setFadeIn] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
-    setFadeIn(false);
     const timeoutId = setTimeout(() => {
       const newTech = params.get("tech") || "1";
       setSearchParams((prev) => {
@@ -42,9 +41,10 @@ export const Technique = function () {
   const filteredTechniques = filterWords
     ? filterTable(techniques, filterWords.trim().split(" "), columns)
     : techniques;
-  const techIndex = filteredTechniques.findIndex(
-    (tech) => tech.id === Number(techId)
-  );
+  // Find the index of the technique that matches the Id in the search param
+  const techIndex = techniques.findIndex((tech) => {
+    return tech.id === Number(techId);
+  });
   const technique = techniques[techIndex];
 
   // Grab the string from the event value to make typescript happy about types
@@ -94,10 +94,10 @@ export const Technique = function () {
           data={filteredTechniques}
           columns={columns}
           rowClick={handleRowClick}
-          selected={techIndex}
+          selected={Number(techId)}
         />
       </div>
-      <div className={`tech-card fadeElement ${fadeIn ? "fade" : ""}`}>
+      <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {technique ? (
           <ItemCard
             title={

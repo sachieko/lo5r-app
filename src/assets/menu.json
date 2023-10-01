@@ -7,12 +7,12 @@
   {
     "title": "Lore and Setting",
     "desc": "Contains information about the lore and setting of the game.\nThis includes information about clans, schools, creatures, and places in the world.",
-    "url": "/lore/"
+    "url": "/lore/1"
   },
   {
     "title": "Rules and Mechanics",
     "desc": "Contains rules or mechanics of the game, such as how dice rolls work or what techniques and skills do.\nThis section helps figure out the how of playing Legend of the Five Rings.",
-    "url": "/rules/"
+    "url": "/rules/1"
   },
   {
     "title": "Opportunities",
