@@ -1,6 +1,6 @@
 @import '../styles/variables';
 
-.rule-table {
+.lore-table {
   margin-bottom: 1em;
   .table {
     max-height: 300px;
@@ -17,7 +17,7 @@
 }
 
 @media only screen and (min-width: 780px) {
-  .rule-table {
+  .lore-table {
     width: 600px;
     font-size: 0.8em;
   }
@@ -25,7 +25,7 @@
 }
 
 @media only screen and (min-width: 1080px) {
-  .rule-table {
+  .lore-table {
     .table {
       max-height: 80dvh;
     }

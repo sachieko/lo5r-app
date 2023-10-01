@@ -93,7 +93,7 @@ export default function Rule() {
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {rule ? (
-          <div className="card rule-card">
+          <div className="card outer-card">
             <div className="title">
               {rule.title}
               {rule.image ? <img src={rule.image} /> : null}

@@ -26,13 +26,8 @@ const router = createBrowserRouter([
             element: <Question />,
           },
           {
-            path: "lore",
-            element: <div>browse lore</div>,
-          },
-          {
             path: "lore/:loreId",
             element: <Lore />,
-            loader: loreLoader,
           },
           {
             path: "rules/:ruleId",
