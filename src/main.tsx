@@ -7,7 +7,7 @@ import ErrorPage from "./routes/ErrorPage";
 import { Index } from "./routes/index";
 import Question from "./routes/Question";
 import Rule from "./routes/Rule";
-import Lore, { loader as loreLoader } from "./routes/Lore";
+import Lore from "./routes/Lore";
 import { Opportunity } from "./routes/Opportunity.js";
 import { Technique } from "./routes/Technique.js";
 
