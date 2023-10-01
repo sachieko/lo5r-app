@@ -162,13 +162,10 @@ html {
 
   #view .detail-card {
     width: 700px;
-    align-items: center;
-    .card {
-      width: 90%;
-    }
   }
 
-  .detail-card {
+  .detail-card,
+  .outer-card {
     width: 700px;
   }
 }
@@ -192,7 +189,8 @@ html {
     align-items: flex-start;
   }
 
-  .detail-card {
+  .detail-card,
+  .outer-card {
     max-height: 84dvh;
     max-width: calc(100dvw - 800px);
     margin-right: 2em;
