@@ -42,7 +42,9 @@ export const Technique = function () {
     ? filterTable(techniques, filterWords.trim().split(" "), columns)
     : techniques;
   // Find the index of the technique that matches the Id in the search param
-  const techIndex = techniques.findIndex((tech) => tech.id === Number(techId));
+  const techIndex = techniques.findIndex((tech) => {
+    return tech.id === Number(techId);
+  });
   const technique = techniques[techIndex];
 
   // Grab the string from the event value to make typescript happy about types
