@@ -6,7 +6,7 @@ import "./index.scss";
 import ErrorPage from "./routes/ErrorPage";
 import { Index } from "./routes/index";
 import Question from "./routes/Question";
-import Rule, { loader as ruleLoader } from "./routes/Rule";
+import Rule from "./routes/Rule";
 import Lore, { loader as loreLoader } from "./routes/Lore";
 import { Opportunity } from "./routes/Opportunity.js";
 import { Technique } from "./routes/Technique.js";
@@ -35,13 +35,8 @@ const router = createBrowserRouter([
             loader: loreLoader,
           },
           {
-            path: "rules",
-            element: <div>browse rules</div>,
-          },
-          {
             path: "rules/:ruleId",
             element: <Rule />,
-            loader: ruleLoader,
           },
           {
             path: "opps/",

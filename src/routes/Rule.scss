@@ -1,0 +1,11 @@
+@import '../styles/variables';
+
+#view .rule-card {
+  display: flex;
+  flex-flow: column;
+  width: 300px;
+  .card {
+    align-items: center;
+    width: 95%;
+  }
+}
