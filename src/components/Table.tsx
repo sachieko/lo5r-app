@@ -1,7 +1,11 @@
 import { ReactNode } from "react";
 import { TableColumn, TableProps } from "../helpers/types";
 
-type TableRowProps<T, K extends keyof T> = {
+type TableData = {
+  id: number;
+}
+
+type TableRowProps<T extends TableData, K extends keyof T> = {
   data: Array<T>;
   columns: Array<TableColumn<T, K>>;
   rowClick?: (row: T) => void;
@@ -28,7 +32,7 @@ const TableHeader = <T, K extends keyof T>({
 };
 
 // Create rows for each row of the table
-const TableRows = <T, K extends keyof T>({
+const TableRows = <T extends TableData, K extends keyof T>({
   data,
   columns,
   rowClick,
@@ -39,7 +43,7 @@ const TableRows = <T, K extends keyof T>({
     return (
       <div
         key={`row-${index}`}
-        className={`row ${index === selected ? "focusRow" : ""}`}
+        className={`row ${row.id === selected ? "focusRow" : ""}`}
         onClick={
           rowClick
             ? () => {
@@ -64,7 +68,7 @@ const TableRows = <T, K extends keyof T>({
   return <>{rows}</>;
 };
 
-export function Table<T, K extends keyof T>({
+export function Table<T extends TableData, K extends keyof T>({
   data,
   columns,
   rowClick,
