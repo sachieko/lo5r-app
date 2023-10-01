@@ -1,11 +1,47 @@
 @import '../styles/variables';
 
-#view .rule-card {
-  display: flex;
-  flex-flow: column;
+.rule-table {
+  margin-bottom: 1em;
+  .table {
+    max-height: 300px;
+  }
+
+  .search-continer {
+    background-color: $cardbgColor;
+  }
+
+  .row-0,
+  .col-0 {
+    width: 300px;
+  }
+}
+
+.rule-card {
   width: 300px;
-  .card {
+
+  .desc {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .rule-table {
+    width: 600px;
+    font-size: 0.8em;
+  }
+
+}
+
+@media only screen and (min-width: 1080px) {
+  .rule-table {
+    .table {
+      max-height: 80dvh;
+    }
+  }
+
+  .rule-card {
+    max-height: 80dvh;
   }
 }

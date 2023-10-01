@@ -7,7 +7,7 @@ import { Table } from "../components/Table";
 import { TRule } from "../helpers/types";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
-import './Rule.scss';
+import "./Rule.scss";
 
 export default function Rule() {
   const rules = useRules();
@@ -91,15 +91,17 @@ export default function Rule() {
           selected={Number(ruleId)}
         />
       </div>
-      <div className={`rule-card fadeElement ${fadeIn ? "fade" : ""}`}>
+      <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {rule ? (
-          <div className="card">
+          <div className="card rule-card">
             <div className="title">
               {rule.title}
               {rule.image ? <img src={rule.image} /> : null}
             </div>
-            <div className="desc">{FetchedParagraphs([rule.detail])}</div>
-            {cards}
+            <div className="desc">
+              {FetchedParagraphs([rule.detail])}
+              {cards}
+            </div>
           </div>
         ) : (
           <ItemCard

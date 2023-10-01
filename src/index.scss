@@ -48,9 +48,6 @@ button:focus-visible {
 .fadeElement {
   opacity: 0;
   transition: opacity 0.3s ease-out;
-  width: 90%;
-  display: flex;
-  justify-content: center;
 }
 
 .fadeElement.fade {

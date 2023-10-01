@@ -24,6 +24,6 @@ export const useRules = function () {
 export const columns: TableColumn<TRule, keyof TRule>[] = [
   {
     key: "title",
-    header: "Rule",
+    header: "Rules",
   },
 ];

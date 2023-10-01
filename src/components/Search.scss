@@ -6,8 +6,8 @@
   margin-right: 100px;
   flex-direction: row;
   span {
-    font-family: $flavorFont;
-    font-size: 0.8em;
+    font-family: $plainFont;
+    font-size: 12px;
     margin-right: 10px;
   }
 }
@@ -69,6 +69,7 @@ input[type="search"] {
 
 @media only screen and (min-width: 780px){
   .search-container span {
-    font-size: 1em;
+    font-family: $plainFont;
+    font-size: 14px;
   }
 }
