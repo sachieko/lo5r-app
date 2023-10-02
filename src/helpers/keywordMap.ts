@@ -14,4 +14,13 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   // lore 2
   koku: "/lore/2",
   currency: "/lore/2",
+  // rules 4
+  duels: "/rules/4",
+  duel: "/rules/4",
+  // rules 5
+  skirmish: "/rules/5",
+  // rules 6
+  intrigue: "/rules/6",
+  // rules 7
+  battles: "/rules/7"
 };
