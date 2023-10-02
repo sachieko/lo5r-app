@@ -14,9 +14,8 @@ const replaceKeywordsWithLinks = (paragraph: string) => {
           {word}{" "}
         </Link>
       );
-    } else {
-      return word + " ";
     }
+    return word + " ";
   });
 };
 
