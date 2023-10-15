@@ -2,7 +2,6 @@ import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { useLore, columns } from "../helpers/useLore";
 import { SearchBar } from "../components/SearchBar";
-import FetchedParagraphs from "../helpers/LinkParser";
 import { TLore } from "../helpers/types";
 import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
@@ -92,16 +91,10 @@ export default function Lore() {
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {loreItem ? (
-          <div className="card outer-card">
-            <div className="title">
-              {loreItem.title}
-              {loreItem.image ? <img src={loreItem.image} /> : null}
-            </div>
-            <div className="desc">
-              {FetchedParagraphs([loreItem.detail])}
-              {cards}
-            </div>
-          </div>
+          <ItemCard 
+          title={loreItem.title}
+          desc={loreItem.detail}
+          >{cards}</ItemCard>
         ) : (
           <ItemCard
             title="Loading the Table"

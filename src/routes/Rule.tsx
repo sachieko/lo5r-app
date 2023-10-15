@@ -1,6 +1,5 @@
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
-import FetchedParagraphs from "../helpers/LinkParser";
 import { useState, useEffect } from "react";
 import { useRules, columns } from "../helpers/useRules";
 import { Table } from "../components/Table";
@@ -93,16 +92,10 @@ export default function Rule() {
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {rule ? (
-          <div className="card outer-card">
-            <div className="title">
-              {rule.title}
-              {rule.image ? <img src={rule.image} /> : null}
-            </div>
-            <div className="desc">
-              {FetchedParagraphs([rule.detail])}
-              {cards}
-            </div>
-          </div>
+          <ItemCard 
+            title={rule.title}
+            desc={rule.detail}
+            >{cards}</ItemCard>
         ) : (
           <ItemCard
             title="Loading the Table"
