@@ -6,10 +6,10 @@ import "./index.scss";
 import ErrorPage from "./routes/ErrorPage";
 import { Index } from "./routes/index";
 import Question from "./routes/Question";
-import Rule from "./routes/Rule";
-import Lore from "./routes/Lore";
+import { Rule } from "./routes/Rule";
 import { Opportunity } from "./routes/Opportunity.js";
 import { Technique } from "./routes/Technique.js";
+import { Lore } from "./routes/Lore.js";
 
 const router = createBrowserRouter([
   {
@@ -26,11 +26,11 @@ const router = createBrowserRouter([
             element: <Question />,
           },
           {
-            path: "lore/:loreId",
+            path: "lore/:dataId",
             element: <Lore />,
           },
           {
-            path: "rules/:ruleId",
+            path: "rules/:dataId",
             element: <Rule />,
           },
           {
