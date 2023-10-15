@@ -6,9 +6,10 @@ interface IitemProps {
   title: string;
   desc: string;
   url?: string;
+  children?: JSX.Element[];
 }
 
-export const ItemCard = function ({ title, desc, url }: IitemProps) {
+export const ItemCard = function ({ title, desc, url, children }: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split("\n"));
 
   return (
@@ -21,6 +22,7 @@ export const ItemCard = function ({ title, desc, url }: IitemProps) {
         <div className="title">{title}</div>
       )}
       <div className="desc">{parablocks}</div>
+      {children}
     </div>
   );
 };

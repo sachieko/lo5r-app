@@ -5,8 +5,6 @@
   background: $cardbgColor;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  @include custom-scrollbar;
 
   .title {
     padding-left: 1em;
@@ -30,16 +28,16 @@
     margin: 1em;
     padding-left: 1em;
   }
-
-  .card {
-    margin-bottom: 1em;
-    width: 95%;
-    border-color: grey;
-    align-items: flex-start;
-  }
 }
 .desc p {
   padding: 1em;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.card > .card {
+  margin-bottom: 1em;
+  width: 95%;
+  border-color: grey;
+  align-items: flex-start;
 }
