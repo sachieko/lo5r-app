@@ -3,7 +3,7 @@ import { TableColumn, TableProps } from "../helpers/types";
 
 type TableData = {
   id: number;
-}
+};
 
 type TableRowProps<T extends TableData, K extends keyof T> = {
   data: Array<T>;
