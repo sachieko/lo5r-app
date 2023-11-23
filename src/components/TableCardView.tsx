@@ -55,7 +55,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     return <div>Loading. . .</div>;
   }
 
-  // Filter the table of rules if there are words to filter
+  // Filter the table if there are words to filter
   const filtereddata = filterWords
     ? filterTable(data, filterWords.trim().split(" "), columns)
     : data;
@@ -77,7 +77,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     );
   };
 
-  // If a particular row is clicked, it should redirect to the rule url
+  // If a particular row is clicked, it should redirect to the url
   const handleRowClick = (row: T) => {
     if (Number(dataId) === row.id) {
       // Don't do anything if they click the same row as the url
@@ -120,7 +120,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
         ) : (
           <ItemCard
             title="Loading the Table"
-            desc="Choose an element from the table"
+            desc=""
           />
         )}
       </div>

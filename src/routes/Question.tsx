@@ -6,6 +6,8 @@ import "./Question.scss";
 import { Table } from "../components/Table";
 import { TQuestion } from "../helpers/types";
 
+const fadeDelay: number = 150;
+
 export default function Question() {
   const [fadeIn, setFadeIn] = useState<boolean>(true);
   const { questionId } = useParams() || 1;
@@ -17,7 +19,7 @@ export default function Question() {
     setFadeIn(false);
     const timeoutId = setTimeout(() => {
       setFadeIn(true);
-    }, 300);
+    }, fadeDelay);
 
     return () => clearTimeout(timeoutId);
   }, [setFadeIn]);
@@ -50,7 +52,7 @@ export default function Question() {
     setTimeout(() => {
       setFadeIn(true);
       navigate(`/questions/${row.id}`);
-    }, 300);
+    }, fadeDelay);
   };
 
   return (

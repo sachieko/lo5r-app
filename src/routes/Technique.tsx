@@ -12,6 +12,8 @@ import { useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { useEffect, useState } from "react";
 
+const fadeDelay: number = 150;
+
 export const Technique = function () {
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
@@ -31,7 +33,7 @@ export const Technique = function () {
         return prev;
       });
       setFadeIn(true);
-    }, 300);
+    }, fadeDelay);
 
     return () => clearTimeout(timeoutId);
   }, [searchParams, setSearchParams]);
@@ -75,7 +77,7 @@ export const Technique = function () {
         },
         { replace: true }
       );
-    }, 300);
+    }, fadeDelay);
   };
 
   return (

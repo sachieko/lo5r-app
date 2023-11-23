@@ -52,7 +52,7 @@ html {
   flex-flow: column nowrap;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.2s ease-out;
   .card {
     width: 20em;
     min-height: 10em;
@@ -146,7 +146,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 @media only screen and (min-width: 780px) {
