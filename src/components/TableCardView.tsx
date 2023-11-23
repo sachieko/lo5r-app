@@ -24,6 +24,8 @@ type TableCardViewProps<T extends dataType, K extends keyof T> = {
   tableClass: string;
 };
 
+const fadeDelay: number = 150;
+
 // Create headers for each column of the table
 export const TableCardView = <T extends dataType, K extends keyof T>({
   columns,
@@ -44,7 +46,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     setFadeIn(false);
     const timeoutId = setTimeout(() => {
       setFadeIn(true);
-    }, 300);
+    }, fadeDelay);
 
     return () => clearTimeout(timeoutId);
   }, [setFadeIn]);
@@ -85,7 +87,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     setTimeout(() => {
       setFadeIn(true);
       navigate(`/${route}/${row.id}`); // change to the clicked url
-    }, 300);
+    }, fadeDelay);
   };
 
   const cards = dataItem?.cards.map((card) => {
