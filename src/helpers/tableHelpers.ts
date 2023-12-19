@@ -12,6 +12,10 @@ Note: Not case sensitive because it's inconvenient for mobile users
 
 const keyRings = ["air", "water", "earth", "fire", "void"];
 
+type hasRingType = {
+  ring: string;
+}
+
 export const filterTable = <T, K extends keyof T>(
   arr: T[],
   keywords: string[],
