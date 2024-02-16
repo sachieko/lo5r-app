@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { TableColumn, TableProps } from "../helpers/types";
 
 type TableData = {
@@ -19,7 +19,7 @@ type TableColProps<T, K extends keyof T> = {
 // Create headers for each column of the table
 const TableHeader = <T, K extends keyof T>({
   columns,
-}: TableColProps<T, K>): JSX.Element => {
+}: TableColProps<T, K>): React.JSX.Element => {
   const headers = columns.map((column, index) => {
     return (
       <p key={`headCell-${index}`} className={`col-${index}`}>

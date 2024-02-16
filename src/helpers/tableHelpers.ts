@@ -12,31 +12,27 @@ Note: Not case sensitive because it's inconvenient for mobile users
 
 const keyRings = ["air", "water", "earth", "fire", "void"];
 
-type hasRingType = {
-  ring: string;
-}
-
 export const filterTable = <T, K extends keyof T>(
   arr: T[],
   keywords: string[],
   columns: TableColumn<T, K>[]
 ): T[] => {
   // For each row
-  return arr.filter((row) => {
+  return arr.filter((row: T) => {
     // Check if all keywords are contained in at least one of the columns
     return keywords.every((keyword) => {
       const lcWord = keyword.toLowerCase();
-        return columns.some((column) => {
-          const columnValue = row[column.key];
-          // If the column's property is a string, check if it includes the keyword
-          if (
-            typeof columnValue === "string" &&
-            columnValue.toLowerCase().includes(keyword.toLowerCase())
-          ) {
-            return true;
-          }
-          return false;
-        });
+      return columns.some((column) => {
+        const columnValue = row[column.key];
+        // If the column's property is a string, check if it includes the keyword
+        if (
+          typeof columnValue === "string" &&
+          columnValue.toLowerCase().includes(lcWord)
+        ) {
+          return true;
+        }
+        return false;
+      });
     });
   });
 };
