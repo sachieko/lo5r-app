@@ -10,8 +10,6 @@ the object of arr, it will be included in the result array. This allows the clie
 Note: Not case sensitive because it's inconvenient for mobile users
 */
 
-const keyRings = ["air", "water", "earth", "fire", "void"];
-
 export const filterTable = <T, K extends keyof T>(
   arr: T[],
   keywords: string[],
