@@ -42,8 +42,7 @@ const formatLoreResult = function (loreResult) {
   return result;
 };
 
-export default {
-  async fetch(request, env, ctx): Promise<Response> {
+export async function onRequestGet(request, env, ctx) {
     const db = new Client(env.DB_URL);
     await db.connect();
 
@@ -64,5 +63,4 @@ export default {
     // Clean up the client
     ctx.waitUntil(db.end());
     return resp;
-  },
 };
