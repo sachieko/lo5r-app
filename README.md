@@ -1,10 +1,11 @@
 # L5R Standard Reference Document App
 
-This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Fantasy Flight Games & Recently Edge Studio)](https://www.edge-studio.net/games/l5r-core-rulebook/).
+This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio, previously published by Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
 Those interested in the game should reference the core rulebook and rely on experience in other tabletop roleplaying games if planning to run the game, but this app is supposed to serve as a resource to help a storyteller (GM) and players to reference certain rules quickly, making the game more accessible to new players.
 
-This is a personal hobby project so while I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me.
+It is currently deployed via Cloudflare at [https://lo5r-app.pages.dev](https://lo5r-app.pages.dev)
+This is a personal hobby project so I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me or open a github issue.
 
 ## Roadmap for Development
 
@@ -15,10 +16,10 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     3. Detailed information is included (School information is a to do at a later date)
     4. Allow users to quickly navigate between questions ✅
   * Site has rule pages ✅
-    1. Rules can be viewed in a list
-    2. Clicking a rule allows users to view it without hiding list
-  * Convert app to Typescript (Front end only) ✅
-  * Site can search for resources using the search bar
+    1. Rules can be viewed in a list ✅
+    2. Clicking a rule allows users to view it without hiding list ✅
+  * Built with Typescript (Support for both Front and Backend) ✅
+  * Site can search for resources using the search bar 
     1. API returns the correct resources based on the search ✅
     2. The site displays them appropriately in a dropdown view ✅
     3. Ensure consistency with mobile views ✅
@@ -46,20 +47,24 @@ This is a personal hobby project so while I wouldn't expect a lot from it, but i
     1. Use authorization via username & password
     2. Allow admin to insert resources
   * Other things as I think of them
+ 
+  ### Current Priority - Refactoring Tables strict filtering, refactoring so views are more DRY in the future
 
   ## Dependencies 
 
 Frontend:
-  * Developed using node v20.5.1, VITE v4.4.9 using React + Typescript
+  * Developed using node v20.8.0, VITE v4.4.5 using React 18.2.0 + Typescript
   * Axios 1.4.0
   * Sass 1.66.1
   * React-Router 6.15
 
 Backend: 
-  * Developed using node v20.5.1, Express v4.18.2 with a PostgreSQL database
-  * @netlify/functions
-  * cors
+  * Developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
+  * Cloudflare Workers (Has replaced netlify functions as both services have migrated)
+  * @types/express
+  * itty-router
   * dotenv
+  * cors
   * pg
   * serverless-http
   * chalk (debugging dependency)
