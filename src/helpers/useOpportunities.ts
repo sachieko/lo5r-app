@@ -8,7 +8,7 @@ export const useOpportunities = function () {
   useEffect(() => {
     const getOpps = async function () {
       try {
-        const results = await axios.get(`${APIURL}/opp/`);
+        const results = await axios.get(`${APIURL}/opps/`);
         const data: TOpportunity[] = results.data; // Assuming the API response is an array of IOpportunity
         setOpportunities(data); // Update the state with the resolved data
       } catch (error) {
