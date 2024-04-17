@@ -18,7 +18,7 @@ export const filterTable = <T, K extends keyof T>(
   // For each row
   return arr.filter((row: T) => {
     // Check if all keywords are contained in at least one of the columns
-    return keywords.every((keyword) => {
+    return  keywords.every((keyword) => {
       const lcWord = keyword.toLowerCase();
       return columns.some((column) => {
         const columnValue = row[column.key];
@@ -33,4 +33,9 @@ export const filterTable = <T, K extends keyof T>(
       });
     });
   });
+};
+
+const findStrictKeywords = <T, K extends keyof T>(columns: TableColumn<T, K>[], keywords: string[], keyArray: string[]): string[] => {
+  // 
+  return ['test']
 };
