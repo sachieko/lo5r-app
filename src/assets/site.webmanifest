@@ -1,0 +1,36 @@
+{
+  "name": "Legend of the 5 Rings SRD",
+  "short_name": "l5rsrd",
+  "start_url": "https://lo5r-app.pages.dev",
+  "display": "standalone",
+  "description": "A Standard Reference Document for the L5R Tabletop Game",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/mstile-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#262626",
+  "background_color": "#262626"
+}
