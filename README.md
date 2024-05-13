@@ -41,6 +41,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     5. Qualities table
   * Site has conditions page for conditions
 * Advanced features
+  * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
     1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this instead of the hacky solution I use now.
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
@@ -48,7 +49,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Allow admin to insert resources
   * Other things as I think of them
  
-  ### Current Priority - Refactoring Tables strict filtering, refactoring so views are more DRY in the future
+  ### Current Priority - refactoring so views are more DRY in the future
 
   ## Dependencies 
 
