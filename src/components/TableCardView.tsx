@@ -59,7 +59,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
   const filtereddata = filterWords
     ? filterTable(data, filterWords.trim().split(" "), columns)
     : data;
-  // Grab the current rule using the id parameter
+  // Grab the current data item using the id parameter
   const dataIndex = data.findIndex((dataItem) => {
     return dataItem.id == Number(dataId);
   });
