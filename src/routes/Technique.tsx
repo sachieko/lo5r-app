@@ -41,7 +41,7 @@ export const Technique = function () {
   // Make a new array if it should be filtered using the filterTable helper
   // This means whether a user filters it or not we will always correctly display the selected element
   const filteredTechniques = filterWords
-    ? filterTable(techniques, filterWords.trim().split(" "), columns)
+    ? filterTable(techniques, filterWords.trim().split(" "), columns, ["kata", "shuji", "kiho", "invocation", "ninjutsu", "ritual", "maho"], "type")
     : techniques;
   // Find the index of the technique that matches the Id in the search param
   const techIndex = techniques.findIndex((tech) => {
