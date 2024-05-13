@@ -89,7 +89,23 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
       navigate(`/${route}/${row.id}`); // change to the clicked url
     }, fadeDelay);
   };
-
+/* TODO: Maybe take a formatting function given 1 object to display from the table.
+(dataItem) => {
+dataitem?.cards.map(card => {
+  return <ItemCard key={card.id} title={card.header} desc={card.content} />;
+});
+dataItem ? (
+          <ItemCard title={dataItem.title} desc={dataItem.detail}>
+            {cards}
+          </ItemCard>
+        ) : (
+          <ItemCard
+            title="Loading the Table"
+            desc=""
+          />
+        )
+*/
+// }
   const cards = dataItem?.cards.map((card) => {
     return <ItemCard key={card.id} title={card.header} desc={card.content} />;
   });
