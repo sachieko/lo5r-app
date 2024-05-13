@@ -135,6 +135,7 @@ html {
 
 #view .menu .card {
   width: 20em;
+  height: 18em;
 }
 
 .detail-card {
@@ -151,7 +152,8 @@ html {
 @media only screen and (min-width: 780px) {
   .menu {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 0 3em;
 
     .card {
       min-height: 15em;
