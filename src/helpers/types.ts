@@ -91,3 +91,9 @@ export type TableProps<T, K extends keyof T> = {
   rowClick?: (row: T) => void;
   selected?: number | null;
 };
+
+export type TCondition = {
+  id: number;
+  title: string;
+  detail: string;
+}
