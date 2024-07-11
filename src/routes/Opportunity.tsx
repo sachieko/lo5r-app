@@ -27,7 +27,13 @@ export const Opportunity = function () {
       <Table
         data={
           filterWord
-            ? filterTable(opps, filterWord.trim().split(" "), columns, ["air", "water", "fire", "earth", "void", "any"], "ring")
+            ? filterTable(
+                opps,
+                filterWord.trim().split(" "),
+                columns,
+                ["air", "water", "fire", "earth", "void", "any"],
+                "ring"
+              )
             : opps
         }
         columns={columns}
