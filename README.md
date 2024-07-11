@@ -1,6 +1,6 @@
 # L5R Standard Reference Document App
 
-This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio, previously published by Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
+This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio under Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
 Those interested in the game should reference the core rulebook and rely on experience in other tabletop roleplaying games if planning to run the game, but this app is supposed to serve as a resource to help a storyteller (GM) and players to reference certain rules quickly, making the game more accessible to new players.
 
@@ -40,6 +40,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     4. Item table
     5. Qualities table
   * Site has conditions page for conditions
+  * Site has terrain qualities page for terrain
 * Advanced features
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
