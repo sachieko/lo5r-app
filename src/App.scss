@@ -53,11 +53,6 @@ html {
   align-items: center;
   opacity: 0;
   transition: opacity 0.2s ease-out;
-  .card {
-    width: 20em;
-    min-height: 10em;
-    margin-bottom: 1em;
-  }
 }
 
 .menu.fade {
@@ -70,18 +65,21 @@ html {
   transition-delay: 200ms;
 }
 .table-container {
-  width: 38em;
+  margin: 0 1em 1em;
   background-color: $cardbgColor;
-  font-size: 0.5em;
+  font-size: 0.7em;
   border-radius: 5px;
+  border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
+  .search-container {
+    margin: 0.5em 0.5em;
+    background-color: $cardbgColor;
+  }
 
   .table {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
     overflow-y: auto;
-    overflow-x: hidden;
     max-height: 300px;
     @include custom-scrollbar;
   }
@@ -92,6 +90,7 @@ html {
     top: 0;
     z-index: 1;
     height: 3em;
+    align-items: center;
     p:hover {
       color: $brightAccent;
       cursor: default;
@@ -123,27 +122,33 @@ html {
   font-size: 1.4em;
   color: $accentColor;
   margin: 0;
-  padding: 1em;
 }
 
 #view {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1em;
+  padding: 1em 1em 2em 1em;
+  p {
+    font-size: 1.2em;
+  }
 }
 
 #view .menu .card {
   width: 20em;
-  height: 18em;
+  height: 15em;
+  & > .desc {
+    overflow-y: auto;
+    @include custom-scrollbar;
+  }
+  margin: 1em;
 }
 
 .detail-card {
-  width: 300px;
+  max-width: fit-content;
 }
 
 .detail-card > .card {
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,15 +161,10 @@ html {
     padding: 0 3em;
 
     .card {
-      min-height: 15em;
+      min-height: 8em;
     }
   }
-
-  #view .detail-card {
-    width: 700px;
-  }
-
-  .detail-card > .card {
+  .table-container > .table {
     width: 700px;
   }
 }
@@ -175,17 +175,23 @@ html {
   }
 
   .table-container {
-    margin-left: 2em;
-  }
-
-  .table-container .table {
-    max-height: 80dvh;
+    .table {
+      max-height: 80dvh;
+    }
   }
 
   #view {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: flex-start;
+
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  .detail-card {
+    margin-left: 2em;
   }
 
   .detail-card > .card {

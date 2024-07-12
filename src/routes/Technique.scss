@@ -1,7 +1,8 @@
 @import "../styles/variables";
 
 .tech-table {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  font-size: 0.6em;
   .table {
     max-height: 300px;
   }
@@ -10,47 +11,37 @@
     background-color: $cardbgColor;
   }
 
-  .column-container {
-    width: 36em;
-  }
-
   .row-0,
   .col-0 {
-    width: 5em;
+    width: 6em;
   }
 
   .row-1,
   .col-1 {
     margin-left: 1em;
-    width: 5em;
+    width: 4em;
   }
 
   .row-2,
   .col-2 {
-    width: 4.5em;
+    width: 6em;
   }
 
   .row-3,
   .col-3 {
-    margin-left: 1em;
-    width: 14em;
+    width: 10em;
   }
 
   .row-4,
   .col-4 {
     margin-left: 1em;
-    width: 3em;
+    width: 7em;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .tech-table {
-    width: 700px;
     font-size: 0.8em;
-
-    .column-container {
-      width: 54em;
-    }
 
     .table {
       max-height: 400px;
@@ -58,7 +49,7 @@
 
     .row-0,
     .col-0 {
-      width: 10em;
+      width: 8em;
     }
 
     .row-1,
@@ -68,12 +59,13 @@
 
     .row-2,
     .col-2 {
+      margin-left: 1em;
       width: 5em;
     }
 
     .row-3,
     .col-3 {
-      width: 25em;
+      width: 24em;
       margin-left: 1em;
     }
 

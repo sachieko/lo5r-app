@@ -8,7 +8,7 @@ import { Table } from "../components/Table";
 import "./Technique.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { useEffect, useState } from "react";
 
@@ -19,6 +19,7 @@ export const Technique = function () {
     filter: "",
     tech: "1",
   });
+  const navigate = useNavigate();
   const filterWords = searchParams.get("filter") || "";
   const techId = searchParams.get("tech") || "1";
   const techniques = useTechniques();
@@ -70,13 +71,8 @@ export const Technique = function () {
     setFadeIn(false); // Hide the current element
     // Set the searchParam after the current element has been hidden
     setTimeout(() => {
-      setSearchParams(
-        (prev) => {
-          prev.set("tech", techId.toString());
-          return prev;
-        },
-        { replace: true }
-      );
+      setFadeIn(true);
+      navigate(`/techniques/?filter=${filterWords}&tech=${techId}`);
     }, fadeDelay);
   };
 

@@ -1,6 +1,8 @@
 @import "../styles/variables";
 
 .opp-table {
+  margin-bottom: 2em;
+  font-size: 0.5em;
   .table {
     max-height: 600px;
   }
@@ -35,7 +37,7 @@
 
   .row-1,
   .col-1 {
-    width: 5em;
+    width: 6em;
   }
 
   .row-2,
@@ -45,25 +47,28 @@
 
   .row-3,
   .col-3 {
-    width: 14em;
+    width: 22em;
   }
 
   .row-4,
   .col-4 {
     margin-left: 1em;
-    width: 2em;
+    width: 6em;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .opp-table {
-    width: 700px;
     font-size: 0.8em;
-
-    .table {
-      max-height: 80dvh;
+    height: 80dvh;
+    & > span {
+      font-size: 1.4em;
     }
-
+    .table {
+      width: auto;
+      max-width: 700px;
+      max-height: 78dvh;
+    }
     .row-0,
     .col-0 {
       width: 5em;
@@ -81,12 +86,28 @@
 
     .row-3,
     .col-3 {
-      width: 22em;
+      width: 28em;
     }
 
     .row-4,
     .col-4 {
       width: 10em;
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .opp-table {
+    .table {
+      max-width: none;
+    }
+    .row-3,
+    .col-3 {
+      width: 34em;
+    }
+    .row-4,
+    .col-4 {
+      width: auto;
     }
   }
 }

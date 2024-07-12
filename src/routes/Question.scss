@@ -1,9 +1,7 @@
 @import "../styles/variables";
 
 .question-table {
-  width: 300px;
   font-size: 0.7em;
-  margin-top: 0;
 
   .row {
     &:hover {
@@ -22,45 +20,25 @@
 
 .question-card {
   margin-top: 1em;
-  width: 300px;
-
+  margin-right: auto;
   .desc {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .card {
-    margin-bottom: 1em;
-  }
-}
-
-.question-card > .desc > .card {
-  border-color: silver;
 }
 
 @media only screen and (min-width: 780px) {
-  .question-table {
-    width: 700px;
-  }
-
-  #view .question-card {
-    width: 700px;
-    .card {
-      width: 95%;
-    }
-  }
 }
 
 @media only screen and (min-width: 1080px) {
   .question-table {
-    width: 500px;
     font-size: 12px;
   }
 
   .question-card {
-    max-width: calc(100dvw - 600px);
-    margin-top: 0;
     max-height: 80dvh;
+    margin-left: 3em;
     overflow-y: auto;
     @include custom-scrollbar;
   }

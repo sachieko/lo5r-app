@@ -1,32 +1,46 @@
 @import "../styles/variables";
 
 .conditions-table {
-  .table {
-    max-height: 300px;
+  .col-0,
+  .row-0 {
+    width: 175px;
   }
-
-  .search-container {
-    background-color: $cardbgColor;
+  .col-1,
+  .row-1 {
+    width: 125px;
   }
-
-  .row-0,
-  .col-0 {
-    width: 300px;
+  .col-2,
+  .row-2 {
+    width: 50px;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .conditions-table {
-    width: 700px;
     font-size: 0.8em;
+    .col-0,
+    .row-0 {
+      min-width: 300px;
+    }
+    .col-1,
+    .row-1 {
+      min-width: 150px;
+    }
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .conditions-table {
-    width: 500px;
     .table {
       max-height: 80dvh;
+    }
+    .col-0,
+    .row-0 {
+      min-width: 300px;
+    }
+    .col-1,
+    .row-1 {
+      min-width: 180px;
     }
   }
 }
