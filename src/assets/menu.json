@@ -27,12 +27,12 @@
   {
     "title": "Conditions",
     "desc": "Contains a list of conditions all characters can have.",
-    "url": "/conditions/"
+    "url": "/conditions/1"
   },
   {
     "title": "Terrain Qualities",
     "desc": "Contains a list of Terrain qualities.",
-    "url": "/terrains/"
+    "url": "/terrains/1"
   },
   {
     "title": "About This App",
