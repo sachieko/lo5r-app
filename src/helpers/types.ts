@@ -3,7 +3,7 @@ export type Tchoice = {
   stat: string | null;
   choice: string | null;
   choiceInfo: string | null;
-}
+};
 
 export type TQuestion = {
   title: string;
@@ -12,13 +12,13 @@ export type TQuestion = {
   id: number;
   image: string | null;
   choices: Tchoice[];
-}
+};
 
 export type TCard = {
   id: number;
   header: string;
   content: string;
-}
+};
 
 export type TLore = {
   id: number;
@@ -26,7 +26,7 @@ export type TLore = {
   detail: string;
   image: string | null;
   cards: TCard[];
-}
+};
 
 export type TRule = {
   id: number;
@@ -35,13 +35,13 @@ export type TRule = {
   detail: string;
   image: string | null;
   cards: TCard[];
-}
+};
 
 export type TSearch = {
   link: string;
   title: string;
   detail: string;
-}
+};
 
 export type TOpportunity = {
   id: number;
@@ -57,7 +57,7 @@ export type TOpportunity = {
   description: string;
   activation: string;
   technique_effect: string;
-}
+};
 
 export type TTechOpportunity = {
   id: number;
@@ -65,7 +65,7 @@ export type TTechOpportunity = {
   category: string;
   cost: string;
   effect: string;
-}
+};
 
 export type TTechnique = {
   id: number;
@@ -77,7 +77,7 @@ export type TTechnique = {
   activation: string;
   effect: string;
   opportunities: TTechOpportunity[];
-}
+};
 
 // Extends key of T creates a link between obj[key] and the key which is useful for row[column.key] later in the IDE
 export type TableColumn<T, K extends keyof T> = {
@@ -96,4 +96,10 @@ export type TCondition = {
   id: number;
   title: string;
   detail: string;
-}
+};
+
+export type TTerrain = {
+  id: number;
+  title: string;
+  detail: string;
+};

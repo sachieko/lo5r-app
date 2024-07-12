@@ -1,0 +1,32 @@
+@import "../styles/variables";
+
+.terrains-table {
+  .table {
+    max-height: 300px;
+  }
+
+  .search-container {
+    background-color: $cardbgColor;
+  }
+
+  .row-0,
+  .col-0 {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .terrains-table {
+    width: 700px;
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .terrains-table {
+    width: 500px;
+    .table {
+      max-height: 80dvh;
+    }
+  }
+}
