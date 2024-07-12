@@ -26,4 +26,12 @@ export const columns: TableColumn<TCondition, keyof TCondition>[] = [
     key: "title",
     header: "Conditions",
   },
+  {
+    key: "book",
+    header: "Source",
+  },
+  {
+    key: "pg",
+    header: "page",
+  },
 ];
