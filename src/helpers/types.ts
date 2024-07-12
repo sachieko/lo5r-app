@@ -96,10 +96,14 @@ export type TCondition = {
   id: number;
   title: string;
   detail: string;
+  book: string;
+  pg: number;
 };
 
 export type TTerrain = {
   id: number;
   title: string;
   detail: string;
+  book: string;
+  pg: number;
 };
