@@ -24,6 +24,7 @@ export const SearchBar = ({
         onFocus={onFocus}
         onBlur={onBlur} // Delay is used to allow search links to be clicked before disabling them
         value={value} // Necessary to cast as string
+        placeholder="Enter search term"
         spellCheck="false"
         autoComplete="off"
       />
