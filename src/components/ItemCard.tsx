@@ -7,9 +7,11 @@ interface IitemProps {
   desc: string;
   url?: string;
   children?: JSX.Element[];
+  book?: string;
+  pg?: number;
 }
 
-export const ItemCard = function ({ title, desc, url, children }: IitemProps) {
+export const ItemCard = function ({ title, desc, url, children, book, pg }: IitemProps) {
   const parablocks = FetchedParagraphs(desc.split("\n"));
 
   return (
@@ -23,6 +25,8 @@ export const ItemCard = function ({ title, desc, url, children }: IitemProps) {
       )}
       <div className="desc">{parablocks}</div>
       {children}
+
+      <span className="card-bookRef">{book ? `${book} pg. ${pg}` : ``}</span>
     </div>
   );
 };

@@ -26,6 +26,8 @@ export type TLore = {
   detail: string;
   image: string | null;
   cards: TCard[];
+  book?: string;
+  pg?: number;
 };
 
 export type TRule = {
@@ -35,6 +37,8 @@ export type TRule = {
   detail: string;
   image: string | null;
   cards: TCard[];
+  book?: string;
+  pg?: number;
 };
 
 export type TSearch = {

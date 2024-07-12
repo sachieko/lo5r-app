@@ -15,6 +15,8 @@ type dataType = {
     header: string;
     content: string;
   }[];
+  book?: string;
+  pg?: number;
 };
 
 type TableCardViewProps<T extends dataType, K extends keyof T> = {
@@ -130,7 +132,7 @@ dataItem ? (
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {dataItem ? (
-          <ItemCard title={dataItem.title} desc={dataItem.detail}>
+          <ItemCard title={dataItem.title} desc={dataItem.detail} book={dataItem.book} pg={dataItem.pg} >
             {cards}
           </ItemCard>
         ) : (
