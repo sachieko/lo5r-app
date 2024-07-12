@@ -1,6 +1,6 @@
 [
   {
-    "title": "20 Questions Character Creation",
+    "title": "20-Q Character Creation",
     "desc": "Creating a new character?\nThe 20 questions process runs you through the how-to of making a new character step by step.",
     "url": "/questions/1"
   },
@@ -35,8 +35,13 @@
     "url": "/terrains/1"
   },
   {
-    "title": "About This App",
-    "desc": "Designed by Sachieko!\nThis is a personal non-profit project, but if you would like to contribute assistance to improving the site in some way, feel free to get in touch or open an issue on Github.",
+    "title": "Disclaimer",
+    "desc": "This is a personal non-profit project intended as an easily-accessible digital reference for products you already own and will not be designed to replace them. Please ensure you only access content in accordance with your local laws. If you have concerns, please contact me via github.",
     "url": "https://github.com/sachieko/lo5r-app"
+  },
+  {
+    "title": "About",
+    "desc": "This is a single-person project at the moment, with the goal of creating an easily accessed digital reference for during gameplay. For more detail on my project, feel free to check out my github repo for this project via this link! - Sachieko",
+    "url": "https://github.com/sachieko/lo5rapp"
   }
 ]
