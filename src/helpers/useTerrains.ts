@@ -26,4 +26,12 @@ export const columns: TableColumn<TTerrain, keyof TTerrain>[] = [
     key: "title",
     header: "Terrain Qualities",
   },
+  {
+    key: "book",
+    header: "Source",
+  },
+  {
+    key: "pg",
+    header: "Page",
+  },
 ];
