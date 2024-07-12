@@ -10,6 +10,8 @@ import { Rule } from "./routes/Rule";
 import { Opportunity } from "./routes/Opportunity.js";
 import { Technique } from "./routes/Technique.js";
 import { Lore } from "./routes/Lore.js";
+import { Conditions } from "./routes/Conditions.js";
+import { Terrains } from "./routes/Terrains.js";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
             path: "techniques/",
             element: <Technique />,
           },
+          {
+            path: "conditions/:dataId",
+            element: <Conditions />
+          },
+          {
+            path: "terrains/:dataId",
+            element: <Terrains />
+          }
         ],
       },
     ],
