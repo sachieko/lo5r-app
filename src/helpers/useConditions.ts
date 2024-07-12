@@ -32,6 +32,6 @@ export const columns: TableColumn<TCondition, keyof TCondition>[] = [
   },
   {
     key: "pg",
-    header: "page",
+    header: "Page",
   },
 ];
