@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.jsx";
+import App from "./App.tsx";
 import "./index.scss";
 import ErrorPage from "./routes/ErrorPage";
 import { Index } from "./routes/index";
 import Question from "./routes/Question";
 import { Rule } from "./routes/Rule";
-import { Opportunity } from "./routes/Opportunity.js";
-import { Technique } from "./routes/Technique.js";
-import { Lore } from "./routes/Lore.js";
-import { Conditions } from "./routes/Conditions.js";
-import { Terrains } from "./routes/Terrains.js";
+import { Opportunity } from "./routes/Opportunity.tsx";
+import { Technique } from "./routes/Technique.tsx";
+import { Lore } from "./routes/Lore.tsx";
+import { Conditions } from "./routes/Conditions.tsx";
+import { Terrains } from "./routes/Terrains.tsx";
 
 const router = createBrowserRouter([
   {
@@ -26,31 +26,38 @@ const router = createBrowserRouter([
           {
             path: "questions/:questionId",
             element: <Question />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "lore/:dataId",
             element: <Lore />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "rules/:dataId",
             element: <Rule />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "opps/",
             element: <Opportunity />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "techniques/",
             element: <Technique />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "conditions/:dataId",
-            element: <Conditions />
+            element: <Conditions />,
+            errorElement: <ErrorPage />,
           },
           {
             path: "terrains/:dataId",
-            element: <Terrains />
-          }
+            element: <Terrains />,
+            errorElement: <ErrorPage />,
+          },
         ],
       },
     ],
