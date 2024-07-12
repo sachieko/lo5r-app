@@ -39,16 +39,18 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     3. Armor table
     4. Item table
     5. Qualities table
-  * Site has conditions page for conditions
-  * Site has terrain qualities page for terrain
+  * Site has conditions page for conditions ✅
+    1. Update link filters for conditions ✅
+  * Site has terrain qualities page for terrain ✅
+    1. Update link filters for terrain qualities ✅
 * Advanced features
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
-    1. Improve the mapping for certain words. This will be reviewed once the site is functional. API could create this instead of the hacky solution I use now.
+    1. Improve or automate the mapping for certain words. API could create this instead of the hacky solution I use now.
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert resources
-  * Other things as I think of them
+  * This roadmap is being added to!
  
   ### Current Priority - refactoring so views are more DRY in the future
 
