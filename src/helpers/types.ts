@@ -81,6 +81,8 @@ export type TTechnique = {
   activation: string;
   effect: string;
   opportunities: TTechOpportunity[];
+  book: string;
+  pg: number;
 };
 
 // Extends key of T creates a link between obj[key] and the key which is useful for row[column.key] later in the IDE

@@ -102,6 +102,8 @@ export const Technique = function () {
               technique.name + ` - ${technique.type} (Rank ${technique.rank})`
             }
             desc={formatTechString(technique)}
+            book={technique.book}
+            pg={technique.pg}
           />
         ) : (
           <ItemCard
