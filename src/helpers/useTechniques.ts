@@ -25,8 +25,8 @@ export const useTechniques = function () {
 export const formatTechString = (tech: TTechnique) => {
   const { description, activation, effect } = tech;
   const opportunityStrings = tech.opportunities.map((opp) => {
-    const { cost, effect } = opp;
-    return `${cost} ${effect}`;
+    const { cost, ring, effect } = opp;
+    return `(${ring})${cost}: ${effect}`;
   });
   const result = `${description}\n${activation}\n${effect}\nOpportunities:\n${opportunityStrings.join(
     "\n"
