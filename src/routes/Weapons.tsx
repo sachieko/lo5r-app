@@ -17,6 +17,7 @@ export const Weapons = function () {
 
   return (
     <>
+      <section className="weapons">
       <div className="weapons-note">
         Note: All weapons have their damage and deadliness displayed in the format of "1h/2h"
         If a weapon has different ways of using it in a 1h or 2h grip, the two possibilities will be shown as "1h/2h or 1h/2h"
@@ -28,33 +29,34 @@ export const Weapons = function () {
           onChange={handleChange}
           onFocus={() => {}}
           onBlur={() => {}}
-        />
+          />
         <Table
           data={
             filterWord
-              ? filterTable(
-                  weapons,
-                  filterWord.trim().split(" "),
-                  columns,
-                  [
-                    "sword",
-                    "polearm",
-                    "special",
-                    "shield",
-                    "blunt",
-                    "bow",
-                    "unarmed",
-                    "axe",
-                    "improvised",
-                    "hand",
-                  ],
-                  "type"
-                )
-              : weapons
+            ? filterTable(
+              weapons,
+              filterWord.trim().split(" "),
+              columns,
+              [
+                "sword",
+                "polearm",
+                "special",
+                "shield",
+                "blunt",
+                "bow",
+                "unarmed",
+                "axe",
+                "improvised",
+                "hand",
+              ],
+              "type"
+            )
+            : weapons
           }
           columns={columns}
-        />
+          />
       </div>
+      </section>
     </>
   );
 };
