@@ -25,8 +25,10 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     3. Ensure consistency with mobile views ✅
     4. Can find: rules ✅, lore ✅, techniques ✅, keywords (such as opportunities)
   * Site has basic lore pages to explain concepts integral to L5R ✅
-    1. Explain bushido ✅, small snippets for clans, Japanese terms
-    2. Explain currency (koku) ✅
+    1. Explain bushido ✅, 
+    2. Small snippets for clans, 
+    3. Explain currency (koku) ✅
+    4. Various misc Japanese terms
   * Site has technique pages where techniques are sorted by type ✅
     1. Techniques can be quickly filtered by type  ✅
     2. Can be searched for in a box, and clicking one allows you to view the details for the technique. ✅
@@ -34,8 +36,8 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     1. Allow users to filter results in the table by ring, category, etc. ✅
     2. Allow users to view techniques related to opportunities on this page by clicking it in the table. 
   * Site has equipment pages for weapons, armor, etc
-    1. Allow users to filter results in the tables by category, type, damage, etc.
-    2. Weapons table
+    1. Allow users to filter results in the tables by category, type, damage, etc.✅
+    2. Weapons table ✅
     3. Armor table
     4. Item table
     5. Qualities table ✅

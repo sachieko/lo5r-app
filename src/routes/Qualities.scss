@@ -29,16 +29,13 @@
 
 @media only screen and (min-width: 1080px) {
   .qualities-table {
-    .table {
-      max-height: 80dvh;
-    }
     .col-0,
     .row-0 {
       min-width: 300px;
     }
     .col-1,
     .row-1 {
-      min-width: 180px;
+      min-width: 240px;
     }
   }
 }
