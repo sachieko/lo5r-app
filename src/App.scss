@@ -69,7 +69,7 @@ html {
   background-color: $cardbgColor;
   font-size: 0.7em;
   flex-grow: 1;
-  height: auto;
+  height: 45dvh;
   border-radius: 5px;
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
@@ -81,6 +81,7 @@ html {
   .table {
     display: flex;
     flex-direction: column;
+    max-height: 43dvh;
     overflow-y: auto;
     @include custom-scrollbar;
   }
@@ -173,8 +174,9 @@ html {
   }
 
   .table-container {
+    max-height: 80dvh;
     .table {
-      max-height: 80dvh;
+      max-height: 78dvh;
     }
   }
 

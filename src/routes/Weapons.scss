@@ -16,11 +16,6 @@ section.weapons {
   width: 95%;
   height: auto;
   flex-grow: 1;
-  overflow-x: auto;
-  overflow-y: hidden;
-  .table {
-    max-height: 600px;
-  }
 
   .row,
   .column-container {
