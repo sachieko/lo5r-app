@@ -70,14 +70,6 @@ section.weapons {
   .col-10 {
     width: 2em;
   }
-
-  .row-1,
-  .row-3,
-  .row-5,
-  .row-7,
-  .row-9 {
-    background-color: adjust-hue($color: $cardbgColor, $degrees: 0)
-  }
 }
 
 @media only screen and (min-width: 780px) {
