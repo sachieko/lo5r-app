@@ -26,7 +26,7 @@ export const formatTechString = (tech: TTechnique) => {
   const { description, activation, effect } = tech;
   const opportunityStrings = tech.opportunities.map((opp) => {
     const { cost, ring, effect } = opp;
-    return `(${ring})${cost}: ${effect}`;
+    return cost == null ? '' : `(${ring})${cost}: ${effect}`;
   });
   const result = `${description}\n${activation}\n${effect}\nOpportunities:\n${opportunityStrings.join(
     "\n"
