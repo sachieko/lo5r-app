@@ -7,25 +7,10 @@
 .weapons-table {
   margin-bottom: 2em;
   font-size: 0.5em;
+  width: 95dvw;
   .table {
     max-height: 600px;
     overflow-x: auto;
-  }
-
-  .column-container {
-    p:hover {
-      color: $brightAccent;
-      cursor: pointer;
-    }
-  }
-
-  .row {
-    border-bottom: 1px solid $darkAccent2;
-    
-    &:hover {
-      background-color: $darkAccent;
-      cursor: default;
-    }
   }
 
   .row,
@@ -33,6 +18,7 @@
     display: flex;
     flex-direction: row;
     padding-left: 10px;
+    justify-content: space-around;
   }
 
   .row-0,
@@ -53,7 +39,7 @@
   }
   .row-4,
   .col-4 {
-    width: 4em;
+    width: 8em;
   }
   .row-5,
   .col-5 {
@@ -82,6 +68,11 @@
 }
 
 @media only screen and (min-width: 780px) {
+
+  .weapons-note {
+    font-size: 1em;
+  }
+
   .weapons-table {
     font-size: 0.8em;
     height: 80dvh;
@@ -96,9 +87,13 @@
 }
 
 @media only screen and (min-width: 1080px) {
+
+  .weapons-note {
+    font-size: 1.4em;
+  }
   .weapons-table {
     .table {
-      max-width: none;
+      width: 100%;
     }
   }
 }
