@@ -16,17 +16,9 @@ section.weapons {
   width: 95%;
   height: auto;
   max-height: 75dvh;
-  flex-grow: 1;
 
   .table {
     max-height: 72dvh;
-  }
-  .row,
-  .column-container {
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    justify-content: space-evenly;
   }
 
   .column-container {
