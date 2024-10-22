@@ -1,0 +1,44 @@
+.qualities-table {
+  .col-0,
+  .row-0 {
+    width: 175px;
+  }
+  .col-1,
+  .row-1 {
+    width: 125px;
+  }
+  .col-2,
+  .row-2 {
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .qualities-table {
+    font-size: 0.8em;
+    .col-0,
+    .row-0 {
+      min-width: 300px;
+    }
+    .col-1,
+    .row-1 {
+      min-width: 150px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .qualities-table {
+    .table {
+      max-height: 80dvh;
+    }
+    .col-0,
+    .row-0 {
+      min-width: 300px;
+    }
+    .col-1,
+    .row-1 {
+      min-width: 180px;
+    }
+  }
+}
