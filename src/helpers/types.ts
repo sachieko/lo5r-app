@@ -124,7 +124,7 @@ export type Quality = {
 
 export type Weapon = {
 	id: number;
-	name: string;
+	title: string;
 	type: string;
 	skill: string;
 	range: string;

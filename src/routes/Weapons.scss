@@ -1,0 +1,79 @@
+@import "../styles/variables";
+
+.weapons-table {
+  margin-bottom: 2em;
+  font-size: 0.5em;
+  .table {
+    max-height: 600px;
+  }
+
+  .column-container {
+    p:hover {
+      color: $brightAccent;
+      cursor: pointer;
+    }
+  }
+
+  .row {
+    border-bottom: 1px solid $darkAccent2;
+
+    &:hover {
+      background-color: $darkAccent;
+      cursor: default;
+    }
+  }
+
+  .row,
+  .column-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+  }
+
+  .row-0,
+  .row-1,
+  .row-2,
+  .row-3,
+  .row-4,
+  .row-5,
+  .row-6,
+  .row-7,
+  .row-8,
+  .row-9,
+  .row-10,
+  .col-0
+  .col-1
+  .col-2
+  .col-3
+  .col-4
+  .col-5
+  .col-6
+  .col-7
+  .col-8
+  .col-9
+  .col-10 {
+    width: fit-content;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .weapons-table {
+    font-size: 0.8em;
+    height: 80dvh;
+    & > span {
+      font-size: 1.4em;
+    }
+    .table {
+      width: fit-content;
+      max-width: 700px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .weapons-table {
+    .table {
+      max-width: none;
+    }
+  }
+}
