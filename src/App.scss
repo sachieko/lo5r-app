@@ -73,6 +73,9 @@ html {
   border-radius: 5px;
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
+  .searchbar-title {
+    font-size: 1em;
+  }
   .search-container {
     margin: 0.5em 0.5em;
     background-color: $cardbgColor;

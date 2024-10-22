@@ -15,7 +15,7 @@ export const SearchBar = ({
 }: ISearchBarProps): JSX.Element => {
   return (
     <>
-      <span>{title as React.ReactNode} </span>
+      <span className={"searchbar-title"}>{title as React.ReactNode} </span>
       <input
         name="search"
         type="search"
