@@ -12,6 +12,7 @@ import { Technique } from "./routes/Technique.tsx";
 import { Lore } from "./routes/Lore.tsx";
 import { Conditions } from "./routes/Conditions.tsx";
 import { Terrains } from "./routes/Terrains.tsx";
+import { Qualities } from "./routes/Qualities.tsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
           {
             path: "terrains/:dataId",
             element: <Terrains />,
+            errorElement: <ErrorPage />,
+          },
+          {
+            path: "qualities/:dataId",
+            element: <Qualities />,
             errorElement: <ErrorPage />,
           },
         ],

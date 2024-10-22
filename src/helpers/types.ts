@@ -113,3 +113,26 @@ export type TTerrain = {
   book: string;
   pg: number;
 };
+
+export type Quality = {
+	id: number;
+	title: string;
+	detail: string;
+	book: string;
+	pg: number;
+};
+
+export type Weapon = {
+	id: number;
+	name: string;
+	type: string;
+	skill: string;
+	range: string;
+	damage: string;
+	deadliness: string;
+	rarity: number;
+	cost: string;
+	book: string;
+	pg: number;
+	qualities: Quality[];
+};

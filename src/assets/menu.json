@@ -30,6 +30,11 @@
     "url": "/conditions/1"
   },
   {
+    "title": "Item Qualities",
+    "desc": "Contains a list of qualities an item can have.",
+    "url": "/qualities/1"
+  },
+  {
     "title": "Terrain Qualities",
     "desc": "Contains a list of Terrain qualities.",
     "url": "/terrains/1"

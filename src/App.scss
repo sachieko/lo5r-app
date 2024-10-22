@@ -137,11 +137,11 @@ html {
 #view .menu .card {
   width: 20em;
   height: 15em;
+  margin: 1em;
   & > .desc {
     overflow-y: auto;
     @include custom-scrollbar;
   }
-  margin: 1em;
 }
 
 .detail-card {
