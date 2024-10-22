@@ -46,28 +46,36 @@ section.weapons {
   .col-7,
   .row-9,
   .col-9 {
-    width: 4em;
+    width: fit-content;
+    padding: 5px 1em;
   }
 
   .row-0,
   .col-0 {
-    width: 5em;
+    width: fit-content;
+    padding: 5px;
+    padding-right: 1em;
   }
   .row-3,
   .col-3 {
-    width: 3em;
+    width: fit-content;
+    padding: 5px 1em;
   }
 
   .row-8,
   .col-8 {
-    width: 6em;
+    width: fit-content;
+    padding: 5px 1em;
   }
   .row-4 {
-    width: 8em;
+    width: fit-content;
+    padding: 5px 1em;
   }
   .row-10,
   .col-10 {
-    width: 2em;
+    width: fit-content;
+    padding: 5px 0;
+    padding-left: 1em;
   }
 }
 
@@ -80,7 +88,7 @@ section.weapons {
     font-size: 0.8em;
     width: 100%;
     & > span {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
     .table {
       width: 100%;

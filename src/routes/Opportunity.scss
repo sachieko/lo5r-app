@@ -3,8 +3,9 @@
 .opp-table {
   margin-bottom: 2em;
   font-size: 0.5em;
+  max-height: 85dvh;
   .table {
-    max-height: 600px;
+    max-height: 82dvh;
   }
 
   .column-container {
@@ -60,14 +61,12 @@
 @media only screen and (min-width: 780px) {
   .opp-table {
     font-size: 0.8em;
-    height: 80dvh;
     & > span {
       font-size: 1.4em;
     }
     .table {
       width: auto;
       max-width: 700px;
-      max-height: 78dvh;
     }
     .row-0,
     .col-0 {
