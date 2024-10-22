@@ -38,7 +38,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Weapons table
     3. Armor table
     4. Item table
-    5. Qualities table
+    5. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
   * Site has terrain qualities page for terrain ✅
