@@ -66,7 +66,7 @@ const router = createBrowserRouter([
             errorElement: <ErrorPage />,
           },
           {
-            path: "weapons/:dataId",
+            path: "weapons/",
             element: <Weapons />,
             errorElement: <ErrorPage />,
           }
