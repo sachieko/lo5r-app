@@ -2,6 +2,8 @@
 
 section.weapons {
   width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
 .weapons-note {
@@ -11,8 +13,11 @@ section.weapons {
 .weapons-table {
   margin-bottom: 2em;
   font-size: 0.5em;
-  width: fit-content;
+  width: 95%;
+  height: auto;
+  flex-grow: 1;
   overflow-x: auto;
+  overflow-y: hidden;
   .table {
     max-height: 600px;
   }
@@ -22,66 +27,60 @@ section.weapons {
     display: flex;
     flex-direction: row;
     padding-left: 10px;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .column-container {
     padding: 10px;
   }
 
+  .row-1,
+  .col-1,
+  .row-2,
+  .col-2,
+  .col-4,
+  .row-5,
+  .col-5,
+  .row-6,
+  .col-6,
+  .row-7,
+  .col-7,
+  .row-9,
+  .col-9 {
+    width: 4em;
+  }
+
   .row-0,
   .col-0 {
     width: 5em;
-  }
-  .row-1,
-  .col-1 {
-    width: 4em;
-  }
-  .row-2,
-  .col-2 {
-    width: 4em;
   }
   .row-3,
   .col-3 {
     width: 3em;
   }
 
-  .col-4 {
-    width: 4em;
-  }
-
-  .row-4,
-  .col-4 {
-    width: 8em;
-  }
-  .row-5,
-  .col-5 {
-    width: 4em;
-  }
-  .row-6,
-  .col-6 {
-    width: 4em;
-  }
-  .row-7,
-  .col-7 {
-    width: 4em;
-  }
   .row-8,
   .col-8 {
     width: 6em;
   }
-  .row-9,
-  .col-9 {
-    width: 4em;
+  .row-4 {
+    width: 8em;
   }
   .row-10,
   .col-10 {
     width: 2em;
   }
+
+  .row-1,
+  .row-3,
+  .row-5,
+  .row-7,
+  .row-9 {
+    background-color: adjust-hue($color: $cardbgColor, $degrees: 0)
+  }
 }
 
 @media only screen and (min-width: 780px) {
-
   .weapons-note {
     font-size: 1em;
   }
@@ -101,7 +100,6 @@ section.weapons {
 }
 
 @media only screen and (min-width: 1080px) {
-
   .weapons-note {
     font-size: 1.4em;
   }
