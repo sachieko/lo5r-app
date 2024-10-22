@@ -69,7 +69,7 @@ html {
   background-color: $cardbgColor;
   font-size: 0.7em;
   flex-grow: 1;
-  height: 45dvh;
+  max-height: 45dvh;
   border-radius: 5px;
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
@@ -137,8 +137,8 @@ html {
 }
 
 #view .menu .card {
-  width: 20em;
-  height: 15em;
+  width: 30em;
+  height: 20em;
   margin: 1em;
   & > .desc {
     overflow-y: auto;
