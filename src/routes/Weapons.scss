@@ -15,8 +15,12 @@ section.weapons {
   font-size: 0.5em;
   width: 95%;
   height: auto;
+  max-height: 75dvh;
   flex-grow: 1;
 
+  .table {
+    max-height: 72dvh;
+  }
   .row,
   .column-container {
     display: flex;
@@ -74,13 +78,11 @@ section.weapons {
 
   .weapons-table {
     font-size: 0.8em;
-    height: 80dvh;
     width: 100%;
     & > span {
       font-size: 1.4em;
     }
     .table {
-      max-height: 78dvh;
       width: 100%;
     }
   }
@@ -88,6 +90,6 @@ section.weapons {
 
 @media only screen and (min-width: 1080px) {
   .weapons-note {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
