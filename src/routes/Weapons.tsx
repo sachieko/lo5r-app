@@ -19,8 +19,9 @@ export const Weapons = function () {
     <>
       <section className="weapons">
       <div className="weapons-note">
-        Note: All weapons have their damage and deadliness displayed in the format of "1h/2h"
-        If a weapon has different ways of using it in a 1h or 2h grip, the two possibilities will be shown as "1h/2h or 1h/2h"
+        Note: All weapons have their damage and deadliness displayed in the format of "1h/2h"<br/><br/>
+        If a weapon has different ways of using it in a 1h or 2h grip, the two possibilities will be shown as "1h/2h or 1h/2h"<br/><br/>
+        If a weapon has a specific property only for certain grips, it will be in the damage column. Ex: "1h Snaring/2h" or "1h/2h Snaring"
       </div>
       <div className="weapons-table table-container">
         <SearchBar

@@ -7,7 +7,7 @@
 .weapons-table {
   margin-bottom: 2em;
   font-size: 0.5em;
-  width: 95dvw;
+  width: fit-content;
   .table {
     max-height: 600px;
     overflow-x: auto;
@@ -19,6 +19,10 @@
     flex-direction: row;
     padding-left: 10px;
     justify-content: space-around;
+  }
+
+  .column-container {
+    padding: 10px;
   }
 
   .row-0,
@@ -35,8 +39,13 @@
   }
   .row-3,
   .col-3 {
+    width: 3em;
+  }
+
+  .col-4 {
     width: 4em;
   }
+
   .row-4,
   .col-4 {
     width: 8em;
@@ -63,7 +72,7 @@
   }
   .row-10,
   .col-10 {
-    width: 4em;
+    width: 2em;
   }
 }
 
@@ -80,8 +89,8 @@
       font-size: 1.4em;
     }
     .table {
-      width: fit-content;
       max-height: 78dvh;
+      width: 100%;
     }
   }
 }
@@ -90,10 +99,5 @@
 
   .weapons-note {
     font-size: 1.4em;
-  }
-  .weapons-table {
-    .table {
-      width: 100%;
-    }
   }
 }
