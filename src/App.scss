@@ -73,6 +73,7 @@ html {
   border-radius: 5px;
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
+  max-width: max-content;
   .searchbar-title {
     font-size: 1em;
   }
@@ -168,7 +169,7 @@ html {
 
   }
   .table-container > .table {
-    width: 700px;
+    width: max-content;
   }
 }
 
