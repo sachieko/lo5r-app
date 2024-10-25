@@ -61,16 +61,19 @@
     }
 
     .row-3,
-    .col-3 {
-      width: 24em;
+    .col-3,
+    .row-4,
+    .col-4 {
+      width: 4em;
       margin-left: 1em;
     }
 
-    .row-4,
-    .col-4 {
+    .row-5,
+    .col-5 {
       margin-left: 1em;
-      width: 6em;
+      width: 2em;
     }
+
   }
 }
 
