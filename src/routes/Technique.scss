@@ -2,7 +2,7 @@
 
 .tech-table {
   margin-bottom: 2em;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   max-height: 33dvh;
   .table {
     max-height: 30dvh;
@@ -14,13 +14,12 @@
 
   .row-0,
   .col-0 {
-    width: 6em;
+    width: 10em;
   }
 
   .row-1,
   .col-1 {
-    margin-left: 1em;
-    width: 4em;
+    width: 3em;
   }
 
   .row-2,
@@ -29,54 +28,28 @@
   }
 
   .row-3,
-  .col-3 {
-    width: 3em;
-  }
-
+  .col-3,
   .row-4,
   .col-4 {
+    width: 6em;
+  }
+
+  .row-5,
+  .col-5 {
     width: 3em;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .tech-table {
-    font-size: 0.8em;
-
-    .row-0,
-    .col-0 {
-      width: 8em;
-    }
-
-    .row-1,
-    .col-1 {
-      width: 3em;
-    }
-
-    .row-2,
-    .col-2 {
-      width: 5em;
-    }
-
-    .row-3,
-    .col-3,
-    .row-4,
-    .col-4 {
-      width: 3em;
-    }
-
-    .row-5,
-    .col-5 {
-      width: 2em;
-    }
-
+    font-size: 0.8rem;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .tech-table {
     max-height: 80dvh;
-   & > .table {
+    & > .table {
       max-height: 70dvh;
       width: auto;
     }
@@ -85,6 +58,6 @@
 
 @media only screen and (max-width: 400px) {
   .tech-table {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 }
