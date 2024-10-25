@@ -91,7 +91,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
       navigate(`/${route}/${row.id}`); // change to the clicked url
     }, fadeDelay);
   };
-/* TODO: Maybe take a formatting function given 1 object to display from the table.
+  /* TODO: Maybe take a formatting function given 1 object to display from the table.
 (dataItem) => {
 dataitem?.cards.map(card => {
   return <ItemCard key={card.id} title={card.header} desc={card.content} />;
@@ -107,22 +107,20 @@ dataItem ? (
           />
         )
 */
-// }
+  // }
   const cards = dataItem?.cards.map((card) => {
     return <ItemCard key={card.id} title={card.header} desc={card.content} />;
   });
   return (
     <>
-        <div className="search-container">
-          <SearchBar
-            title="Filter:"
-            value={filterWords}
-            onChange={handleChange}
-            onFocus={() => {}}
-            onBlur={() => {}}
-          />
-        </div>
       <div className={`${tableClass} table-container`}>
+        <SearchBar
+          title="Filter:"
+          value={filterWords}
+          onChange={handleChange}
+          onFocus={() => {}}
+          onBlur={() => {}}
+        />
         <Table
           data={filtereddata}
           columns={columns}
@@ -132,14 +130,16 @@ dataItem ? (
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
         {dataItem ? (
-          <ItemCard title={dataItem.title} desc={dataItem.detail} book={dataItem.book} pg={dataItem.pg} >
+          <ItemCard
+            title={dataItem.title}
+            desc={dataItem.detail}
+            book={dataItem.book}
+            pg={dataItem.pg}
+          >
             {cards}
           </ItemCard>
         ) : (
-          <ItemCard
-            title="Loading the Table"
-            desc=""
-          />
+          <ItemCard title="Loading the Table" desc="" />
         )}
       </div>
     </>
