@@ -67,10 +67,6 @@
     & > span {
       font-size: 1.4em;
     }
-    .table {
-      width: auto;
-      max-width: 95dvw;
-    }
     .row-0,
     .col-0 {
       width: 5em;
@@ -100,9 +96,6 @@
 
 @media only screen and (min-width: 1080px) {
   .opp-table {
-    .table {
-      max-width: none;
-    }
     .row-3,
     .col-3 {
       width: 34em;
