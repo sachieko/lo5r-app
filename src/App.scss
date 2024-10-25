@@ -73,7 +73,7 @@ html {
   border-radius: 5px;
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
-  max-width: max-content;
+  max-width: 95dvw;
   .searchbar-title {
     font-size: 1em;
   }
@@ -87,6 +87,7 @@ html {
     flex-direction: column;
     max-height: 38dvh;
     overflow-y: auto;
+    max-width: max-content;
     @include custom-scrollbar;
   }
 
@@ -152,7 +153,7 @@ html {
 }
 
 .detail-card {
-  max-width: fit-content;
+  max-width: max-content;
 }
 
 .detail-card > .card {
@@ -168,9 +169,6 @@ html {
     padding: 0 3em;
 
   }
-  .table-container > .table {
-    width: max-content;
-  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -179,6 +177,7 @@ html {
   }
 
   .table-container {
+    max-width: max-content;
     max-height: 85dvh;
     height: auto;
     .table {
