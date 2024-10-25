@@ -5,9 +5,9 @@
   display: flex;
   margin-right: 100px;
   flex-direction: row;
-  span {
+  div {
     font-family: $plainFont;
-    font-size: 14px;
+    font-size: 1rem;
     margin-right: 10px;
   }
 }
