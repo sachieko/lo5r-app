@@ -40,6 +40,7 @@
     max-height: 80dvh;
     margin-left: 3rem;
     overflow-y: auto;
+    width: 50dvw;
     @include custom-scrollbar;
   }
 }
