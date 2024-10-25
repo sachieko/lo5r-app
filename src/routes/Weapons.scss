@@ -1,7 +1,7 @@
 @import "../styles/variables";
 
 section.weapons {
-  width: dvw;
+  width: 95dvw;
   display: flex;
   flex-direction: column;
 }
@@ -16,6 +16,7 @@ section.weapons {
   width: 95dvw;
   height: auto;
   max-height: 30dvh;
+  max-width: inherit;
 
   .table {
     max-height: 27dvh;
@@ -44,7 +45,6 @@ section.weapons {
   .row-0,
   .col-0 {
     width: 5em;
-
   }
   .row-3,
   .col-3 {
@@ -85,5 +85,9 @@ section.weapons {
 @media only screen and (min-width: 1080px) {
   .weapons-note {
     font-size: 1.2em;
+  }
+
+  .weapons-table {
+    max-width: 95dvw;
   }
 }
