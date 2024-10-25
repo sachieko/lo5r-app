@@ -15,7 +15,7 @@ export const SearchBar = ({
 }: ISearchBarProps): JSX.Element => {
   return (
     <>
-      <span className={"searchbar-title"}>{title as React.ReactNode} </span>
+      <span className={"searchbar-container"}>{title as React.ReactNode} 
       <input
         name="search"
         type="search"
@@ -28,6 +28,7 @@ export const SearchBar = ({
         spellCheck="false"
         autoComplete="off"
       />
+      </span>
     </>
   );
 };
