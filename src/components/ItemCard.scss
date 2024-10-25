@@ -7,7 +7,7 @@
   flex-direction: column;
 
   .title {
-    padding: 0.5em 0.5em;
+    padding: 0.5rem 0.5rem;
     color: $brightAccent;
   }
 
@@ -23,16 +23,16 @@
 
   .emphasis {
     font-weight: 700;
-    margin: 1em;
-    padding-left: 1em;
+    margin: 1rem;
+    padding-left: 1rem;
   }
 }
 .desc p {
-  padding: 5px 1em;
+  padding: 5px 1rem;
 }
 
 .card .card {
-  margin: 0.7em 1em;
+  margin: 0.7rem 1rem;
   border-color: grey;
   align-items: flex-start;
   width: 95%;

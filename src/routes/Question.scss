@@ -1,7 +1,7 @@
 @import "../styles/variables";
 
 .question-table {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 
   .row {
     &:hover {
@@ -19,7 +19,7 @@
 }
 
 .question-card {
-  margin-top: 1em;
+  margin-top: 1rem;
   margin-right: auto;
   .desc {
     display: flex;
@@ -38,7 +38,7 @@
 
   .question-card {
     max-height: 80dvh;
-    margin-left: 3em;
+    margin-left: 3rem;
     overflow-y: auto;
     @include custom-scrollbar;
   }

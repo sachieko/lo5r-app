@@ -1,7 +1,7 @@
 @import "../styles/variables";
 
 .tech-table {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
   font-size: 0.6rem;
   max-height: 33dvh;
   .table {
@@ -14,35 +14,64 @@
 
   .row-0,
   .col-0 {
-    width: 10em;
+    width: 10rem;
   }
 
   .row-1,
   .col-1 {
-    width: 3em;
+    width: 3rem;
   }
 
   .row-2,
   .col-2 {
-    width: 4em;
+    width: 5.5rem;
   }
 
   .row-3,
   .col-3,
   .row-4,
   .col-4 {
-    width: 6em;
+    width: 4rem;
   }
 
   .row-5,
   .col-5 {
-    width: 3em;
+    width: 3rem;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .tech-table {
     font-size: 0.8rem;
+
+    .row-0,
+  .col-0 {
+    width: 15rem;
+  }
+
+  .row-1,
+  .col-1 {
+    width: 3rem;
+  }
+
+  .row-2,
+  .col-2 {
+    width: 5.5rem;
+  }
+
+  .row-3,
+  .col-3 {
+    width: 4rem;
+  }
+  .row-4,
+  .col-4 {
+    width: 4rem;
+  }
+
+  .row-5,
+  .col-5 {
+    width: 3rem;
+  }
   }
 }
 

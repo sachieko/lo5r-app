@@ -7,7 +7,7 @@ html {
 
 .topNav {
   width: 100%;
-  height: 3em;
+  height: 3rem;
   border-bottom: 1px solid #fff;
   display: flex;
   flex-direction: row;
@@ -17,21 +17,21 @@ html {
   position: sticky;
   top: 0;
   z-index: 2;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 
   form {
-    margin: 0.7em;
+    margin: 0.7rem;
     display: flex;
     flex-direction: row;
     span {
-      margin-right: 0.5em;
+      margin-right: 0.5rem;
     }
   }
 
   .title {
     padding: 0;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .title:hover {
@@ -65,9 +65,9 @@ html {
   transition-delay: 200ms;
 }
 .table-container {
-  margin: 0 1em 1em;
+  margin: 0 1rem 1rem;
   background-color: $cardbgColor;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   flex-grow: 1;
   max-height: 45dvh;
   border-radius: 5px;
@@ -75,10 +75,10 @@ html {
   border-bottom: 1px solid $accentColor;
   max-width: 95dvw;
   .searchbar-title {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .search-container {
-    margin: 0.5em 0.5em;
+    margin: 0.5rem 0.5rem;
     background-color: $cardbgColor;
   }
 
@@ -98,6 +98,7 @@ html {
     z-index: 1;
     height: 3dvh;
     align-items: center;
+    text-align: center;
     p:hover {
       color: $brightAccent;
       cursor: default;
@@ -127,7 +128,7 @@ html {
 
 .title {
   font-family: $flavorFont;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   color: $accentColor;
   margin: 0;
 }
@@ -136,16 +137,16 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 1em 2em 1em;
+  padding: 1rem 1rem 2rem 1rem;
   p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
 #view .menu .card {
-  width: 20em;
-  height: 15em;
-  margin: 1em;
+  width: 20rem;
+  height: 15rem;
+  margin: 1rem;
   & > .desc {
     overflow-y: auto;
     @include custom-scrollbar;
@@ -166,14 +167,14 @@ html {
   .menu {
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 0 3em;
+    padding: 0 3rem;
 
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .title {
-    font-size: 1.6em;
+    font-size: 1.6rem;
   }
 
   .table-container {
@@ -190,16 +191,16 @@ html {
     justify-content: flex-start;
     align-items: flex-start;
     .menu .card {
-      width: 30em;
-      height: 20em;
+      width: 30rem;
+      height: 20rem;
     }
     p {
-      font-size: 1.3em;
+      font-size: 1.3rem;
     }
   }
 
   .detail-card {
-    margin-left: 2em;
+    margin-left: 2rem;
   }
 
   .detail-card > .card {

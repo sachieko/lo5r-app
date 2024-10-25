@@ -7,12 +7,12 @@ section.weapons {
 }
 
 .weapons-note {
-  margin: 1em;
+  margin: 1rem;
 }
 
 .weapons-table {
-  margin-bottom: 2em;
-  font-size: 4px;
+  margin-bottom: 2rem;
+  font-size: .5rem;
   width: 95dvw;
   height: auto;
   max-height: 30dvh;
@@ -39,41 +39,41 @@ section.weapons {
   .col-7,
   .row-9,
   .col-9 {
-    width: 5em;
+    width: 5rem;
   }
 
   .row-0,
   .col-0 {
-    width: 5em;
+    width: 5rem;
   }
   .row-3,
   .col-3 {
-    width: 5em;
+    width: 5rem;
   }
 
   .row-8,
   .col-8 {
-    width: 10em;
+    width: 10rem;
   }
   .row-4 {
-    width: 4em;
+    width: 4rem;
   }
   .row-10,
   .col-10 {
-    width: 2em;
+    width: 2rem;
   }
 }
 
 @media only screen and (min-width: 780px) {
   .weapons-note {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .weapons-table {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     max-height: 75dvh;
     & > span {
-      font-size: 1.2em;
+      font-size: 1.2rem;
     }
     .table {
       width: 100%;
@@ -84,7 +84,7 @@ section.weapons {
 
 @media only screen and (min-width: 1080px) {
   .weapons-note {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .weapons-table {
