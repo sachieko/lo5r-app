@@ -98,7 +98,7 @@ html {
     z-index: 1;
     height: 3dvh;
     align-items: center;
-    text-align: center;
+    
     p:hover {
       color: $brightAccent;
       cursor: default;
@@ -111,6 +111,7 @@ html {
     flex-direction: row;
     padding-left: 10px;
     justify-content: space-between;
+    text-align: center;
   }
 
   .focusRow {
@@ -139,7 +140,7 @@ html {
   align-items: center;
   padding: 1rem 1rem 2rem 1rem;
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -195,7 +196,7 @@ html {
       height: 20rem;
     }
     p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
   }
 

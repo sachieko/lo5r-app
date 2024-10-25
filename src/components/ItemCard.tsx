@@ -26,7 +26,7 @@ export const ItemCard = function ({ title, desc, url, children, book, pg }: Iite
       <div className="desc">{parablocks}</div>
       {children}
 
-      <span className="card-bookRef">{book ? `${book} pg. ${pg === 0 ? 'N/A' : pg}` : ``}</span>
+      <span className="card-bookRef">{book ? `${book} pg. ${pg ? 'N/A' : pg}` : ``}</span>
     </div>
   );
 };

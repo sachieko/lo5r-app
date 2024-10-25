@@ -24,7 +24,7 @@
 
   .row-2,
   .col-2 {
-    width: 5.5rem;
+    width: 6rem;
   }
 
   .row-3,
@@ -54,23 +54,18 @@
     width: 3rem;
   }
 
-  .row-2,
-  .col-2 {
-    width: 5.5rem;
-  }
-
   .row-3,
   .col-3 {
-    width: 4rem;
+    width: 5.5rem;
   }
   .row-4,
   .col-4 {
-    width: 4rem;
+    width: 10rem;
   }
 
   .row-5,
   .col-5 {
-    width: 3rem;
+    width: 4rem;
   }
   }
 }
@@ -78,7 +73,7 @@
 @media only screen and (min-width: 1080px) {
   .tech-table {
     max-height: 80dvh;
-    & > .table {
+    .table {
       max-height: 70dvh;
       width: auto;
     }
