@@ -23,8 +23,12 @@ section.weapons {
   }
 
   .column-container {
-    width: max-content;
     padding: 10px;
+  }
+
+  .column-container,
+  .row {
+    width: max-content;
   }
 
   .row-6,
@@ -94,5 +98,10 @@ section.weapons {
 
   .weapons-table {
     max-width: 95dvw;
+    .column-container,
+    .row {
+      width: auto;
+      flex-grow: 1;
+    }
   }
 }
