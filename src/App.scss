@@ -76,6 +76,7 @@ html {
   width: 95dvw;
   overflow-y: auto;
   @include custom-scrollbar;
+  
   .searchbar-container {
     font-size: 1rem;
   }

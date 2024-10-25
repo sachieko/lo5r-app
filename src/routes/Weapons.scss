@@ -16,8 +16,7 @@ section.weapons {
   width: 95dvw;
   height: 60dvh;
   max-width: 95dvw;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
 
   .table {
     max-height: inherit;
