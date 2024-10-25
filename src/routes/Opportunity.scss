@@ -1,4 +1,4 @@
-@import "../styles/variables";
+@use "../styles/variables";
 
 .opp-table {
   margin-bottom: 2rem;
@@ -11,16 +11,16 @@
 
   .column-container {
     p:hover {
-      color: $brightAccent;
+      color: variables.$brightAccent;
       cursor: pointer;
     }
   }
 
   .row {
-    border-bottom: 1px solid $darkAccent2;
+    border-bottom: 1px solid variables.$darkAccent2;
 
     &:hover {
-      background-color: $darkAccent;
+      background-color: variables.$darkAccent;
       cursor: default;
     }
   }

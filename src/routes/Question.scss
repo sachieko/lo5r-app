@@ -1,4 +1,4 @@
-@import "../styles/variables";
+@use "../styles/variables";
 
 .question-table {
   .column-container {
@@ -8,12 +8,12 @@
 
   .row {
     &:hover {
-      background-color: $darkAccent3;
+      background-color: variables.$darkAccent3;
     }
   }
 
   .focusRow {
-    background-color: $darkAccent;
+    background-color: variables.$darkAccent;
   }
 
   .table {
@@ -49,6 +49,6 @@
     margin-left: 3rem;
     overflow-y: auto;
     width: 50dvw;
-    @include custom-scrollbar;
+    @include variables.custom-scrollbar;
   }
 }

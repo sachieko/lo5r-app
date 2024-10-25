@@ -1,11 +1,11 @@
-@import "./styles/variables";
+@use "./styles/variables";
 
 :root {
-  font-family: $plainFont;
+  font-family: variables.$plainFont;
   font-weight: 400;
   color-scheme: light dark;
-  color: $textColor;
-  background-color: $bgColor;
+  color: variables.$textColor;
+  background-color: variables.$bgColor;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,17 +13,17 @@
 }
 
 a {
-  color: $brightAccent;
+  color: variables.$brightAccent;
   text-decoration: inherit;
 }
 a:hover {
-  color: $hoverLink;
+  color: variables.$hoverLink;
 }
 
 body {
   margin: 0;
   overflow-y: auto;
-  @include custom-scrollbar;
+  @include variables.custom-scrollbar;
 }
 
 button {
@@ -38,7 +38,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: $accentColor;
+  border-color: variables.$accentColor;
 }
 button:focus,
 button:focus-visible {

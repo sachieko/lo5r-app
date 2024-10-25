@@ -1,8 +1,7 @@
-@import "./styles/variables";
-$card-bg: url("./assets/soft-kill.png");
+@use "./styles/variables";
 
 html {
-  background-image: $card-bg;
+  background-image: variables.$card-bg;
 }
 
 .topNav {
@@ -13,7 +12,7 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: $bgColor;
+  background: variables.$bgColor;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -35,15 +34,15 @@ html {
   }
 
   .title:hover {
-    color: $hoverLink;
+    color: variables.$hoverLink;
   }
 
   .active {
-    color: $activeLink;
+    color: variables.$activeLink;
   }
 
   .pending {
-    color: $pendingLink;
+    color: variables.$pendingLink;
   }
 }
 
@@ -67,15 +66,15 @@ html {
 
 .table-container {
   margin: 0 1rem 1rem;
-  background-color: $cardbgColor;
+  background-color: variables.$cardbgColor;
   font-size: 0.7rem;
   height: 45dvh;
   border-radius: 5px;
-  border: 1px solid $darkAccent;
-  border-bottom: 1px solid $accentColor;
+  border: 1px solid variables.$darkAccent;
+  border-bottom: 1px solid variables.$accentColor;
   width: 90dvw;
   overflow-y: auto;
-  @include custom-scrollbar;
+  @include variables.custom-scrollbar;
 
   .table {
     display: flex;
@@ -99,15 +98,15 @@ html {
     height: 25px;
     font-size: 1.2rem;
     min-width: 200px;
-    background-color: $cardbgColor;
+    background-color: variables.$cardbgColor;
   }
   .column-container {
-    background: $bpGradient;
+    background: variables.$bpGradient;
     height: 3dvh;
     align-items: center;
 
     p:hover {
-      color: $brightAccent;
+      color: variables.$brightAccent;
       cursor: default;
     }
   }
@@ -122,22 +121,22 @@ html {
   }
 
   .focusRow {
-    background-color: $darkAccent3;
+    background-color: variables.$darkAccent3;
   }
 
   .row {
-    border-bottom: 1px solid $darkAccent2;
+    border-bottom: 1px solid variables.$darkAccent2;
     &:hover {
-      background-color: $darkAccent;
+      background-color: variables.$darkAccent;
       cursor: pointer;
     }
   }
 }
 
 .title {
-  font-family: $flavorFont;
+  font-family: variables.$flavorFont;
   font-size: 1.4rem;
-  color: $accentColor;
+  color: variables.$accentColor;
   margin: 0;
 }
 
@@ -153,7 +152,7 @@ html {
 
   .search-container {
     margin: 0.5rem 0.5rem;
-    background-color: $cardbgColor;
+    background-color: variables.$cardbgColor;
   }
   p {
     font-size: 0.8rem;
@@ -166,7 +165,7 @@ html {
   margin: 1rem;
   & > .desc {
     overflow-y: auto;
-    @include custom-scrollbar;
+    @include variables.custom-scrollbar;
   }
 }
 
@@ -227,6 +226,6 @@ html {
     max-width: 50dvw;
     width: auto;
     min-width: 20dvw;
-    @include custom-scrollbar;
+    @include variables.custom-scrollbar;
   }
 }

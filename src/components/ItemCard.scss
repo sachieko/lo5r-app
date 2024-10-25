@@ -1,23 +1,23 @@
-@import "../styles/variables";
+@use "../styles/variables";
 
 .card {
-  border: $cardBorder;
-  background: $cardbgColor;
+  border: variables.$cardBorder;
+  background: variables.$cardbgColor;
   display: flex;
   flex-direction: column;
 
   .title {
     padding: 0.5rem 0.5rem;
-    color: $brightAccent;
+    color: variables.$brightAccent;
   }
 
   a div {
-    background-color: $bgDark;
-    border-bottom: 1px solid $darkAccent;
-    color: $brightAccent;
+    background-color: variables.$bgDark;
+    border-bottom: 1px solid variables.$darkAccent;
+    color: variables.$brightAccent;
 
     &:hover {
-      color: $hoverLink;
+      color: variables.$hoverLink;
     }
   }
 
