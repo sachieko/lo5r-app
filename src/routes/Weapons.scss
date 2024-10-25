@@ -1,7 +1,7 @@
 @import "../styles/variables";
 
 section.weapons {
-  width: 95%;
+  width: dvw;
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@ section.weapons {
 .weapons-table {
   margin-bottom: 2em;
   font-size: 4px;
-  width: 95%;
+  width: 95dvw;
   height: auto;
   max-height: 30dvh;
   max-width: auto;
@@ -79,7 +79,7 @@ section.weapons {
     }
     .table {
       width: 100%;
-      max-height: 72dvh;
+      max-height: 70dvh;
     }
   }
 }
