@@ -40,11 +40,11 @@ export const columns: TableColumn<Weapon, keyof Weapon>[] = [
   },
   {
     key: "damage",
-    header: "Damage 1h/2h",
+    header: "Damage (1H/2H)",
   },
   {
     key: "deadliness",
-    header: "Deadliness 1h/2h",
+    header: "Deadliness (1H/2H)",
   },
   {
     key: "rarity",
