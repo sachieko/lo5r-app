@@ -79,7 +79,6 @@ export const Technique = function () {
   return (
     <>
       <div className="tech-table table-container">
-        <div className="search-container">
           <SearchBar
             title="Filter:"
             value={filterWords}
@@ -87,7 +86,6 @@ export const Technique = function () {
             onFocus={() => {}}
             onBlur={() => {}}
           />
-        </div>
         <Table
           data={filteredTechniques}
           columns={columns}
