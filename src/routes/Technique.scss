@@ -4,13 +4,6 @@
   margin-bottom: 2rem;
   font-size: 0.6rem;
   max-height: 35dvh;
-  .table {
-    max-height: 25dvh;
-  }
-
-  .search-continer {
-    background-color: $cardbgColor;
-  }
 
   .row-0,
   .col-0 {
@@ -45,28 +38,28 @@
     font-size: 0.8rem;
 
     .row-0,
-  .col-0 {
-    width: 15rem;
-  }
+    .col-0 {
+      width: 15rem;
+    }
 
-  .row-1,
-  .col-1 {
-    width: 3rem;
-  }
+    .row-1,
+    .col-1 {
+      width: 3rem;
+    }
 
-  .row-3,
-  .col-3 {
-    width: 5.5rem;
-  }
-  .row-4,
-  .col-4 {
-    width: 10rem;
-  }
+    .row-3,
+    .col-3 {
+      width: 5.5rem;
+    }
+    .row-4,
+    .col-4 {
+      width: 10rem;
+    }
 
-  .row-5,
-  .col-5 {
-    width: 4rem;
-  }
+    .row-5,
+    .col-5 {
+      width: 4rem;
+    }
   }
 }
 
@@ -74,7 +67,6 @@
   .tech-table {
     max-height: 80dvh;
     .table {
-      max-height: 70dvh;
       width: auto;
     }
   }

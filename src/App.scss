@@ -64,6 +64,7 @@ html {
   transition: opacity 200ms;
   transition-delay: 200ms;
 }
+
 .table-container {
   margin: 0 1rem 1rem;
   background-color: $cardbgColor;
@@ -77,20 +78,10 @@ html {
   overflow-y: auto;
   @include custom-scrollbar;
 
-  .searchbar-container,
-  input[type="search"] {
-    font-size: 1rem;
-  }
-  .search-container {
-    margin: 0.5rem 0.5rem;
-    background-color: $cardbgColor;
-  }
-
   .table {
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    max-width: inherit;
   }
   .search-container,
   .column-container {
@@ -143,6 +134,16 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 1rem 1rem 2rem 1rem;
+
+  .searchbar-container,
+  input[type="search"] {
+    font-size: 1rem;
+  }
+
+  .search-container {
+    margin: 0.5rem 0.5rem;
+    background-color: $cardbgColor;
+  }
   p {
     font-size: 0.8rem;
   }
@@ -186,10 +187,6 @@ html {
     max-height: 85dvh;
     max-width: 45dvw;
     height: auto;
-
-    .searchbar-container {
-      font-size: 1.2rem;
-    }
   }
 
   #view {
@@ -200,7 +197,8 @@ html {
       width: 30rem;
       height: 20rem;
     }
-    p {
+
+    .searchbar-container, p {
       font-size: 1.2rem;
     }
   }
