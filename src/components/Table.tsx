@@ -75,14 +75,17 @@ export function Table<T extends TableData, K extends keyof T>({
   selected,
 }: TableProps<T, K>): JSX.Element {
   return (
+    <>
+    <TableHeader columns={columns} />
     <div className="table">
-      <TableHeader columns={columns} />
+      
       <TableRows
         data={data}
         columns={columns}
         rowClick={rowClick}
         selected={selected}
-      />
+        />
     </div>
+    </>
   );
 }
