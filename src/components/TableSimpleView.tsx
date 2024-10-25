@@ -105,7 +105,6 @@ dataItem ? (
 // }
   return (
     <>
-      <div className={`${tableClass} table-container`}>
         <div className="search-container">
           <SearchBar
             title="Filter:"
@@ -115,6 +114,7 @@ dataItem ? (
             onBlur={() => {}}
           />
         </div>
+      <div className={`${tableClass} table-container`}>
         <Table
           data={filtereddata}
           columns={columns}
