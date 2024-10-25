@@ -82,6 +82,7 @@ html {
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    width: max-content;
   }
   .search-container,
   .column-container {
@@ -135,7 +136,15 @@ html {
   align-items: center;
   padding: 1rem 1rem 2rem 1rem;
 
-  .searchbar-container,
+  .searchbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    font-size: 1.2rem;
+    min-width: 200px;
+  }
+
   input[type="search"] {
     font-size: 1rem;
   }
