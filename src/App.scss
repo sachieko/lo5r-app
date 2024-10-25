@@ -76,8 +76,9 @@ html {
   width: 95dvw;
   overflow-y: auto;
   @include custom-scrollbar;
-  
-  .searchbar-container {
+
+  .searchbar-container,
+  input[type="search"] {
     font-size: 1rem;
   }
   .search-container {
@@ -91,12 +92,14 @@ html {
     overflow-y: hidden;
     max-width: inherit;
   }
-
+  .search-container,
   .column-container {
-    background: $bpGradient;
     position: sticky;
     top: 0;
     z-index: 1;
+  }
+  .column-container {
+    background: $bpGradient;
     height: 3dvh;
     align-items: center;
 
@@ -183,8 +186,9 @@ html {
     max-height: 85dvh;
     max-width: 45dvw;
     height: auto;
-    .table {
-      max-height: inherit;
+
+    .searchbar-container {
+      font-size: 1.2rem;
     }
   }
 
