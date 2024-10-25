@@ -49,8 +49,12 @@ export const columns: TableColumn<TTechnique, keyof TTechnique>[] = [
     header: "Type",
   },
   {
-    key: "description",
-    header: "Description",
+    key: "book",
+    header: "Book",
+  },
+  {
+    key: "pg",
+    header: "Pg",
   },
   {
     key: "prerequisite",
