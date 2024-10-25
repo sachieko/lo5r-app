@@ -85,7 +85,7 @@ html {
   .table {
     display: flex;
     flex-direction: column;
-    max-height: 42dvh;
+    max-height: 38dvh;
     overflow-y: auto;
     @include custom-scrollbar;
   }
@@ -179,10 +179,10 @@ html {
   }
 
   .table-container {
-    max-height: 80dvh;
+    max-height: 85dvh;
     height: auto;
     .table {
-      max-height: 77dvh;
+      max-height: 75dvh;
     }
   }
 
