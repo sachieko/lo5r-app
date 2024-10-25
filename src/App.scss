@@ -87,7 +87,7 @@ html {
     flex-direction: column;
     max-height: 38dvh;
     overflow-y: auto;
-    max-width: max-content;
+    max-width: inherit;
     @include custom-scrollbar;
   }
 
