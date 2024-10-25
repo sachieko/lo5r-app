@@ -90,10 +90,16 @@ html {
     z-index: 1;
   }
   .searchbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1;
     height: 25px;
+    font-size: 1.2rem;
+    min-width: 200px;
+    background-color: $cardbgColor;
   }
   .column-container {
     background: $bpGradient;
@@ -140,15 +146,6 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 1rem 1rem 2rem 1rem;
-
-  .searchbar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 2rem;
-    font-size: 1.2rem;
-    min-width: 200px;
-  }
 
   input[type="search"] {
     font-size: 1rem;
