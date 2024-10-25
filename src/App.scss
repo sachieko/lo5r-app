@@ -74,6 +74,8 @@ html {
   border: 1px solid $darkAccent;
   border-bottom: 1px solid $accentColor;
   width: 95dvw;
+  overflow-y: auto;
+  @include custom-scrollbar;
   .searchbar-container {
     font-size: 1rem;
   }
@@ -85,10 +87,8 @@ html {
   .table {
     display: flex;
     flex-direction: column;
-    max-height: 38dvh;
-    overflow-y: auto;
+    overflow-y: hidden;
     max-width: inherit;
-    @include custom-scrollbar;
   }
 
   .column-container {
@@ -98,7 +98,7 @@ html {
     z-index: 1;
     height: 3dvh;
     align-items: center;
-    
+
     p:hover {
       color: $brightAccent;
       cursor: default;
@@ -140,7 +140,7 @@ html {
   align-items: center;
   padding: 1rem 1rem 2rem 1rem;
   p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -170,7 +170,6 @@ html {
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 0 3rem;
-
   }
 }
 
