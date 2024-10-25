@@ -3,8 +3,11 @@
 .opp-table {
   margin-bottom: 2rem;
   font-size: 0.5rem;
-  height: auto;
-  max-width: 95dvw;
+  height: 85dvh;
+  .table,
+  .column-container {
+    width: max-content;
+  }
 
   .column-container {
     p:hover {
@@ -81,8 +84,14 @@
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1000px) {
   .opp-table {
+    width: 90dvw;
+    overflow-x: hidden;
+    .table,
+    .column-container {
+      width: 100%;
+    }
     .row-3,
     .col-3 {
       width: 34rem;

@@ -3,8 +3,13 @@
 .tech-table {
   margin-bottom: 2rem;
   font-size: 0.6rem;
-  max-height: 35dvh;
-
+  height: 35dvh;
+  width: 95dvw;
+  overflow: auto;
+  .column-container,
+  .table {
+    min-width: max-content;
+  }
   .row-0,
   .col-0 {
     width: 10rem;
@@ -35,8 +40,6 @@
 
 @media only screen and (min-width: 780px) {
   .tech-table {
-    font-size: 0.8rem;
-
     .row-0,
     .col-0 {
       width: 15rem;
@@ -65,15 +68,19 @@
 
 @media only screen and (min-width: 1080px) {
   .tech-table {
-    max-height: 80dvh;
+    min-width: max-content;
+    width: 65dvw;
+    height: 85dvh;
     .table {
-      width: auto;
+      min-width: fit-content;
+      width: 100%;
     }
   }
 }
 
 @media only screen and (max-width: 400px) {
   .tech-table {
+    height: 80dvh;
     font-size: 0.5rem;
   }
 }

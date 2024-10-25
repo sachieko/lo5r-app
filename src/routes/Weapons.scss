@@ -14,7 +14,6 @@ section.weapons {
   margin-bottom: 1rem;
   font-size: 0.6rem;
   height: 60dvh;
-  
   overflow: auto;
 
   .column-container {
@@ -22,7 +21,8 @@ section.weapons {
   }
 
   .column-container,
-  .row {
+  .row,
+  .table {
     width: max-content;
   }
 
@@ -79,9 +79,6 @@ section.weapons {
     & > span {
       font-size: 1.2rem;
     }
-    .table {
-      width: 100%;
-    }
   }
 }
 
@@ -91,7 +88,11 @@ section.weapons {
   }
 
   .weapons-table {
-    max-width: 95dvw;
+    width: 95dvw;
+
+    .table {
+      width: 100%;
+    }
     .column-container,
     .row {
       width: auto;

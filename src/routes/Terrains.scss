@@ -3,41 +3,24 @@
 .terrains-table {
   .col-0,
   .row-0 {
-    width: 175px;
+    width: 6rem;
   }
   .col-1,
   .row-1 {
-    width: 125px;
+    width: 8rem;
   }
   .col-2,
   .row-2 {
-    width: 50px;
-  }
-}
-
-@media only screen and (min-width: 780px) {
-  .terrains-table {
-    font-size: 0.8rem;
-    .col-0,
-    .row-0 {
-      min-width: 300px;
-    }
-    .col-1,
-    .row-1 {
-      min-width: 150px;
-    }
+    width: 3rem;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .terrains-table {
-    .col-0,
-    .row-0 {
-      min-width: 300px;
-    }
-    .col-1,
-    .row-1 {
-      min-width: 180px;
+    width: 500px;
+    overflow-x: hidden;
+    .column-container, .table {
+      width: 100%;
     }
   }
 }

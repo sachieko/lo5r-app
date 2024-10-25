@@ -1,14 +1,12 @@
 @import "../styles/variables";
 
 .rule-table {
-  .row-0,
-  .col-0 {
-    width: 300px;
-  }
+  width: 300px;
+  font-size: 0.8rem;
 }
 
 @media only screen and (min-width: 780px) {
   .rule-table {
-    font-size: 0.8rem;
+    width: 400px;
   }
 }

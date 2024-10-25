@@ -1,8 +1,6 @@
 @import "../styles/variables";
 
 .question-table {
-  font-size: 0.7rem;
-
   .column-container {
     text-align: left;
     top: 0;
@@ -23,6 +21,7 @@
     width: 100%;
     .row {
       text-align: left;
+      justify-content: flex-start;
     }
   }
 }

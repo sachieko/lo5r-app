@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Weapon, TableColumn } from "./types";
-const APIURL: string = import.meta.env.VITE_API_URL;
+const { VITE_API_URL, VITE_API_TEST, TEST_MODE } = import.meta.env
+const APIURL: string = TEST_MODE === "TRUE" ? VITE_API_TEST : VITE_API_URL;
 
 export const useWeapons = function () {
   const [weapons, setWeapons] = useState<Weapon[]>([]);

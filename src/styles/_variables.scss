@@ -25,6 +25,7 @@ $bpGradient: linear-gradient(to top, $darkAccent2, $darkAccent);
 @mixin custom-scrollbar {
   &::-webkit-scrollbar {
     width: 0.5rem;
+    height: .6rem;
   }
 
   /* Track */

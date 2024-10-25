@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { TSearch } from "../helpers/types";
-const APIURL: string = import.meta.env.VITE_API_URL;
+const { VITE_API_URL, VITE_API_TEST, TEST_MODE } = import.meta.env
+const APIURL: string = TEST_MODE === "TRUE" ? VITE_API_TEST : VITE_API_URL;
 import SearchList from "./SearchList";
 import "./Search.scss";
 import { SearchBar } from "./SearchBar";
