@@ -71,7 +71,7 @@ const TableRows = <T extends TableData, K extends keyof T>({
                       target={"_blank"}
                       rel={"noopener noreferrer"}
                     >
-                      ${row[column.key] as ReactNode}
+                      {row[column.key] as ReactNode}
                     </Link>
                   ) as ReactNode)
                 : (row[column.key] as ReactNode)}
