@@ -64,7 +64,7 @@ const TableRows = <T extends TableData, K extends keyof T>({
           // columns we wish to add to our table in order to find the value in that cell
           return (
             <p key={`cell-${index2}`} className={`row-${index2}`}>
-              {linkedCol == column.key && linkedID && urlStart
+              {linkedCol == column.key && linkedID && urlStart && row[column.key]
                 ? ((
                     <Link
                       to={`${urlStart}${row[linkedID]}`}
