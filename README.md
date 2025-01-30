@@ -34,12 +34,15 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Can be searched for in a box, and clicking one allows you to view the details for the technique. ✅
   * Site has opportunities page where opportunities are displayed in a table ✅
     1. Allow users to filter results in the table by ring, category, etc. ✅
-    2. Allow users to view techniques related to opportunities on this page by clicking it in the table. 
+    2. Allow users to view techniques related to opportunities on this page by clicking it in the table. ✅
   * Site has equipment pages for weapons, armor, etc
     1. Allow users to filter results in the tables by category, type, damage, etc.✅
     2. Weapons table ✅
+      * Weapons table has links to qualities table
     3. Armor table
+      * Armor table has links to the qualities table
     4. Item table
+      * Item table has links to the qualities table as necessary
     5. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
@@ -64,7 +67,7 @@ Frontend:
   * Sass 1.66.1
   * React-Router 6.15
 
-Backend: 
+Backend:
   * Developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
   * Cloudflare Workers (Has replaced netlify functions as both services have migrated)
   * @types/express
