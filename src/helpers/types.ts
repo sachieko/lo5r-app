@@ -96,6 +96,9 @@ export type TableProps<T, K extends keyof T> = {
   columns: Array<TableColumn<T, K>>;
   rowClick?: (row: T) => void;
   selected?: number | null;
+  linkedCol?: keyof T;
+  linkedID?: keyof T;
+  urlStart?: string;
 };
 
 export type TCondition = {
