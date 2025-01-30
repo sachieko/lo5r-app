@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { TableColumn, TableProps } from "../helpers/types";
 
 type TableData = {
@@ -10,6 +11,9 @@ type TableRowProps<T extends TableData, K extends keyof T> = {
   columns: Array<TableColumn<T, K>>;
   rowClick?: (row: T) => void;
   selected?: number | null;
+  linkedCol?: keyof T;
+  linkedID?: keyof T;
+  urlStart?: string;
 };
 
 type TableColProps<T, K extends keyof T> = {
@@ -37,6 +41,9 @@ const TableRows = <T extends TableData, K extends keyof T>({
   columns,
   rowClick,
   selected,
+  linkedCol,
+  linkedID,
+  urlStart,
 }: TableRowProps<T, K>): JSX.Element => {
   // Create rows from the data
   const rows = data.map((row, index) => {
@@ -57,7 +64,17 @@ const TableRows = <T extends TableData, K extends keyof T>({
           // columns we wish to add to our table in order to find the value in that cell
           return (
             <p key={`cell-${index2}`} className={`row-${index2}`}>
-              {row[column.key] as ReactNode}
+              {linkedCol == column.key && linkedID && urlStart
+                ? ((
+                    <Link
+                      to={`${urlStart}${row[linkedID]}`}
+                      target={"_blank"}
+                      rel={"noopener noreferrer"}
+                    >
+                      ${row[column.key] as ReactNode}
+                    </Link>
+                  ) as ReactNode)
+                : (row[column.key] as ReactNode)}
             </p>
           );
         })}
@@ -73,19 +90,24 @@ export function Table<T extends TableData, K extends keyof T>({
   columns,
   rowClick,
   selected,
+  linkedCol,
+  linkedID,
+  urlStart,
 }: TableProps<T, K>): JSX.Element {
   return (
     <>
-    <TableHeader columns={columns} />
-    <div className="table">
-      
-      <TableRows
-        data={data}
-        columns={columns}
-        rowClick={rowClick}
-        selected={selected}
+      <TableHeader columns={columns} />
+      <div className="table">
+        <TableRows
+          data={data}
+          columns={columns}
+          rowClick={rowClick}
+          selected={selected}
+          linkedCol={linkedCol}
+          linkedID={linkedID}
+          urlStart={urlStart}
         />
-    </div>
+      </div>
     </>
   );
 }
