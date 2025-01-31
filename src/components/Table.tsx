@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { TableColumn, TableProps } from "../helpers/types";
 
@@ -34,7 +34,10 @@ const TableHeader = <T, K extends keyof T>({
 
   return <div className="column-container">{headers}</div>;
 };
-
+const scrollToClassedRow = (classString: string) => {
+  const focusedRow = document.getElementsByClassName(classString)[0]; // There should only ever be 1 focusRow class
+  focusedRow && focusedRow.scrollIntoView({ behavior: "smooth" }); // This could be an argument to change focusRow to ID
+};
 // Create rows for each row of the table
 const TableRows = <T extends TableData, K extends keyof T>({
   data,
@@ -46,6 +49,9 @@ const TableRows = <T extends TableData, K extends keyof T>({
   urlStart,
 }: TableRowProps<T, K>): JSX.Element => {
   // Create rows from the data
+  useEffect(() => {
+    scrollToClassedRow("focusRow");
+  }, []);
   const rows = data.map((row, index) => {
     return (
       <div
@@ -64,7 +70,10 @@ const TableRows = <T extends TableData, K extends keyof T>({
           // columns we wish to add to our table in order to find the value in that cell
           return (
             <p key={`cell-${index2}`} className={`row-${index2}`}>
-              {linkedCol == column.key && linkedID && urlStart && row[column.key]
+              {linkedCol == column.key &&
+              linkedID &&
+              urlStart &&
+              row[column.key]
                 ? ((
                     <Link
                       to={`${urlStart}${row[linkedID]}`}
