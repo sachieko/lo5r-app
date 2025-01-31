@@ -62,14 +62,13 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   ## Dependencies 
 
 Frontend:
-  * Developed using node v20.8.0, VITE v4.4.5 using React 18.2.0 + Typescript
+  * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript
   * Axios 1.4.0
   * Sass 1.66.1
-  * React-Router 6.15
+  * React-Router 6.15.0
 
 Backend:
-  * Developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
-  * Cloudflare Workers (Has replaced netlify functions as both services have migrated)
+  * Implemented currently with Cloudflare Workers and a PostgreSQL database.
   * @types/express
   * itty-router
   * dotenv
@@ -77,3 +76,4 @@ Backend:
   * pg
   * serverless-http
   * chalk (debugging dependency)
+  * (No longer up to date, fully migrated to Cloudflare)Previously developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
