@@ -48,11 +48,11 @@ const TableRows = <T extends TableData, K extends keyof T>({
   // Create rows from the data
   const tableRef = useRef<null | HTMLDivElement>(null);
   useEffect(() => {
-    console.log("Running useEffect:\n")
-    if (tableRef.current) {
-      console.log("TableRef.current exists");
-      tableRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      if (tableRef.current) {
+        tableRef.current.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest"});
+      }
+    }, 500)
   }, [tableRef.current]);
   const rows = data.map((row, index) => {
     return (
