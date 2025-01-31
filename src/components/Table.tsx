@@ -53,7 +53,7 @@ const TableRows = <T extends TableData, K extends keyof T>({
         tableRef.current.scrollIntoView({ block: "center", behavior: "smooth", inline: "nearest"});
       }
     }, 500)
-  }, [tableRef.current]);
+  }, []);
   const rows = data.map((row, index) => {
     return (
       <div
