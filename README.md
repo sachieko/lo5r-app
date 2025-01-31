@@ -38,12 +38,12 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   * Site has equipment pages for weapons, armor, etc
     1. Allow users to filter results in the tables by category, type, damage, etc.✅
     2. Weapons table ✅
-      * Weapons table has links to qualities table
-    3. Armor table
-      * Armor table has links to the qualities table
-    4. Item table
-      * Item table has links to the qualities table as necessary
-    5. Qualities table ✅
+    3. Weapons table has links to qualities table (requires refactoring of qualities via backend)
+    4. Armor table
+    5. Armor table has links to the qualities table (see 3.)
+    6. Item table
+    7. Item table has links to the qualities table (see 3.)
+    8. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
   * Site has terrain qualities page for terrain ✅
@@ -62,14 +62,13 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   ## Dependencies 
 
 Frontend:
-  * Developed using node v20.8.0, VITE v4.4.5 using React 18.2.0 + Typescript
+  * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
-  * React-Router 6.15
+  * React-Router 6.15.0
 
 Backend:
-  * Developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
-  * Cloudflare Workers (Has replaced netlify functions as both services have migrated)
+  * Implemented currently with Cloudflare Workers and a PostgreSQL database.
   * @types/express
   * itty-router
   * dotenv
@@ -77,3 +76,4 @@ Backend:
   * pg
   * serverless-http
   * chalk (debugging dependency)
+  * (No longer up to date, fully migrated to Cloudflare)Previously developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
