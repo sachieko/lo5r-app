@@ -49,7 +49,8 @@ const TableRows = <T extends TableData, K extends keyof T>({
   const tableRef = useRef<null | HTMLDivElement>(null);
   useEffect(() => {
     if (tableRef.current !== null) {
-      tableRef.current.scrollIntoView({ block: "end", behavior: "smooth" });
+      console.log("Running use effect, tableRef:", JSON.stringify(tableRef));
+      tableRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
   const rows = data.map((row, index) => {
