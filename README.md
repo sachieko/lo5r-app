@@ -62,7 +62,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   ## Dependencies 
 
 Frontend:
-  * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript
+  * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
   * React-Router 6.15.0
