@@ -50,7 +50,7 @@ const TableRows = <T extends TableData, K extends keyof T>({
   useEffect(() => {
     console.log("Running useEffect:\n")
     if (tableRef.current) {
-      console.log("Running use effect, tableRef:", JSON.stringify(tableRef));
+      console.log("TableRef.current exists");
       tableRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [tableRef.current]);
