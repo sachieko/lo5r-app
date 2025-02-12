@@ -17,18 +17,18 @@ const fadeDelay: number = 150;
 export const Technique = function () {
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
-    tech: "1",
+    tech: "24",
   });
   const navigate = useNavigate();
   const filterWords = searchParams.get("filter") || "";
-  const techId = searchParams.get("tech") || "1";
+  const techId = searchParams.get("tech") || "0";
   const techniques = useTechniques();
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
     const timeoutId = setTimeout(() => {
-      const newTech = params.get("tech") || "1";
+      const newTech = params.get("tech") || "0";
       setSearchParams((prev) => {
         prev.set("tech", newTech);
         return prev;

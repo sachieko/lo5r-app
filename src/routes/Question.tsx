@@ -34,10 +34,10 @@ export default function Question() {
   const choices = currentQuestion.choices.map((choice) => {
     return (
       <ChoiceCard
-        key={choice.id}
+        key={choice.choice_id}
         choice={choice.choice}
         stat={choice.stat}
-        info={choice.choiceInfo}
+        info={choice.info}
       />
     );
   });

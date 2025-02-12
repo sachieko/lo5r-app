@@ -15,9 +15,9 @@ export const ItemCard = function ({ title, desc, url, children, book, pg }: Iite
   const parablocks = FetchedParagraphs(desc.split("\n"));
 
   return (
-    <div className={`card`}>
+    <div  className={`card`}>
       {url ? (
-        <Link to={url}>
+        <Link  to={url}>
           <div className="title">{title}</div>
         </Link>
       ) : (

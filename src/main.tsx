@@ -15,69 +15,76 @@ import { Terrains } from "./routes/Terrains.tsx";
 import { Qualities } from "./routes/Qualities.tsx";
 import { Weapons } from "./routes/Weapons.tsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          errorElement: <ErrorPage />,
+          children: [
+            { index: true, element: <Index /> },
+            {
+              path: "questions/:questionId",
+              element: <Question />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "lore/:dataId",
+              element: <Lore />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "rules/:dataId",
+              element: <Rule />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "opps/",
+              element: <Opportunity />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "techniques/",
+              element: <Technique />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "conditions/:dataId",
+              element: <Conditions />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "terrains/:dataId",
+              element: <Terrains />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "qualities/:dataId",
+              element: <Qualities />,
+              errorElement: <ErrorPage />,
+            },
+            {
+              path: "weapons/",
+              element: <Weapons />,
+              errorElement: <ErrorPage />,
+            },
+          ],
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        errorElement: <ErrorPage />,
-        children: [
-          { index: true, element: <Index /> },
-          {
-            path: "questions/:questionId",
-            element: <Question />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "lore/:dataId",
-            element: <Lore />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "rules/:dataId",
-            element: <Rule />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "opps/",
-            element: <Opportunity />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "techniques/",
-            element: <Technique />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "conditions/:dataId",
-            element: <Conditions />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "terrains/:dataId",
-            element: <Terrains />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "qualities/:dataId",
-            element: <Qualities />,
-            errorElement: <ErrorPage />,
-          },
-          {
-            path: "weapons/",
-            element: <Weapons />,
-            errorElement: <ErrorPage />,
-          }
-        ],
-      },
-    ],
-  },
-]);
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} future={{v7_startTransition: true}}/>
   </React.StrictMode>
 );

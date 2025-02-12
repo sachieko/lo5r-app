@@ -1,8 +1,8 @@
 export type Tchoice = {
-  id: number;
+  choice_id: number;
   stat: string | null;
   choice: string | null;
-  choiceInfo: string | null;
+  info: string | null;
 };
 
 export type TQuestion = {
