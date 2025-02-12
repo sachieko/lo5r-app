@@ -108,8 +108,8 @@ dataItem ? (
         )
 */
   // }
-  const cards = dataItem?.cards.map((card) => {
-    return <ItemCard key={card.id} title={card.header} desc={card.content} />;
+  const cards = dataItem?.cards.map((card, index) => {
+    return <ItemCard key={index} title={card.header} desc={card.content} />;
   });
   return (
     <>

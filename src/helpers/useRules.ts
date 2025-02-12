@@ -13,7 +13,7 @@ export const useRules = function () {
         const data: TRule[] = results.data;
         setRules(data); // Update the state with the resolved data
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data:", JSON.stringify(error));
       }
     };
     getRules();
