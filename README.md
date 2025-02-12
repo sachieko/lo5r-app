@@ -4,7 +4,7 @@ This app is to contain useful reference information for players while playing th
 
 Those interested in the game should reference the core rulebook and rely on experience in other tabletop roleplaying games if planning to run the game, but this app is supposed to serve as a resource to help a storyteller (GM) and players to reference certain rules quickly, making the game more accessible to new players.
 
-It is currently deployed via Cloudflare at [https://lo5r-app.pages.dev](https://lo5r-app.pages.dev)
+It is currently deployed via Cloudflare at [https://lo5r.yuseiko.org](https://lo5r.yuseiko.org)
 This is a personal hobby project so I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me or open a github issue.
 
 ## Roadmap for Development
@@ -57,7 +57,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Allow admin to insert resources
   * This roadmap is being added to!
  
-  ### Current Priority - refactoring so views are more DRY in the future
+  ### Current Priority - Improve backend security, add missing tables
 
   ## Dependencies 
 
@@ -65,15 +65,12 @@ Frontend:
   * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
-  * React-Router 6.15.0
+  * React-Router 6.29.0
 
-Backend:
-  * Implemented currently with Cloudflare Workers and a PostgreSQL database.
+Backend [Repo Located here](https://github.com/sachieko/lo5r-back):
+  * Implemented currently with express and a PostgreSQL database.
   * @types/express
-  * itty-router
   * dotenv
   * cors
   * pg
-  * serverless-http
   * chalk (debugging dependency)
-  * (No longer up to date, fully migrated to Cloudflare)Previously developed using node v20.8.0, Express v4.18.2 with a PostgreSQL database
