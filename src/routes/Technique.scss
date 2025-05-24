@@ -6,10 +6,7 @@
   height: 35dvh;
   width: 95dvw;
   overflow: auto;
-  .column-container,
-  .table {
-    min-width: max-content;
-  }
+
   .row-0,
   .col-0 {
     width: 10rem;
@@ -68,11 +65,9 @@
 
 @media only screen and (min-width: 1080px) {
   .tech-table {
-    min-width: max-content;
     width: 65dvw;
     height: 85dvh;
     .table {
-      min-width: fit-content;
       width: 100%;
     }
   }

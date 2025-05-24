@@ -1,19 +1,30 @@
 import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useWeapons, columns } from "../helpers/useWeapons";
 import { Table } from "../components/Table";
 import "./Weapons.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
+import { Weapon } from "../helpers/types";
 
 export const Weapons = function () {
   const [filterWord, setFilterWord] = useState<string>("");
+  const { dataId } = useParams() || 1;
+  const navigate = useNavigate();
   const weapons = useWeapons();
-
   // Grab the string from the event value to make typescript happy about types
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newFilterWord = event.target.value;
     setFilterWord(newFilterWord);
   };
+
+  const handleRowClick = (row: Weapon) => {
+      const weaponId = row.id;
+      if (weaponId === Number(dataId)) {
+        return;
+      }
+      navigate(`/weapons/${weaponId}`, { replace: true });
+    };
 
   return (
     <>
@@ -50,6 +61,8 @@ export const Weapons = function () {
                 : weapons
             }
             columns={columns}
+            selected={Number(dataId)}
+            rowClick={handleRowClick}
           />
         </div>
         <div className="weapons-note">

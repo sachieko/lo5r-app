@@ -22,8 +22,10 @@ export const filterTable = <T, K extends keyof T>(
   // Find first strict keyword that matches and transform to match data by capitalizing first letter
   let strictKeyword = undefined;
   if (strictWords) {
-    strictKeyword = keywords.find(word => strictWords.includes(word as T[K]))
-    strictKeyword = strictKeyword ? strictKeyword[0].toUpperCase() + strictKeyword.slice(1) : undefined;
+    strictKeyword = keywords.find((word) => strictWords.includes(word as T[K]));
+    strictKeyword = strictKeyword
+      ? strictKeyword[0].toUpperCase() + strictKeyword.slice(1)
+      : undefined;
   }
   return arr.filter((row: T) => {
     // Check if any keywords match scrictKey, remove any rows that do not match strictKeyword

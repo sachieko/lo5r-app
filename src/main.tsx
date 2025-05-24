@@ -47,7 +47,7 @@ const router = createBrowserRouter(
               errorElement: <ErrorPage />,
             },
             {
-              path: "techniques/",
+              path: "techniques/:dataId",
               element: <Technique />,
               errorElement: <ErrorPage />,
             },
@@ -67,7 +67,7 @@ const router = createBrowserRouter(
               errorElement: <ErrorPage />,
             },
             {
-              path: "weapons/",
+              path: "weapons/:dataId",
               element: <Weapons />,
               errorElement: <ErrorPage />,
             },

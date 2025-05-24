@@ -88,7 +88,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     setFadeIn(false); // Hide the current element
     setTimeout(() => {
       setFadeIn(true);
-      navigate(`/${route}/${row.id}`); // change to the clicked url
+      navigate(`/${route}/${row.id}`, { replace: true}); // change to the clicked url
     }, fadeDelay);
   };
   /* TODO: Maybe take a formatting function given 1 object to display from the table.

@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ChoiceCard } from "../components/ChoiceCard";
 import { useQuestions, columns } from "../helpers/useQuestions";
@@ -51,7 +51,7 @@ export default function Question() {
     setFadeIn(false); // Hide the current element
     setTimeout(() => {
       setFadeIn(true);
-      navigate(`/questions/${row.id}`);
+      navigate(`/questions/${row.id}`, { replace: true });
     }, fadeDelay);
   };
 
@@ -66,9 +66,7 @@ export default function Question() {
         />
       </div>
       <div className={`fadeElement ${fadeIn ? "fade" : ""}`}>
-        <div
-          className={"card question-card"}
-        >
+        <div className={"card question-card"}>
           <div className="title">{title}</div>
           <div className="desc">
             <p>{detail}</p>
