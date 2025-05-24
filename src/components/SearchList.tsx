@@ -10,7 +10,7 @@ const SearchList = function ({
 }) {
   const listComponent = searchItems.map((item, index) => {
     return (
-      <Link key={index} to={item.link} className="search-item">
+      <Link key={index} to={item.link} className="search-item" reloadDocument >
         <div className="search-item-title">{item.title}</div>
         <div className="search-detail">{[item.detail.slice(0, 50)]}...</div>
       </Link>
