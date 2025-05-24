@@ -48,6 +48,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     1. Update link filters for conditions ✅
   * Site has terrain qualities page for terrain ✅
     1. Update link filters for terrain qualities ✅
+  * Site has announcement page for dev updates ✅
 * Advanced features
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
@@ -62,7 +63,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   ## Dependencies 
 
 Frontend:
-  * Currently using: node v23.6.1, VITE v4.4.5 using React 18.2.0 + Typescript 5.0.2
+  * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
   * React-Router 6.29.0

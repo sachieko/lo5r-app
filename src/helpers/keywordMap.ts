@@ -41,7 +41,7 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   hallowed: "/terrains/4",
   imbalanced: "/terrains/5",
   obscuring: "/terrains/6",
-  confining: "terrains/7",
+  confining: "/terrains/7",
   elevated: "/terrains/8",
   open: "/terrains/9",
   recessed: "/terrains/10",
