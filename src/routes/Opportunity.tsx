@@ -39,7 +39,7 @@ export const Opportunity = function () {
         columns={columns}
         linkedCol={"name"}
         linkedID={"technique_id"}
-        urlStart="/techniques/?filter=&tech="
+        urlStart="/techniques/"
       />
     </div>
   );

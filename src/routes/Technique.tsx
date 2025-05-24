@@ -8,7 +8,7 @@ import { Table } from "../components/Table";
 import "./Technique.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { useEffect, useState } from "react";
 
@@ -17,22 +17,16 @@ const fadeDelay: number = 150;
 export const Technique = function () {
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
-    tech: "24",
   });
   const navigate = useNavigate();
+  const { dataId } = useParams() || 1;
   const filterWords = searchParams.get("filter") || "";
-  const techId = searchParams.get("tech") || "0";
   const techniques = useTechniques();
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    const params = new URLSearchParams(searchParams);
+    setFadeIn(false)
     const timeoutId = setTimeout(() => {
-      const newTech = params.get("tech") || "0";
-      setSearchParams((prev) => {
-        prev.set("tech", newTech);
-        return prev;
-      });
       setFadeIn(true);
     }, fadeDelay);
 
@@ -46,7 +40,7 @@ export const Technique = function () {
     : techniques;
   // Find the index of the technique that matches the Id in the search param
   const techIndex = techniques.findIndex((tech) => {
-    return tech.id === Number(techId);
+    return tech.id === Number(dataId);
   });
   const technique = techniques[techIndex];
 
@@ -65,14 +59,14 @@ export const Technique = function () {
   // If a particular row is clicked, it should set the url param to be the techniques ID so it can be found in the array later
   const handleRowClick = (row: TTechnique) => {
     const techId = row.id;
-    if (techId === Number(searchParams.get("tech"))) {
+    if (techId === Number(dataId)) {
       return;
     }
     setFadeIn(false); // Hide the current element
     // Set the searchParam after the current element has been hidden
     setTimeout(() => {
       setFadeIn(true);
-      navigate(`/techniques/?filter=${filterWords}&tech=${techId}`);
+      navigate(`/techniques/${techId}?filter=${filterWords}`, { replace: true });
     }, fadeDelay);
   };
 
@@ -90,7 +84,7 @@ export const Technique = function () {
           data={filteredTechniques}
           columns={columns}
           rowClick={handleRowClick}
-          selected={Number(techId)}
+          selected={Number(dataId)}
         />
       </div>
       <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>

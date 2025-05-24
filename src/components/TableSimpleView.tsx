@@ -75,7 +75,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
   };
 
   // If a particular row is clicked, it should redirect to the url
-  const handleRowClick = (row: T) => {
+ const handleRowClick = (row: T) => {
     if (Number(dataId) === row.id) {
       // Don't do anything if they click the same row as the url
       return;
@@ -83,7 +83,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
     setFadeIn(false); // Hide the current element
     setTimeout(() => {
       setFadeIn(true);
-      navigate(`/${route}/${row.id}`); // change to the clicked url
+      navigate(`/${route}/${row.id}`, { replace: true }); // change to the clicked url but replace entry in history
     }, fadeDelay);
   };
   /* TODO: Maybe take a formatting function given 1 object to display from the table.
