@@ -63,4 +63,9 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   subtle: "/qualities/14",
   unholy: "/qualities/15",
   wargear: "/qualities/16",
+  // weapons
+  tetsubo: "/weapons/17",
+  katana: "/weapons/6",
+  bo: "/weapons/23",
+  yari: "/weapons/27",
 };
