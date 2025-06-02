@@ -22,14 +22,14 @@ export const useTechniques = function () {
   return techniques;
 };
 
-//Format the description for the selected technique to be displayed
+// Format the description for the selected technique to be displayed
 export const formatTechString = (tech: TTechnique) => {
   const { description, activation, effect } = tech;
   const opportunityStrings = tech.opportunities.map((opp) => {
     const { cost, ring, effect } = opp;
     return cost == null ? "" : `(${ring})${cost}: ${effect}`;
   });
-  const result = `${description}\n${activation}\n${effect}\nOpportunities:\n${opportunityStrings.join(
+  const result = `${description}\n${activation}\n${effect ? "Effect:" + effect : ''}\nOpportunities:\n${opportunityStrings.join(
     "\n"
   )}`;
   return result;
