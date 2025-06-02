@@ -16,7 +16,7 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   // rules 6
   intrigue: "/rules/6",
   // rules 7
-  battles: "/rules/7",
+  battle: "/rules/7",
   // Conditions
   afflicted: "/conditions/1",
   bleeding: "/conditions/2",
