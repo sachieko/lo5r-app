@@ -5,7 +5,7 @@ This app is to contain useful reference information for players while playing th
 Those interested in the game should reference the core rulebook and rely on experience in other tabletop roleplaying games if planning to run the game, but this app is supposed to serve as a resource to help a storyteller (GM) and players to reference certain rules quickly, making the game more accessible to new players.
 
 It is currently deployed via Cloudflare at [https://lo5r.yuseiko.org](https://lo5r.yuseiko.org)
-This is a personal hobby project so I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me or open a github issue.
+This is a personal hobby project so I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me or open a github issue. Development updates are regularly put on the home page as well!
 
 ## Roadmap for Development
 
@@ -32,6 +32,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   * Site has technique pages where techniques are sorted by type ✅
     1. Techniques can be quickly filtered by type  ✅
     2. Can be searched for in a box, and clicking one allows you to view the details for the technique. ✅
+    3. Techniques associated with a particular Ring can be filtered for.
   * Site has opportunities page where opportunities are displayed in a table ✅
     1. Allow users to filter results in the table by ring, category, etc. ✅
     2. Allow users to view techniques related to opportunities on this page by clicking it in the table. ✅
@@ -58,9 +59,9 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Allow admin to insert resources
   * This roadmap is being added to!
  
-  ### Current Priority - Improve backend security, add missing tables
+  ### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
 
-  ## Dependencies 
+  ## Dependencies - Version 1.3.2
 
 Frontend:
   * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
