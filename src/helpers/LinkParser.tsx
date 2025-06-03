@@ -10,7 +10,7 @@ const replaceKeywordsWithLinks = (paragraph: string) => {
 
     if (keywordToUrlMap[cleanedWord]) {
       return (
-        <Link key={index} to={keywordToUrlMap[cleanedWord]}>
+        <Link key={index} to={keywordToUrlMap[cleanedWord]} target="_blank" rel="noopener noreferrer">
           {word}{" "}
         </Link>
       );

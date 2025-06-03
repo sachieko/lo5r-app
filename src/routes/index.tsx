@@ -1,6 +1,6 @@
 import { ItemCard } from "../components/ItemCard";
 import menucards from "../assets/menu.json";
-import announcement from "../assets/announcement.json";
+import announcements from "../assets/announcements";
 import { useEffect, useState } from "react";
 
 export const Index = function () {
@@ -24,7 +24,7 @@ export const Index = function () {
     );
   });
 
-  const announcements = announcement.map((announcement, index) => {
+  const announceList = announcements.map((announcement, index) => {
     const paragraphs = announcement.text.split("\n").map((paragraph, index) => {
       return <p key={index}>{paragraph}</p>;
     });
@@ -45,7 +45,7 @@ export const Index = function () {
         className={`${hideAnnounce ? "fadeout" : ""}`}
         onClick={() => setHideAnnounce(true)}
       >
-        {announcements}
+        {announceList}
       </div>
       <div className={`menu ${fadeIn ? "fade" : ""}`}>{items}</div>
     </section>
