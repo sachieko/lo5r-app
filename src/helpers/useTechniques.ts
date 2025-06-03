@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { TTechnique, TableColumn } from "./types";
-const { VITE_API_URL, VITE_API_TEST, TEST_MODE } = import.meta.env
+const { VITE_API_URL, VITE_API_TEST, TEST_MODE } = import.meta.env;
 const APIURL: string = TEST_MODE === "TRUE" ? VITE_API_TEST : VITE_API_URL;
 
 export const useTechniques = function () {
@@ -24,14 +24,19 @@ export const useTechniques = function () {
 
 // Format the description for the selected technique to be displayed
 export const formatTechString = (tech: TTechnique) => {
-  const { description, activation, effect } = tech;
-  const opportunityStrings = tech.opportunities.map((opp) => {
-    const { cost, ring, effect } = opp;
-    return cost == null ? "" : `(${ring})${cost}: ${effect}`;
+  const { description, activation, effect, opportunities } = tech;
+  let hasOpps: boolean = true;
+  const opportunityStrings = opportunities.map((opp) => {
+    if (opp.cost) {
+      const { cost, ring, effect } = opp;
+      return cost === null ? "" : `(${ring})${cost}: ${effect}`;
+    }
+    hasOpps = false;
+    return;
   });
-  const result = `${description}\n${activation}\n${effect ? "Effect:" + effect : ''}\nOpportunities:\n${opportunityStrings.join(
-    "\n"
-  )}`;
+  const result = `${description}\n${activation}\n${
+    effect ? "Effect: " + effect : ""
+  }\n${hasOpps ? `Opportunities:\n${opportunityStrings.join("\n")}` : ""} `;
   return result;
 };
 

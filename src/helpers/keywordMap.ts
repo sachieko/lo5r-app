@@ -3,21 +3,25 @@ export interface IkeywordToUrlMap {
 }
 
 export const keywordToUrlMap: IkeywordToUrlMap = {
-  // lore 1
+  // lore
   honor: "/lore/1",
-  // rules 2
-  conflict: "/rules/2",
-  // lore 2
+  compassion: "/lore/1",
+  loyalty: "/lore/1",
+  sincerity: "/lore/1",
+  righteousness: "/lore/1",
+  courage: "/lore/1",
+  respect: "/lore/1",
   koku: "/lore/2",
-  // rules 4
+  // rules
+  conflict: "/rules/2",
   duel: "/rules/4",
-  // rules 5
   skirmish: "/rules/5",
-  // rules 6
   intrigue: "/rules/6",
-  // rules 7
   battle: "/rules/7",
+  critical: "/rules/8",
+  severity: "/rules/8",
   // Conditions
+  condition: "/conditions/1",
   afflicted: "/conditions/1",
   bleeding: "/conditions/2",
   burning: "/conditions/3",
@@ -34,7 +38,8 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   silenced: "/conditions/14",
   unconscious: "/conditions/15",
   wounded: "/conditions/16",
-  // terrain
+  // terrains
+  terrain: "/terrains/1",
   dangerous: "/terrains/1",
   defiled: "/terrains/2",
   entangling: "/terrains/3",
@@ -63,9 +68,20 @@ export const keywordToUrlMap: IkeywordToUrlMap = {
   subtle: "/qualities/14",
   unholy: "/qualities/15",
   wargear: "/qualities/16",
-  // weapons
+  // weapons - these are referenced elsewhere often
   tetsubo: "/weapons/17",
   katana: "/weapons/6",
   bo: "/weapons/23",
   yari: "/weapons/27",
+  wakizashi: "/weapons/9",
+  weapon: "/weapons/1",
+  // techniques
+  technique: "/techniques/1",
+  maho: "/techniques/179?filter=maho",
+  kiho: "/techniques/79?filter=kiho", // spooky that 179 and 79 are maho and kiho...
+  invocations: "/techniques/76?filter=invocation",
+  kata: "/techniques/14?filter=kata",
+  ninjutsu: "/techniques/52?filter=ninjutsu",
+  shuji: "/techniques/58?filter=shuji",
+  ritual: "/techniques/1?filter=ritual",
 };

@@ -35,6 +35,14 @@
   }
 }
 
+.techCard .card .desc {
+  display: flex;
+  align-items: flex-start;
+  .card-bookRef {
+    align-self: center;
+  }
+}
+
 @media only screen and (min-width: 780px) {
   .tech-table {
     .row-0,
