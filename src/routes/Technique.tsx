@@ -87,7 +87,7 @@ export const Technique = function () {
           selected={Number(dataId)}
         />
       </div>
-      <div className={`detail-card fadeElement ${fadeIn ? "fade" : ""}`}>
+      <div className={`detail-card fadeElement techCard ${fadeIn ? "fade" : ""}`}>
         {technique ? (
           <ItemCard
             title={
