@@ -26,7 +26,8 @@ export const Index = function () {
 
   const announcements = announcement.map((announcement, index) => {
     const paragraphs = announcement.text.split("\n").map((paragraph, index) => {
-    return (<p  key={index}>{paragraph}</p>)});
+      return <p key={index}>{paragraph}</p>;
+    });
     return (
       <div className="announce-card" key={index}>
         <p className="announce-title">
@@ -40,12 +41,13 @@ export const Index = function () {
   return (
     <section className="main-menu">
       <div
-        id="announce-container" className={`${hideAnnounce ? "fadeout" : ""}`}
+        id="announce-container"
+        className={`${hideAnnounce ? "fadeout" : ""}`}
         onClick={() => setHideAnnounce(true)}
       >
         {announcements}
       </div>
-      <div className={`menu ${fadeIn ? "fade" : ""}`}>{items}</div>;
+      <div className={`menu ${fadeIn ? "fade" : ""}`}>{items}</div>
     </section>
   );
 };
