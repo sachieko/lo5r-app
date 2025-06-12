@@ -18,14 +18,18 @@ export const filterTable = <T, K extends keyof T>(
   strictKey?: K
 ): T[] => {
   // Early convert all keywords to lowercase
-  keywords = keywords.map((word) => word.toLowerCase());
+  keywords = keywords.map((word) => {
+     return word.toLowerCase()
+    });
   // Find first strict keyword that matches and transform to match data by capitalizing first letter
   let strictKeyword = undefined;
-  if (strictWords) {
+  if (strictWords && strictKeyword) {
     strictKeyword = keywords.find((word) => strictWords.includes(word as T[K]));
+    if (typeof strictKeyword === "string") {
     strictKeyword = strictKeyword
       ? strictKeyword[0].toUpperCase() + strictKeyword.slice(1)
       : undefined;
+    }
   }
   return arr.filter((row: T) => {
     // Check if any keywords match scrictKey, remove any rows that do not match strictKeyword
@@ -42,6 +46,9 @@ export const filterTable = <T, K extends keyof T>(
           typeof columnValue === "string" &&
           columnValue.toLowerCase().includes(lcWord)
         ) {
+          return true;
+        }
+        if (typeof columnValue === "number" && columnValue === Number(lcWord)) {
           return true;
         }
         return false;
