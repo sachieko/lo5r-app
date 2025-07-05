@@ -19,22 +19,20 @@ export const filterTable = <T, K extends keyof T>(
 ): T[] => {
   // Early convert all keywords to lowercase
   keywords = keywords.map((word) => {
-     return word.toLowerCase()
-    });
+    return word.toLowerCase();
+  });
   // Find first strict keyword that matches and transform to match data by capitalizing first letter
   let strictKeyword = undefined;
-  if (strictWords && strictKeyword) {
+  if (strictWords && strictKey) {
     strictKeyword = keywords.find((word) => strictWords.includes(word as T[K]));
     if (typeof strictKeyword === "string") {
-    strictKeyword = strictKeyword
-      ? strictKeyword[0].toUpperCase() + strictKeyword.slice(1)
-      : undefined;
+      strictKeyword = strictKeyword[0].toUpperCase() + strictKeyword.slice(1);
     }
   }
   return arr.filter((row: T) => {
     // Check if any keywords match scrictKey, remove any rows that do not match strictKeyword
-    if (strictKeyword && strictKey && strictKeyword !== row[strictKey]) {
-      return false;
+    if (strictKeyword && strictKey) {
+      return strictKeyword === row[strictKey];
     }
     // Check if all keywords are contained in at least one of the columns
     return keywords.every((keyword) => {
