@@ -31,22 +31,28 @@ export const filterTable = <T, K extends keyof T>(
   }
   return arr.filter((row: T) => {
     // Check if any keywords match scrictKey, remove any rows that do not match strictKeyword
-    if (strictKeyword && strictKey) {
-      return strictKeyword === row[strictKey];
+    if (strictKeyword && strictKey && strictKeyword !== row[strictKey]) {
+      return false;
     }
     // Check if all keywords are contained in at least one of the columns
     return keywords.every((keyword) => {
-      const lcWord = keyword;
+      const lcKeyword: number | string = keyword;
+      const isWholeN = /^\d+$/.test(lcKeyword);
       return columns.some((column) => {
         const columnValue = row[column.key];
         // If the column's property is a string, check if it includes the keyword
         if (
           typeof columnValue === "string" &&
-          columnValue.toLowerCase().includes(lcWord)
+          !isWholeN && // If the keyword is a number, skip
+          columnValue.toLowerCase().includes(lcKeyword)
         ) {
           return true;
         }
-        if (typeof columnValue === "number" && columnValue === Number(lcWord)) {
+        if (
+          typeof columnValue === "number" &&
+          isWholeN &&
+          columnValue === Number(lcKeyword)
+        ) {
           return true;
         }
         return false;
