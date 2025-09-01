@@ -71,9 +71,10 @@ export const Weapons = function () {
           <br />
           <br />
           If a weapon has multiple ways of using it, the two possibilities will
-          be shown as "1h/2h or 1h/2h"
+          be shown as "1h/2h or 1h/2h" where 1h/2h is replaced by the damage or deadliness in that grip.
           <br />
           <br />
+          Weapons with different ranges will use a "/" to divide the range types based on how it's being used.
         </div>
       </section>
     </>
