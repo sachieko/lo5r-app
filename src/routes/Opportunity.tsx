@@ -37,9 +37,6 @@ export const Opportunity = function () {
             : opps
         }
         columns={columns}
-        linkedCol={"name"}
-        linkedID={"technique_id"}
-        urlStart="/techniques/"
       />
     </div>
   );

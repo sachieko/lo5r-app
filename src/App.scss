@@ -189,7 +189,10 @@ html {
     margin: 0.5rem 0.5rem;
     background-color: variables.$cardbgColor;
   }
-  p {
+  p, div {
+    font-size: 0.8rem;
+  }
+  .table > div {
     font-size: 0.8rem;
   }
 }
@@ -217,7 +220,7 @@ html {
 
 @media only screen and (min-width: 780px) {
 
-  #view p {
+  #view p, #view div, #view .table > div {
     font-size: 1rem;
   }
   .menu {
@@ -246,7 +249,7 @@ html {
       height: 20rem;
     }
 
-    .searchbar-container, p {
+    .searchbar-container, p, div {
       font-size: 1.2rem;
     }
   }

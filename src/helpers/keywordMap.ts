@@ -1,87 +1,69 @@
-export interface IkeywordToUrlMap {
-  [key: string]: string;
+import axios from "axios";
+import { Pagelink, KeywordMap } from "./types";
+const { VITE_API_URL, VITE_API_TEST, TEST_MODE } = import.meta.env;
+const APIURL: string = TEST_MODE === "TRUE" ? VITE_API_TEST : VITE_API_URL;
+
+class KeywordMapStore {
+  private keywordMap: KeywordMap | null = null;
+  private loading: boolean = false;
+  private error: string | null = null;
+  private listeners: Set<(map: KeywordMap | null) => void> = new Set();
+
+  constructor() {}
+
+  getMap(): KeywordMap | null {
+    return this.keywordMap;
+  }
+
+  isLoading(): boolean {
+    return this.loading;
+  }
+
+  getError(): string | null {
+    return this.error;
+  }
+
+  subscribe(listener: (map: KeywordMap | null) => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  private notifyListeners(): void {
+    this.listeners.forEach((listener) => listener(this.keywordMap));
+  }
+
+  async fetchKeywordMap(): Promise<void> {
+    if (this.loading || this.keywordMap) return;
+
+    this.loading = true;
+    this.error = null;
+
+    try {
+      const results = await axios.get(`${APIURL}/pagelinks/`);
+      const data: Pagelink[] = results.data;
+
+      const keywordMap: KeywordMap = {};
+      data.forEach((row) => {
+        keywordMap[row.key] = row.link;
+      });
+
+      this.keywordMap = keywordMap;
+      this.loading = false;
+      this.notifyListeners();
+    } catch (err) {
+      this.loading = false;
+      this.error =
+        err instanceof Error ? err.message : "Failed to fetch keyword map";
+      console.error("Error fetching keywordMap:", err);
+    }
+  }
+
+  clearCache(): void {
+    this.keywordMap = null;
+    this.loading = false;
+    this.error = null;
+    this.notifyListeners();
+  }
 }
 
-export const keywordToUrlMap: IkeywordToUrlMap = {
-  // lore
-  honor: "/lore/1",
-  compassion: "/lore/1",
-  loyalty: "/lore/1",
-  sincerity: "/lore/1",
-  righteousness: "/lore/1",
-  courage: "/lore/1",
-  respect: "/lore/1",
-  koku: "/lore/2",
-  // rules
-  conflict: "/rules/2",
-  duel: "/rules/4",
-  skirmish: "/rules/5",
-  intrigue: "/rules/6",
-  battle: "/rules/7",
-  critical: "/rules/8",
-  severity: "/rules/8",
-  // Conditions
-  condition: "/conditions/1",
-  afflicted: "/conditions/1",
-  bleeding: "/conditions/2",
-  burning: "/conditions/3",
-  compromised: "/conditions/4",
-  dazed: "/conditions/5",
-  disoriented: "/conditions/6",
-  dying: "/conditions/7",
-  enraged: "/conditions/8",
-  exhausted: "/conditions/9",
-  immobilized: "/conditions/10",
-  incapacitated: "/conditions/11",
-  intoxicated: "/conditions/12",
-  prone: "/conditions/13",
-  silenced: "/conditions/14",
-  unconscious: "/conditions/15",
-  wounded: "/conditions/16",
-  // terrains
-  terrain: "/terrains/1",
-  dangerous: "/terrains/1",
-  defiled: "/terrains/2",
-  entangling: "/terrains/3",
-  hallowed: "/terrains/4",
-  imbalanced: "/terrains/5",
-  obscuring: "/terrains/6",
-  confining: "/terrains/7",
-  elevated: "/terrains/8",
-  open: "/terrains/9",
-  recessed: "/terrains/10",
-  // qualities
-  ceremonial: "/qualities/1",
-  concealable: "/qualities/2",
-  cumbersome: "/qualities/3",
-  damaged: "/qualities/4",
-  destroyed: "/qualities/5",
-  durable: "/qualities/6",
-  forbidden: "/qualities/7",
-  mundane: "/qualities/8",
-  piercing: "/qualities/17",
-  prepare: "/qualities/9",
-  "razor-edged": "/qualities/10",
-  resplendent: "/qualities/11",
-  sacred: "/qualities/12",
-  snaring: "/qualities/13",
-  subtle: "/qualities/14",
-  unholy: "/qualities/15",
-  wargear: "/qualities/16",
-  // weapons - these are referenced elsewhere often
-  tetsubo: "/weapons/17",
-  katana: "/weapons/6",
-  bo: "/weapons/23",
-  yari: "/weapons/27",
-  wakizashi: "/weapons/9",
-  weapon: "/weapons/1",
-  // techniques
-  technique: "/techniques/1",
-  maho: "/techniques/179?filter=maho",
-  kiho: "/techniques/79?filter=kiho", // spooky that 179 and 79 are maho and kiho...
-  invocations: "/techniques/76?filter=invocation",
-  kata: "/techniques/14?filter=kata",
-  ninjutsu: "/techniques/52?filter=ninjutsu",
-  shuji: "/techniques/58?filter=shuji",
-  ritual: "/techniques/1?filter=ritual",
-};
+export const keywordMapStore = new KeywordMapStore();

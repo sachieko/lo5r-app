@@ -97,7 +97,6 @@ export type TableProps<T, K extends keyof T> = {
   rowClick?: (row: T) => void;
   selected?: number | null;
   linkedCol?: keyof T;
-  linkedID?: keyof T;
   urlStart?: string;
 };
 
@@ -139,3 +138,12 @@ export type Weapon = {
 	pg: number;
 	qualities: Quality[];
 };
+
+export type KeywordMap = {
+  [key: string]: string;
+}
+
+export type Pagelink = {
+  key: keyof KeywordMap; 
+  link: string;
+}

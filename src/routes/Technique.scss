@@ -38,6 +38,7 @@
 .techCard .card .desc {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   .card-bookRef {
     align-self: center;
   }

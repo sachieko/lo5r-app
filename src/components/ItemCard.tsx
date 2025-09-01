@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ItemCard.scss";
-import FetchedParagraphs from "../helpers/LinkParser";
+import LinkParsedText from "../helpers/LinkParser";
 
 interface IitemProps {
   title: string;
@@ -11,22 +11,31 @@ interface IitemProps {
   pg?: number;
 }
 
-export const ItemCard = function ({ title, desc, url, children, book, pg }: IitemProps) {
-  const parablocks = FetchedParagraphs(desc.split("\n"));
-
+export const ItemCard = function ({
+  title,
+  desc,
+  url,
+  children,
+  book,
+  pg,
+}: IitemProps) {
   return (
-    <div  className={`card`}>
+    <div className={`card`}>
       {url ? (
-        <Link  to={url}>
+        <Link to={url}>
           <div className="title">{title}</div>
         </Link>
       ) : (
         <div className="title">{title}</div>
       )}
-      <div className="desc">{parablocks}</div>
+      <div className="desc">
+        <LinkParsedText text={desc}></LinkParsedText>
+      </div>
       {children}
 
-      <span className="card-bookRef">{book ? `${book} pg. ${pg === 0 || undefined ? 'N/A' : pg}` : ``}</span>
+      <span className="card-bookRef">
+        {book ? `${book} pg. ${pg === 0 || undefined ? "N/A" : pg}` : ``}
+      </span>
     </div>
   );
 };

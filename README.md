@@ -1,4 +1,4 @@
-# L5R Standard Reference Document App
+# L5R Standard Reference Document App v2.0
 
 This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio under Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
@@ -39,11 +39,11 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   * Site has equipment pages for weapons, armor, etc
     1. Allow users to filter results in the tables by category, type, damage, etc.✅
     2. Weapons table ✅
-    3. Weapons table has links to qualities table (requires refactoring of qualities via backend)
-    4. Armor table
-    5. Armor table has links to the qualities table (see 3.)
+    3. Weapons table has links to qualities table (requires refactoring of qualities via backend) ✅
+    4. Armor table ✅
+    5. Armor table has links to the qualities table (see 3.) ✅
     6. Item table
-    7. Item table has links to the qualities table (see 3.)
+    7. Item table has links to the qualities table (see 3.) ✅
     8. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
@@ -53,7 +53,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
 * Advanced features
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
-    1. Improve or automate the mapping for certain words. API could create this instead of the hacky solution I use now.
+    1. Automated the mapping for keywords via the backend. ✅
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert resources
@@ -61,7 +61,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
  
   ### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
 
-  ## Dependencies - Version 1.3.2
+  ## Dependencies - Version 2.0.0
 
 Frontend:
   * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
