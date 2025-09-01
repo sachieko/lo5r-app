@@ -34,9 +34,9 @@ export const formatTechString = (tech: TTechnique) => {
     hasOpps = false;
     return;
   });
-  const result = `${description}\n${activation}\n${
-    effect ? "Effect: " + effect : ""
-  }\n${hasOpps ? `Opportunities:\n${opportunityStrings.join("\n")}` : ""} `;
+  const result = `${description ? description + "\n\n" : ""}${activation ? activation + "\n\n": ""}${
+    effect ? "Effect: " + effect + "\n\n" : ""
+  }${hasOpps ? `Opportunities:\n${opportunityStrings.join("\n")}` : ""} `;
   return result;
 };
 

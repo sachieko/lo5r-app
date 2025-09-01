@@ -19,7 +19,7 @@ export default function ErrorPage() {
     <div id="error-page">
       <ItemCard
         title={"Oops! Were you expecting something else?"}
-        desc={`Sorry, an unexpected error occurred: \n${errorMessage}\nIf this error persists for too long, feel free to notify me by making an issue at https://github.com/sachieko/lo5r-app/issues`}
+        desc={`Sorry, an unexpected error occurred: \n${errorMessage}\nIf this error persists for too long, feel free to notify me by making an issue at https://github.com/sachieko/lo5r-app/issues or yell at me on bluesky @yuseiko.bsky.social`}
       />
     </div>
   );
