@@ -30,8 +30,11 @@
  .card .desc {
   width: 98%;
 }
-.desc p {
+
+.desc div {
   padding: 5px 1rem;
+  white-space: pre-line;
+  line-height: 1.6;
 }
 
 .card .card {

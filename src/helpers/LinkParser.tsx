@@ -1,32 +1,64 @@
 import { Link } from "react-router-dom";
-import { keywordToUrlMap } from "./keywordMap";
+import { keywordMapStore } from "./keywordMap";
+import { useKeywordMap } from "./useKeywordMap";
 
-const replaceKeywordsWithLinks = (paragraph: string) => {
-  const words = paragraph.split(" ");
+const replaceKeywordsWithLinks = (text: string) => {
+  const keywordMap = keywordMapStore.getMap();
+  const bracketRegex = /\[([^\]]+)\]/g;
+  const result = [];
+  if (!keywordMap) return [text];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
 
-  return words.map((word, index) => {
-    // Remove punctuation from the word to check against the keyword map
-    const cleanedWord = word.replace(/[.,!?]/g, "").toLowerCase();
+  while ((match = bracketRegex.exec(text)) !== null) {
+    const [fullMatch, textInside] = match;
+    const matchIndex = match.index;
 
-    if (keywordToUrlMap[cleanedWord]) {
-      return (
-        <Link key={index} to={keywordToUrlMap[cleanedWord]} target="_blank" rel="noopener noreferrer">
-          {word}{" "}
-        </Link>
-      );
+    // Add text before the match
+    if (matchIndex > lastIndex) {
+      result.push(text.substring(lastIndex, matchIndex));
     }
-    return word + " ";
-  });
-};
 
-const FetchedParagraphs = (paragraphs: string[]) => {
+    // Get URL from keywordMap and create Link component
+    const url = keywordMap[textInside];
+    if (url) {
+      result.push(
+        <span key={key++}>
+          <Link
+            key={key++}
+            to={url}
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+          >
+            {textInside}
+          </Link>
+        </span>
+      );
+    } else {
+      result.push(<span key={key++}>{textInside}</span>);
+    }
+
+    lastIndex = matchIndex + fullMatch.length;
+  }
+
+  // Add remaining text after the last match
+  if (lastIndex < text.length) {
+    result.push(text.substring(lastIndex));
+  }
+  return result;
+};
+const LinkParsedText = ({ text }: { text: string }): JSX.Element => {
+  const { keywordMap, loading } = useKeywordMap();
+  // If keyword map is null, skip so app still functions in case keywordMap has issues
+  if (loading || !keywordMap) return <>{text}</>;
+  const elements = replaceKeywordsWithLinks(text);
   return (
     <div>
-      {paragraphs.map((paragraph, index) => (
-        <p key={index}>{replaceKeywordsWithLinks(paragraph)}</p>
-      ))}
+      {elements.map((element, index) => {
+        return <span key={index}>{element}</span>;
+      })}
     </div>
   );
 };
-
-export default FetchedParagraphs;
+export default LinkParsedText;

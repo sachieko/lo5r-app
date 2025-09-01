@@ -1,9 +1,14 @@
 import { Outlet, Link, useNavigation } from "react-router-dom";
 import "./App.scss";
 import { Search } from "./components/Search";
+import { useEffect } from "react";
+import { keywordMapStore } from "./helpers/keywordMap";
 
 const App = function () {
   const navigation = useNavigation();
+  useEffect(() => {
+    keywordMapStore.fetchKeywordMap();
+  }, []);
 
   return (
     <>
