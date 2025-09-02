@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
 import { filterTable } from "../helpers/tableHelpers";
 import { TableColumn } from "../helpers/types";
+import { Helmet } from "react-helmet-async";
 
 type dataType = {
   id: number;
@@ -91,31 +92,22 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
       navigate(`/${route}/${row.id}`, { replace: true}); // change to the clicked url
     }, fadeDelay);
   };
-  /* TODO: Maybe take a formatting function given 1 object to display from the table.
-(dataItem) => {
-dataitem?.cards.map(card => {
-  return <ItemCard key={card.id} title={card.header} desc={card.content} />;
-});
-dataItem ? (
-          <ItemCard title={dataItem.title} desc={dataItem.detail}>
-            {cards}
-          </ItemCard>
-        ) : (
-          <ItemCard
-            title="Loading the Table"
-            desc=""
-          />
-        )
-*/
-  // }
+
   const cards = dataItem?.cards.map((card, index) => {
     return <ItemCard key={index} title={card.header} desc={card.content} />;
   });
+
+  const ogDescription = `${dataItem.title} - ${
+    dataItem.book ? dataItem.book + " page " + dataItem.pg?.toString() : ""
+  }: ${dataItem.detail.slice(0, 20)}...`;
   return (
     <>
+      <Helmet>
+        <meta property="og:description" content={ogDescription} />
+      </Helmet>
       <div className={`${tableClass} table-container`}>
         <SearchBar
-          title="Filter:"
+          title="🔎"
           value={filterWords}
           onChange={handleChange}
           onFocus={() => {}}

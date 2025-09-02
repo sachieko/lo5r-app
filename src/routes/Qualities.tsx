@@ -6,11 +6,11 @@ export const Qualities = function () {
   const qualitiesData = useQualities();
 
   return (
-    <TableSimpleView
-      columns={columns}
-      data={qualitiesData}
-      route="qualities"
-      tableClass="qualities-table"
-    />
+      <TableSimpleView
+        columns={columns}
+        data={qualitiesData}
+        route="qualities"
+        tableClass="qualities-table"
+      />
   );
 };

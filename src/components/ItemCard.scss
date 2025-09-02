@@ -2,6 +2,7 @@
 
 .card {
   border: variables.$cardBorder;
+  border-radius: 5px;
   background: variables.$cardbgColor;
   display: flex;
   flex-direction: column;
@@ -11,14 +12,14 @@
     color: variables.$brightAccent;
   }
 
-  a div {
-    background-color: variables.$bgDark;
-    border-bottom: 1px solid variables.$darkAccent;
-    color: variables.$brightAccent;
+  .link:hover .title {
+    color: variables.$hoverLink;
+    transition: color 1s;
+  }
 
-    &:hover {
-      color: variables.$hoverLink;
-    }
+  a div {
+    color: variables.$textColor;
+    transition: color 1s;
   }
 
   .emphasis {
@@ -27,7 +28,7 @@
     padding-left: 1rem;
   }
 }
- .card .desc {
+.card .desc {
   width: 98%;
 }
 

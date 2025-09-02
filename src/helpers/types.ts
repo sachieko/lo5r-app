@@ -136,8 +136,20 @@ export type Weapon = {
 	cost: string;
 	book: string;
 	pg: number;
-	qualities: Quality[];
+	qualities: string;
 };
+
+export type Armor = {
+  id: number;
+  title: string;
+  physical_resistance: number;
+  supernatural_resistance: number;
+  rarity: number;
+  cost: string;
+  book: string;
+  pg: number;
+  qualities: string;
+}
 
 export type KeywordMap = {
   [key: string]: string;

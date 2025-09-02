@@ -19,11 +19,11 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     1. Rules can be viewed in a list ✅
     2. Clicking a rule allows users to view it without hiding list ✅
   * Built with Typescript (Support for both Front and Backend) ✅
-  * Site can search for resources using the search bar 
+  * Site can search for resources using the search bar ✅
     1. API returns the correct resources based on the search ✅
     2. The site displays them appropriately in a dropdown view ✅
     3. Ensure consistency with mobile views ✅
-    4. Can find: rules ✅, lore ✅, techniques ✅, keywords (such as opportunities)
+    4. Can find: rules ✅, lore ✅, techniques ✅, other keywords  ✅
   * Site has basic lore pages to explain concepts integral to L5R ✅
     1. Explain bushido ✅, 
     2. Small snippets for clans, 
@@ -43,7 +43,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     4. Armor table ✅
     5. Armor table has links to the qualities table (see 3.) ✅
     6. Item table
-    7. Item table has links to the qualities table (see 3.) ✅
+    7. Item table has links to the qualities table (see 3.) 
     8. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
@@ -54,20 +54,25 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
     1. Automated the mapping for keywords via the backend. ✅
+    2. Cache these keywords in localStorage for fast and reliable lookups after the first pageload, even for refreshes or new tabs
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert resources
   * This roadmap is being added to!
  
-  ### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
+  ##### Current Priorities - Create Caches for Routes (med), Create Advantage/Disadvantage Tables (med), Refactor Techniques (low)  
 
-  ## Dependencies - Version 2.0.0
+  ![An icon of fire on a pool of water with mountains reflecting blow on a dark background](/public/android-chrome-192x192.png)
+
+  ### Dependencies - Version 2.0.2
 
 Frontend:
   * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
   * React-Router 6.29.0
+  * React-helmet-async 2.0.5
+  * Relies on localStorage for caching
 
 Backend [Repo Located here](https://github.com/sachieko/lo5r-back):
   * Implemented currently with express and a PostgreSQL database.

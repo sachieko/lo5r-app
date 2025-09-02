@@ -1,6 +1,10 @@
 @use "../styles/variables";
 
 .terrains-table {
+  .row {
+    min-height: 3rem;
+  }
+
   .col-0,
   .row-0 {
     width: 6rem;
@@ -17,8 +21,12 @@
 
 @media only screen and (min-width: 1080px) {
   .terrains-table {
-    width: 500px;
+    width: 600px;
     overflow-x: hidden;
+    .row-1,
+    .col-1 {
+      width: 10rem;
+    }
     .column-container, .table {
       width: 100%;
     }

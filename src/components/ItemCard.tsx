@@ -9,6 +9,7 @@ interface IitemProps {
   children?: JSX.Element[];
   book?: string;
   pg?: number;
+  noLink?: boolean;
 }
 
 export const ItemCard = function ({
@@ -18,6 +19,7 @@ export const ItemCard = function ({
   children,
   book,
   pg,
+  noLink
 }: IitemProps) {
   return (
     <div className={`card`}>
@@ -29,7 +31,7 @@ export const ItemCard = function ({
         <div className="title">{title}</div>
       )}
       <div className="desc">
-        <LinkParsedText text={desc}></LinkParsedText>
+        {noLink ? desc : <LinkParsedText text={desc}></LinkParsedText>}
       </div>
       {children}
 

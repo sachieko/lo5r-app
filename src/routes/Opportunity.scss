@@ -18,7 +18,7 @@
 
   .row {
     border-bottom: 1px solid variables.$darkAccent2;
-
+    min-height: 4rem;
     &:hover {
       background-color: variables.$darkAccent;
       cursor: default;

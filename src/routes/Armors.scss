@@ -1,16 +1,16 @@
 @use "../styles/variables";
 
-section.weapons {
+section.armors {
   width: 95dvw;
   display: flex;
   flex-direction: column;
 }
 
-.weapons-note {
+.armors-note {
   margin: 1rem;
 }
 
-.weapons-table {
+.armors-table {
   margin-bottom: 1rem;
   font-size: 0.6rem;
   height: 60dvh;
@@ -23,73 +23,58 @@ section.weapons {
   .column-container,
   .row,
   .table {
+    display: flex;
     width: max-content;
   }
 
-  .row-6,
-  .col-6,
-  .row-7,
-  .col-7 {
-    width: 4rem;
-  }
-
-  .row-1,
-  .col-1,
-  .row-2,
-  .col-2,
-  .row-5,
-  .col-5,
-  .row-9,
-  .col-9 {
-    width: 6rem;
+  .row {
+    min-height: 2rem;
   }
 
   .row-0,
-  .col-0 {
-    width: 5rem;
+  .col-0,
+  .row-5,
+  .col-5 {
+    width: 12rem;
   }
+
+  .row-1,
+  .row-2,
   .row-3,
+  .col-1,
+  .col-2,
   .col-3 {
     width: 5rem;
   }
 
-  .row-8,
-  .col-8 {
-    width: 10rem;
-  }
-
+  .row-4,
+  .row-6,
+  .row-7,
   .col-4,
-  .row-4 {
-    width: 7rem;
-  }
-  .row-10,
-  .col-10 {
-    width: 4rem;
+  .col-6,
+  .col-7 {
+    width: 6rem;
   }
 }
 
 @media only screen and (min-width: 780px) {
-
-  .weapons-table {
-    font-size: 0.8rem;
+  .armors-table {
     max-height: 75dvh;
-    & > span {
-      font-size: 1.2rem;
+
+    .row {
+      min-height: 4rem;
     }
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .weapons-note {
-    font-size: 1.2rem;
-  }
-
-  .weapons-table {
+  .armors-table {
     width: 95dvw;
 
     .table {
       width: 100%;
     }
+
     .column-container,
     .row {
       width: auto;

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.scss";
 import ErrorPage from "./routes/ErrorPage";
@@ -14,6 +15,7 @@ import { Conditions } from "./routes/Conditions.tsx";
 import { Terrains } from "./routes/Terrains.tsx";
 import { Qualities } from "./routes/Qualities.tsx";
 import { Weapons } from "./routes/Weapons.tsx";
+import { Armors } from "./routes/Armors.tsx";
 
 const router = createBrowserRouter(
   [
@@ -71,6 +73,11 @@ const router = createBrowserRouter(
               element: <Weapons />,
               errorElement: <ErrorPage />,
             },
+            {
+              path: "armors/:dataId",
+              element: <Armors />,
+              errorElement: <ErrorPage />,
+            },
           ],
         },
       ],
@@ -85,6 +92,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} future={{v7_startTransition: true}}/>
+    <HelmetProvider>
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
+    </HelmetProvider>
   </React.StrictMode>
 );

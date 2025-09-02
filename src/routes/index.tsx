@@ -1,7 +1,9 @@
 import { ItemCard } from "../components/ItemCard";
 import menucards from "../assets/menu.json";
 import announcements from "../assets/announcements";
+import LinkParsedText from "../helpers/LinkParser";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Index = function () {
   const [fadeIn, setFadeIn] = useState<boolean>(false);
@@ -15,25 +17,24 @@ export const Index = function () {
 
   const items = menucards.map((item, index) => {
     return (
-      <ItemCard
-        key={index}
-        title={item.title}
-        desc={item.desc}
-        url={item.url}
-      />
+      <Link key={`link-${index}`}to={item.url}>
+        <ItemCard
+          key={index}
+          title={item.title}
+          desc={item.desc}
+          noLink={true}
+        />
+      </Link>
     );
   });
 
   const announceList = announcements.map((announcement, index) => {
-    const paragraphs = announcement.text.split("\n").map((paragraph, index) => {
-      return <p key={index}>{paragraph}</p>;
-    });
     return (
       <div className="announce-card" key={index}>
         <p className="announce-title">
           {announcement.title} - {announcement.date}
         </p>
-        {paragraphs}
+        <LinkParsedText text={announcement.text} key={index}></LinkParsedText>
       </div>
     );
   });

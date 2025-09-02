@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { keywordMapStore } from "./keywordMap";
 import { useKeywordMap } from "./useKeywordMap";
 
 const replaceKeywordsWithLinks = (text: string) => {
-  const keywordMap = keywordMapStore.getMap();
+  const { keywordMap } = useKeywordMap();
   const bracketRegex = /\[([^\]]+)\]/g;
   const result = [];
   if (!keywordMap) return [text];
@@ -26,6 +25,7 @@ const replaceKeywordsWithLinks = (text: string) => {
       result.push(
         <span key={key++}>
           <Link
+            className="link"
             key={key++}
             to={url}
             target={"_blank"}
