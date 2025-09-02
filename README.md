@@ -19,11 +19,11 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     1. Rules can be viewed in a list ✅
     2. Clicking a rule allows users to view it without hiding list ✅
   * Built with Typescript (Support for both Front and Backend) ✅
-  * Site can search for resources using the search bar 
+  * Site can search for resources using the search bar ✅
     1. API returns the correct resources based on the search ✅
     2. The site displays them appropriately in a dropdown view ✅
     3. Ensure consistency with mobile views ✅
-    4. Can find: rules ✅, lore ✅, techniques ✅, keywords (such as opportunities)
+    4. Can find: rules ✅, lore ✅, techniques ✅, other keywords  ✅
   * Site has basic lore pages to explain concepts integral to L5R ✅
     1. Explain bushido ✅, 
     2. Small snippets for clans, 
@@ -61,7 +61,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
  
   ### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
 
-  ## Dependencies - Version 2.0.0
+  ## Dependencies - Version 2.0.1
 
 Frontend:
   * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2

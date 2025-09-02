@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
 import { filterTable } from "../helpers/tableHelpers";
 import { TableColumn } from "../helpers/types";
+import { Helmet } from "react-helmet-async";
 
 type colDataType = {
   id: number;
@@ -75,7 +76,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
   };
 
   // If a particular row is clicked, it should redirect to the url
- const handleRowClick = (row: T) => {
+  const handleRowClick = (row: T) => {
     if (Number(dataId) === row.id) {
       // Don't do anything if they click the same row as the url
       return;
@@ -86,25 +87,15 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
       navigate(`/${route}/${row.id}`, { replace: true }); // change to the clicked url but replace entry in history
     }, fadeDelay);
   };
-  /* TODO: Maybe take a formatting function given 1 object to display from the table.
-(dataItem) => {
-dataitem?.cards.map(card => {
-  return <ItemCard key={card.id} title={card.header} desc={card.content} />;
-});
-dataItem ? (
-          <ItemCard title={dataItem.title} desc={dataItem.detail}>
-            {cards}
-          </ItemCard>
-        ) : (
-          <ItemCard
-            title="Loading the Table"
-            desc=""
-          />
-        )
-*/
-  // }
+
+  const ogDescription = `${dataItem.title} - ${
+    dataItem.book ? dataItem.book + " page " + dataItem.pg?.toString() : ""
+  }: ${dataItem.detail.slice(0, 20)}...`;
   return (
     <>
+      <Helmet>
+        <meta property="og:description" content={ogDescription} />
+      </Helmet>
       <div className={`${tableClass} table-container`}>
         <SearchBar
           title="Filter:"

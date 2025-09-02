@@ -6,6 +6,7 @@ import "./Armors.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
 import { Armor } from "../helpers/types";
+import { Helmet } from "react-helmet-async";
 
 export const Armors = function () {
   const [filterWord, setFilterWord] = useState<string>("");
@@ -26,8 +27,22 @@ export const Armors = function () {
     navigate(`/armors/${armorId}`, { replace: true });
   };
 
+  const dataIndex = armors.findIndex((armor) => {
+    return armor.id === Number(dataId);
+  });
+  const armor = armors[dataIndex];
+  const ogDescription = armor
+    ? `${armor.title}: Phys. ${armor.physical_resistance}, Supernat. ${
+        armor.supernatural_resistance
+      } ${armor.book + " pg." + armor.pg}`
+    : "";
+
   return (
     <>
+      <Helmet>
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:url" content="/armors" />
+      </Helmet>
       <section className="armors">
         <div className="armors-table table-container">
           <SearchBar
@@ -49,8 +64,9 @@ export const Armors = function () {
           />
         </div>
         <div className="armors-note">
-          For details on a piece of armor please see the page in the reference book it is from, 
-          as sometimes there is helpful narrative information or other features that may not fit in the table.
+          For details on a piece of armor please see the page in the reference
+          book it is from, as sometimes there is helpful narrative information
+          or other features that may not fit in the table.
         </div>
       </section>
     </>

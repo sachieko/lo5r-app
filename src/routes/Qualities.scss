@@ -1,4 +1,7 @@
 .qualities-table {
+  .row {
+    min-height: 2rem;
+  }
   .col-0,
   .row-0 {
     width: 6rem;
@@ -13,10 +16,30 @@
   }
 }
 
+@media only screen and (min-width: 780px) {
+  .qualities-table {
+    .col-0,
+    .row-0 {
+      width: 12rem;
+    }
+    .col-1,
+    .row-1 {
+      width: 14rem;
+    }
+    .col-2,
+    .row-2 {
+      width: 5rem;
+    }
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .qualities-table {
-    width: 600px;
+    width: 800px;
     overflow-x: hidden;
+    .row {
+      min-height: 4rem;
+    }
     .column-container, .table {
       width: 100%;
     }

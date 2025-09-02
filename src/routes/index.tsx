@@ -1,6 +1,7 @@
 import { ItemCard } from "../components/ItemCard";
 import menucards from "../assets/menu.json";
 import announcements from "../assets/announcements";
+import LinkParsedText from "../helpers/LinkParser";
 import { useEffect, useState } from "react";
 
 export const Index = function () {
@@ -25,15 +26,12 @@ export const Index = function () {
   });
 
   const announceList = announcements.map((announcement, index) => {
-    const paragraphs = announcement.text.split("\n").map((paragraph, index) => {
-      return <p key={index}>{paragraph}</p>;
-    });
     return (
       <div className="announce-card" key={index}>
         <p className="announce-title">
           {announcement.title} - {announcement.date}
         </p>
-        {paragraphs}
+        <LinkParsedText text={announcement.text} key={index}></LinkParsedText>
       </div>
     );
   });

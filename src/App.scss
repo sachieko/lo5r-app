@@ -7,11 +7,11 @@ html {
 #announce-container {
   display: flex;
   border: 2px dashed rgba(0, 225, 255, 0.694);
-  padding: 5px;
+  padding: 10px;
   flex-direction: column;
   max-width: 90%;
   width: fit-content;
-  line-height: 1rem;
+  white-space: pre-line;
   max-height: 300px;
   overflow-y: scroll;
   justify-self: center;
@@ -21,13 +21,13 @@ html {
   &:hover {
     border-color: azure;
   }
-    .announce-card p {
+    .announce-card  {
     font-size: 1rem;
   }
   .announce-card .announce-title {
     display: flex;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2rem;
   }
 
@@ -190,7 +190,7 @@ html {
     margin: 0.5rem 0.5rem;
     background-color: variables.$cardbgColor;
   }
-  p, div {
+  div {
     font-size: 0.8rem;
   }
   .table > div {
@@ -221,7 +221,7 @@ html {
 
 @media only screen and (min-width: 780px) {
 
-  #view p, #view div, #view .table > div {
+  #view div, #view .table > div {
     font-size: 1rem;
   }
   .menu {
@@ -250,7 +250,7 @@ html {
       height: 20rem;
     }
 
-    .searchbar-container, p, div {
+    .searchbar-container, div {
       font-size: 1.2rem;
     }
   }
