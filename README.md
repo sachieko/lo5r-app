@@ -60,7 +60,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Allow admin to insert resources
   * This roadmap is being added to!
  
-  ##### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
+  ##### Current Priorities - Create Caches for Routes (med), Create Advantage/Disadvantage Tables (med), Refactor Techniques (low)  
 
   ![An icon of fire on a pool of water with mountains reflecting blow on a dark background](/public/android-chrome-192x192.png)
 
