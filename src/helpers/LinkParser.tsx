@@ -49,9 +49,6 @@ const replaceKeywordsWithLinks = (text: string) => {
   return result;
 };
 const LinkParsedText = ({ text }: { text: string }): JSX.Element => {
-  const { keywordMap, loading } = useKeywordMap();
-  // If keyword map is null, skip so app still functions in case keywordMap has issues
-  if (loading || !keywordMap) return <>{text}</>;
   const elements = replaceKeywordsWithLinks(text);
   return (
     <div>
