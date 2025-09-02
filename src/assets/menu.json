@@ -45,6 +45,11 @@
     "url": "/weapons/1"
   },
   {
+    "title": "Armors",
+    "desc": "A list of things to die slower",
+    "url": "/armors/1"
+  },
+  {
     "title": "Disclaimer",
     "desc": "This is a personal non-profit project intended as an easily-accessible digital reference for products you already own and will not be designed to replace them. Please ensure you only access content in accordance with your local laws. If you have concerns, please contact me via github.",
     "url": "https://github.com/sachieko/lo5r-app"
