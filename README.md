@@ -43,7 +43,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     4. Armor table ✅
     5. Armor table has links to the qualities table (see 3.) ✅
     6. Item table
-    7. Item table has links to the qualities table (see 3.) ✅
+    7. Item table has links to the qualities table (see 3.) 
     8. Qualities table ✅
   * Site has conditions page for conditions ✅
     1. Update link filters for conditions ✅
@@ -54,6 +54,7 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
     1. Automated the mapping for keywords via the backend. ✅
+    2. Cache these keywords in localStorage for fast and reliable lookups after the first pageload, even for refreshes or new tabs
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert resources
@@ -71,6 +72,7 @@ Frontend:
   * Sass 1.66.1
   * React-Router 6.29.0
   * React-helmet-async 2.0.5
+  * Relies on localStorage for caching
 
 Backend [Repo Located here](https://github.com/sachieko/lo5r-back):
   * Implemented currently with express and a PostgreSQL database.
