@@ -59,15 +59,18 @@ This is a personal hobby project so I wouldn't expect a lot from it, but if you 
     2. Allow admin to insert resources
   * This roadmap is being added to!
  
-  ### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
+  ##### Current Priority - Add important rule pages that are referenced often, improve keyword filtering creation, add armor and adv/disadv tables.
 
-  ## Dependencies - Version 2.0.1
+  ![An icon of fire on a pool of water with mountains reflecting blow on a dark background](/public/android-chrome-192x192.png)
+
+  ### Dependencies - Version 2.0.2
 
 Frontend:
   * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
   * React-Router 6.29.0
+  * React-helmet-async 2.0.5
 
 Backend [Repo Located here](https://github.com/sachieko/lo5r-back):
   * Implemented currently with express and a PostgreSQL database.

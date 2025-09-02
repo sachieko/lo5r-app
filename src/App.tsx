@@ -13,7 +13,8 @@ const App = function () {
   return (
     <>
       <nav className="topNav">
-        <Link to="/">
+        <Link to="/" className="navLink">
+          <img src="/favicon.svg" alt="A flame in a pool with earth below and air above in a void" />
           <p className="title">L5RSRD</p>
         </Link>
         <Search />

@@ -3,6 +3,7 @@ import menucards from "../assets/menu.json";
 import announcements from "../assets/announcements";
 import LinkParsedText from "../helpers/LinkParser";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Index = function () {
   const [fadeIn, setFadeIn] = useState<boolean>(false);
@@ -16,12 +17,14 @@ export const Index = function () {
 
   const items = menucards.map((item, index) => {
     return (
-      <ItemCard
-        key={index}
-        title={item.title}
-        desc={item.desc}
-        url={item.url}
-      />
+      <Link key={`link-${index}`}to={item.url}>
+        <ItemCard
+          key={index}
+          title={item.title}
+          desc={item.desc}
+          noLink={true}
+        />
+      </Link>
     );
   });
 

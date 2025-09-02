@@ -78,7 +78,7 @@ export const Technique = function () {
       </Helmet>
       <div className="tech-table table-container">
           <SearchBar
-            title="Filter:"
+            title="🔎"
             value={filterWords}
             onChange={handleChange}
             onFocus={() => {}}

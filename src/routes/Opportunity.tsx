@@ -24,7 +24,7 @@ export const Opportunity = function () {
       </Helmet>
       <div className="opp-table table-container">
         <SearchBar
-          title="Filter:"
+          title="🔎"
           value={filterWord}
           onChange={handleChange}
           onFocus={() => {}}

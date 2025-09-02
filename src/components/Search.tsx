@@ -50,7 +50,7 @@ export const Search = function () {
   return (
     <div className="search-container">
       <SearchBar
-        title="Search:"
+        title="🔎"
         onChange={handleInput}
         onFocus={() => setSearchFocused(true)}
         onBlur={() =>

@@ -107,7 +107,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
       </Helmet>
       <div className={`${tableClass} table-container`}>
         <SearchBar
-          title="Filter:"
+          title="🔎"
           value={filterWords}
           onChange={handleChange}
           onFocus={() => {}}

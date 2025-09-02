@@ -9,16 +9,17 @@ $darkAccent2: #4e60d0;
 $darkAccent3: #303a81;
 $brightAccent: #58cdff;
 $bgColor: #262626;
-$cardbgColor: #222222;
+$cardbgColor: #2222228d;
+$tableSearchBgColor: #222222;
 $bgDark: #1d1d1d;
 $textColor: rgba(255, 255, 255, 0.87);
 $card-bg: url("./assets/soft-kill.png");
 
-$navLinkBg: #301e1e;
-$cardBorder: 1px solid $accentColor;
+$navLinkBg: #301e1e3f;
+$cardBorder: 2px solid $accentColor;
 
 $activeLink: rgb(0, 247, 255);
-$hoverLink: silver;
+$hoverLink: rgb(255, 0, 47);
 $pendingLink: green;
 
 $bpGradient: linear-gradient(to top, $darkAccent2, $darkAccent);

@@ -4,6 +4,15 @@ html {
   background-image: variables.$card-bg;
 }
 
+a {
+  color: variables.$brightAccent;
+  transition: color 1s;
+}
+
+a:hover {
+  transition: color 1s;
+}
+
 #announce-container {
   display: flex;
   border: 2px dashed rgba(0, 225, 255, 0.694);
@@ -15,13 +24,15 @@ html {
   max-height: 300px;
   overflow-y: scroll;
   justify-self: center;
+  transition: border-color 1s;
   background-color: variables.$cardbgColor;
   @include variables.custom-scrollbar;
   cursor: pointer;
   &:hover {
     border-color: azure;
+    transition: border-color 1s;
   }
-    .announce-card  {
+  .announce-card {
     font-size: 1rem;
   }
   .announce-card .announce-title {
@@ -30,10 +41,10 @@ html {
     font-weight: 600;
     font-size: 1.2rem;
   }
-
 }
 
-.fadeout, #announce-container.fadeout {
+.fadeout,
+#announce-container.fadeout {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -63,14 +74,35 @@ html {
     }
   }
 
-  .title {
-    padding: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  img {
+    height: 2.5rem;
+    border: variables.$cardBorder;
+    transition: border-color 1s;
   }
 
-  .title:hover {
-    color: variables.$hoverLink;
+  .navLink:hover .title {
+    color: variables.$brightAccent;
+    transition: color 1s;
+  }
+
+  .navLink:hover img {
+    border-color: variables.$brightAccent;
+    transition: border-color 1s;
+  }
+
+  .title {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    transition: color 1s;
+  }
+
+  .navLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .active {
@@ -88,9 +120,24 @@ html {
   align-items: center;
   opacity: 0;
   transition: opacity 0.4s ease-out;
+  .card .desc {
+    color: variables.$textColor;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card:hover .title {
+    color: variables.$hoverLink;
+    transition: color 1s;
+  }
+
+  .card .title {
+    border-bottom: 2px solid variables.$brightAccent;
+    transition: color 1s;
+  }
 }
 
-.menu.fade {
+.fade {
   opacity: 1;
 }
 
@@ -134,7 +181,7 @@ html {
     height: 25px;
     font-size: 1.2rem;
     min-width: 200px;
-    background-color: variables.$cardbgColor;
+    background-color: variables.$tableSearchBgColor;
   }
   .column-container {
     background: variables.$bpGradient;
@@ -220,8 +267,8 @@ html {
 }
 
 @media only screen and (min-width: 780px) {
-
-  #view div, #view .table > div {
+  #view div,
+  #view .table > div {
     font-size: 1rem;
   }
   .menu {
@@ -250,7 +297,8 @@ html {
       height: 20rem;
     }
 
-    .searchbar-container, div {
+    .searchbar-container,
+    div {
       font-size: 1.2rem;
     }
   }

@@ -26,6 +26,7 @@ const replaceKeywordsWithLinks = (text: string) => {
       result.push(
         <span key={key++}>
           <Link
+            className="link"
             key={key++}
             to={url}
             target={"_blank"}
