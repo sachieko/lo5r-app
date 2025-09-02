@@ -11,7 +11,8 @@ html {
   flex-direction: column;
   max-width: 90%;
   width: fit-content;
-  max-height: 400px;
+  line-height: 1rem;
+  max-height: 300px;
   overflow-y: scroll;
   justify-self: center;
   background-color: variables.$cardbgColor;

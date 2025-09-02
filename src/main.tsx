@@ -14,6 +14,7 @@ import { Conditions } from "./routes/Conditions.tsx";
 import { Terrains } from "./routes/Terrains.tsx";
 import { Qualities } from "./routes/Qualities.tsx";
 import { Weapons } from "./routes/Weapons.tsx";
+import { Armors } from "./routes/Armors.tsx";
 
 const router = createBrowserRouter(
   [
@@ -71,6 +72,11 @@ const router = createBrowserRouter(
               element: <Weapons />,
               errorElement: <ErrorPage />,
             },
+            {
+              path: "armors/:dataId",
+              element: <Armors />,
+              errorElement: <ErrorPage />,
+            }
           ],
         },
       ],

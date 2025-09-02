@@ -1,10 +1,9 @@
 const announcements = [
   {
-    title: "Version 2.0",
-    text: `There was downtime as I prepared the back and front end for version 2.0. Quite exciting huh?
-    This is what the update entails in a bundle:
+    title: "Version 2.0 Dev Announcement",
+    text: `There was downtime as I prepared the back and front end for version 2.0. Quite exciting huh? Here's the list of changes below:
     - Weapons and Armors now have direct links to their qualities!
-    - Did I say armors? Yes! I have armors in the backend, table will drop when I update this announcement!
+    - Did I say armors? Yes! We have an armor table now!
     - Readability of titles is drastically improved! Sorry cool cursive font, you ain't all that!
     - New weapons and armors from the Unicorn book, and Celestial Realms, have been added!
     - All keyword links should have their logic improved. If they show up, they're working! If not, they may not have a page yet!
@@ -14,7 +13,7 @@ const announcements = [
     - Improvements to some orders of things
     - Arrows! Yes, arrows are now a thing you can look up in the weapon table, their qualities will have further details!
     - Space is used a bit better on desktop views for the future. Tomorrow me thanks past me.
-    Enjoy, look forward to the fancy Armor table!`,
+    Enjoy!`,
     date: "1/9/2025",
   },
 ];
