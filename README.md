@@ -7,6 +7,17 @@ Those interested in the game should reference the core rulebook and rely on expe
 It is currently deployed via Cloudflare at [https://lo5r.yuseiko.org](https://lo5r.yuseiko.org)
 This is a personal hobby project so I wouldn't expect a lot from it, but if you do like the project and want to contribute or ask about features/issues, feel free to reach out to me or open a github issue. Development updates are regularly put on the home page as well!
 
+### Contributions
+
+In no particular order:
+
+* Snowbear22/Snowbear
+* Logos
+* Moonlit Demon
+* @teschnei
+
+Thanks for the support and assistance in finding bugs, errors, typos, grammatical mishaps, and even submitting content!
+
 ## Roadmap for Development
 
 * Basic features 
