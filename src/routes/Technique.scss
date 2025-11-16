@@ -3,35 +3,43 @@
 .tech-table {
   margin-bottom: 2rem;
   font-size: 0.6rem;
-  height: 35dvh;
-  width: 95dvw;
+  height: 50dvh;
+  max-width: 95dvw;
   overflow: auto;
+
+  .column-container,
+  .row,
+  .table {
+    width: min(max-content, 95dvw);
+    min-width: max-content;
+  }
+
+  .row {
+    height: 3rem;
+  }
 
   .row-0,
   .col-0 {
     width: 10rem;
+    
   }
 
   .row-1,
-  .col-1 {
-    width: 3rem;
-  }
-
   .row-2,
-  .col-2 {
-    width: 6rem;
-  }
-
+  .col-1,
+  .col-2,
   .row-3,
   .col-3,
   .row-4,
-  .col-4 {
-    width: 4rem;
-  }
-
+  .col-4,
   .row-5,
   .col-5 {
-    width: 3rem;
+    width: 5rem;
+  }
+
+  .row-6,
+  .col-6 {
+    width: 6rem;
   }
 }
 
@@ -45,46 +53,14 @@
 }
 
 @media only screen and (min-width: 780px) {
-  .tech-table {
-    .row-0,
-    .col-0 {
-      width: 15rem;
-    }
-
-    .row-1,
-    .col-1 {
-      width: 3rem;
-    }
-
-    .row-3,
-    .col-3 {
-      width: 5.5rem;
-    }
-    .row-4,
-    .col-4 {
-      width: 10rem;
-    }
-
-    .row-5,
-    .col-5 {
-      width: 4rem;
-    }
+  .tech-table .row {
+    height: 4rem;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .tech-table {
-    width: 65dvw;
+    min-width: max-content;
     height: 85dvh;
-    .table {
-      width: 100%;
-    }
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .tech-table {
-    height: 80dvh;
-    font-size: 0.5rem;
   }
 }

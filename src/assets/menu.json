@@ -46,8 +46,13 @@
   },
   {
     "title": "20-Q Character Creation",
-    "desc": "Creating a new character?\nThe 20 questions process runs you through the how-to of making a new character step by step.",
+    "desc": "UNDER RECONSTRUCTION...",
     "url": "/questions/1"
+  },
+  {
+    "title": "Shukumei Discord Dice Bot",
+    "desc": "Want a discord dice bot specifically tailored to Legend of the Five Rings, 5th Edition? Add my bot to your server by following the install instructions here.",
+    "url": "https://github.com/sachieko/shukumei"
   },
   {
     "title": "Disclaimer",
@@ -56,7 +61,7 @@
   },
   {
     "title": "About",
-    "desc": "This is a single-person project at the moment, with the goal of creating an easily accessed digital reference for during gameplay. For more detail on my project, feel free to check out my github for this project - Sachieko",
+    "desc": "This is a single-person project at the moment, with the goal of creating an easily accessed digital reference for during gameplay. For more detail on my project, check out my github for this project - Sachieko",
     "url": "https://github.com/sachieko/lo5r-app"
   }
 ]

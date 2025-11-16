@@ -34,9 +34,11 @@ export const formatTechString = (tech: TTechnique) => {
     hasOpps = false;
     return;
   });
-  const result = `${description ? description + "\n\n" : ""}${activation ? activation + "\n\n": ""}${
-    effect ? "Effect: " + effect + "\n\n" : ""
-  }${hasOpps ? `Opportunities:\n${opportunityStrings.join("\n")}` : ""} `;
+  const result = `${description ? description + "\n\n" : ""}${
+    activation ? activation + "\n\n" : ""
+  }${effect ? "Effect: " + effect + "\n\n" : ""}${
+    hasOpps ? `Opportunities:\n${opportunityStrings.join("\n")}` : ""
+  } `;
   return result;
 };
 
@@ -45,6 +47,10 @@ export const columns: TableColumn<TTechnique, keyof TTechnique>[] = [
   {
     key: "name",
     header: "Technique",
+  },
+  {
+    key: "rings",
+    header: "Rings",
   },
   {
     key: "rank",
