@@ -10,7 +10,7 @@ the object of arr, it will be included in the result array. This allows the clie
 Note: Not case sensitive because it's inconvenient for mobile users
 */
 
-export const filterTable = <T, K extends keyof T>(
+export const filterTable = <T extends {}, K extends keyof T>(
   arr: T[],
   keywords: string[],
   columns: TableColumn<T, K>[],

@@ -165,9 +165,10 @@ a:hover {
     overflow-y: hidden;
     width: 100%;
   }
+
   .column-container {
     position: sticky;
-    top: 25px;
+    top: 3rem;
     z-index: 1;
   }
   .searchbar-container {
@@ -178,14 +179,15 @@ a:hover {
     top: 0;
     left: 0;
     z-index: 1;
-    height: 25px;
+    height: 2rem;
     font-size: 1.2rem;
     min-width: 200px;
     background-color: variables.$tableSearchBgColor;
+    padding: 0.5rem;
   }
   .column-container {
     background: variables.$bpGradient;
-    height: 3dvh;
+    height: 3rem;
     align-items: center;
 
     p:hover {
@@ -201,6 +203,7 @@ a:hover {
     padding-left: 10px;
     justify-content: space-around;
     text-align: center;
+    align-items: center;
   }
 
   .focusRow {
@@ -263,7 +266,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90dvw;
+  max-width: 80dvw;
 }
 
 @media only screen and (min-width: 780px) {
@@ -310,7 +313,7 @@ a:hover {
   .detail-card > .card {
     max-height: 80dvh;
     overflow-y: auto;
-    width: 50dvw;
+    max-width: 50dvw;
     min-width: 20dvw;
     @include variables.custom-scrollbar;
   }

@@ -15,6 +15,7 @@ section.weapons {
   font-size: 0.6rem;
   height: 60dvh;
   overflow: auto;
+  width: 95dvw;
 
   .column-container {
     padding: 10px;
@@ -23,7 +24,8 @@ section.weapons {
   .column-container,
   .row,
   .table {
-    width: max-content;
+    width: min(max-content, 95dvw);
+    min-width: max-content;
   }
 
   .row-6,
@@ -45,9 +47,7 @@ section.weapons {
   }
 
   .row-0,
-  .col-0 {
-    width: 5rem;
-  }
+  .col-0,
   .row-3,
   .col-3 {
     width: 5rem;
@@ -82,18 +82,5 @@ section.weapons {
 @media only screen and (min-width: 1080px) {
   .weapons-note {
     font-size: 1.2rem;
-  }
-
-  .weapons-table {
-    width: 95dvw;
-
-    .table {
-      width: 100%;
-    }
-    .column-container,
-    .row {
-      width: auto;
-      flex-grow: 1;
-    }
   }
 }

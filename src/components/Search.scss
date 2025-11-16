@@ -42,6 +42,7 @@
   padding: 1px;
   border-radius: 3px;
   border: 1px solid variables.$darkAccent;
+  max-width: 40dvw;
   &:focus {
     border-color: variables.$accentColor;
   }

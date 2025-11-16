@@ -1,4 +1,4 @@
-# L5R Standard Reference Document App v2.0
+# L5R Standard Reference Document App v2.1
 
 This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio under Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
@@ -20,12 +20,15 @@ Thanks for the support and assistance in finding bugs, errors, typos, grammatica
 
 ## Roadmap for Development
 
+Current Priorities: Create Advantage and Disadvantage Tables, Refactor 20 Questions, Refactor CSS.
+
 * Basic features 
   * Site has character creation details ✅
     1. 20 questions are referenced from database ✅
     2. Character sheet changes are noted ✅
     3. Detailed information is included (School information is a to do at a later date)
     4. Allow users to quickly navigate between questions ✅
+    5. Allow users to select choices to populate a character sheet
   * Site has rule pages ✅
     1. Rules can be viewed in a list ✅
     2. Clicking a rule allows users to view it without hiding list ✅
@@ -73,7 +76,7 @@ Thanks for the support and assistance in finding bugs, errors, typos, grammatica
  
   ##### Current Priorities - Create Caches for Routes (med), Create Advantage/Disadvantage Tables (med), Refactor Techniques (low)  
 
-  ![An icon of fire on a pool of water with mountains reflecting blow on a dark background](/public/android-chrome-192x192.png)
+  ![An icon of fire on a pool of water with mountains reflecting below on a dark background](/public/android-chrome-192x192.png)
 
   ### Dependencies - Version 2.0.2
 
