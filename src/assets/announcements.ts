@@ -1,20 +1,14 @@
 const announcements = [
   {
-    title: "Version 2.1 Dev Announcement",
-    text: `Usersへ, 
+    title: "Happy New Year / 明けましておめでとうございます",
+    text: `A New Year Dawns yet again. 
 
-    Version 2.1 is now live. Changes below:
+    * New conditions from the Unicorn book have been added
+    * A few errors have been corrected, such as the original source material referencing fatigued as a condition instead of [Exhausted].
+    * Advantages and Disadvantages are still planned.
 
-    * Techniques from Shadowlands and Path of Waves have been added.
-    * This excludes the Gaikokujin exclusive talents due to their complex systems and lower priority.. because gaikokujin.
-    * The techniques table now includes the rings used for rolls for optimal technique selecting, as highly requested.
-    * Site styles have been updated to hopefully provide a slightly better experience on various devices.
-    * A few backend updates. 
-    * Added a menu link for those interested in adding a discord dice bot specifically tailored for Legend of the 5 Rings 5th edition. 
-    * 20 Questions are under construction, stay tuned..
-
-    Sachiekoより`,
-    date: "16/11/2025",
+    今年もよろしく！`,
+    date: "11/1/2026",
   },
 ];
 
