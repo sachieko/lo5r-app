@@ -1,10 +1,5 @@
 [
   {
-    "title": "Lore and Setting",
-    "desc": "Contains information about the lore and setting of the game.\nThis includes information about clans, schools, creatures, and places in the world.",
-    "url": "/lore/1"
-  },
-  {
     "title": "Rules and Mechanics",
     "desc": "Contains rules or mechanics of the game, such as how dice rolls work or skills do.\nThis section helps figure out the how of playing Legend of the Five Rings.",
     "url": "/rules/1"
@@ -30,11 +25,6 @@
     "url": "/qualities/1"
   },
   {
-    "title": "Terrain Qualities",
-    "desc": "Contains a list of Terrain qualities.",
-    "url": "/terrains/1"
-  },
-  {
     "title": "Weapons",
     "desc": "A table listing common weapons and their qualities.",
     "url": "/weapons/1"
@@ -43,6 +33,16 @@
     "title": "Armors",
     "desc": "A list of things to help you die slower",
     "url": "/armors/1"
+  },
+    {
+    "title": "Terrain Qualities",
+    "desc": "Contains a list of Terrain qualities.",
+    "url": "/terrains/1"
+  },
+  {
+    "title": "Lore and Setting",
+    "desc": "Contains information about the lore and setting of the game.\nThis includes information about clans, schools, creatures, and places in the world.",
+    "url": "/lore/1"
   },
   {
     "title": "20-Q Character Creation",
