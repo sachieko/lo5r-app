@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { useWeapons, columns } from "../helpers/useWeapons";
 import { Table } from "../components/Table";
 import "./Weapons.scss";
@@ -26,17 +25,9 @@ export const Weapons = function () {
       }
       navigate(`/weapons/${weaponId}`, { replace: true });
     };
-  const dataIndex = weapons.findIndex((weapon) => {
-    return weapon.id === Number(dataId)
-  })
-  const weapon = weapons[dataIndex]
-  const ogDescription = weapon ? `${weapon.title}: ${weapon.type}, Damage: ${weapon.damage}, Deadliness: ${weapon.deadliness}, Range: ${weapon.range}.` : "";
 
   return (
     <>
-      <Helmet>
-        <meta property="og:description" content={ogDescription} />
-      </Helmet>
       <section className="weapons">
         <div className="weapons-table table-container">
           <SearchBar
