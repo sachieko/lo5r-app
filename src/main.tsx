@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
 import "./index.scss";
 import ErrorPage from "./routes/ErrorPage";
@@ -92,8 +91,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <HelmetProvider>
       <RouterProvider router={router} future={{ v7_startTransition: true }} />
-    </HelmetProvider>
   </React.StrictMode>
 );

@@ -11,7 +11,6 @@ import { filterTable } from "../helpers/tableHelpers";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ItemCard } from "../components/ItemCard";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 
 const fadeDelay: number = 150;
 
@@ -70,12 +69,9 @@ export const Technique = function () {
       navigate(`/techniques/${techId}?filter=${filterWords}`, { replace: true });
     }, fadeDelay);
   };
-  const ogDescription = technique ? `${technique.name}: ${technique.activation.slice(0,20)}` : ``
+  
   return (
     <>
-      <Helmet>
-        <meta property="og:description" content={ogDescription} />
-      </Helmet>
       <div className="tech-table table-container">
           <SearchBar
             title="🔎"
