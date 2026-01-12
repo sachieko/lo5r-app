@@ -25,11 +25,6 @@
     "url": "/qualities/1"
   },
   {
-    "title": "Terrain Qualities",
-    "desc": "Contains a list of Terrain qualities.",
-    "url": "/terrains/1"
-  },
-  {
     "title": "Weapons",
     "desc": "A table listing common weapons and their qualities.",
     "url": "/weapons/1"
@@ -38,6 +33,11 @@
     "title": "Armors",
     "desc": "A list of things to help you die slower",
     "url": "/armors/1"
+  },
+    {
+    "title": "Terrain Qualities",
+    "desc": "Contains a list of Terrain qualities.",
+    "url": "/terrains/1"
   },
   {
     "title": "Lore and Setting",
