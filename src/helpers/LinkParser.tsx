@@ -48,7 +48,7 @@ const replaceKeywordsWithLinks = (text: string) => {
   }
   return result;
 };
-const LinkParsedText = ({ text }: { text: string }): JSX.Element => {
+const LinkParsedText = ({ text }: { text: string }) => {
   const elements = replaceKeywordsWithLinks(text);
   return (
     <div>

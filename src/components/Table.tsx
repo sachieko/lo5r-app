@@ -4,6 +4,7 @@ import LinkParsedText from "../helpers/LinkParser";
 
 type TableData = {
   id: number;
+  [key: string]: any;
 };
 
 type TableRowProps<T extends TableData, K extends keyof T> = {
@@ -38,7 +39,7 @@ const TableRows = <T extends TableData, K extends keyof T>({
   columns,
   rowClick,
   selected,
-}: TableRowProps<T, K>): JSX.Element => {
+}: TableRowProps<T, K>) => {
   // Create rows from the data
   const tableRef = useRef<null | HTMLDivElement>(null);
   useEffect(() => {
@@ -86,7 +87,7 @@ export function Table<T extends TableData, K extends keyof T>({
   columns,
   rowClick,
   selected,
-}: TableProps<T, K>): JSX.Element {
+}: TableProps<T, K>) {
   return (
     <>
       <TableHeader columns={columns} />

@@ -1,7 +1,4 @@
 .qualities-table {
-  .row {
-    min-height: 2rem;
-  }
   .col-0,
   .row-0 {
     width: 6rem;
@@ -37,9 +34,6 @@
   .qualities-table {
     width: 800px;
     overflow-x: hidden;
-    .row {
-      min-height: 4rem;
-    }
     .column-container, .table {
       width: 100%;
     }

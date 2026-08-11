@@ -1,4 +1,4 @@
-# L5R Standard Reference Document App v2.1
+# L5R Standard Reference Document App v2.2
 
 This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio under Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 

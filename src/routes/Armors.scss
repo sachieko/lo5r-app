@@ -27,10 +27,6 @@ section.armors {
     width: max-content;
   }
 
-  .row {
-    min-height: 2rem;
-  }
-
   .row-0,
   .col-0,
   .row-5,
@@ -60,10 +56,6 @@ section.armors {
 @media only screen and (min-width: 780px) {
   .armors-table {
     max-height: 75dvh;
-
-    .row {
-      min-height: 4rem;
-    }
   }
 }
 
