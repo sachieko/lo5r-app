@@ -4,6 +4,7 @@ import LinkParsedText from "../helpers/LinkParser";
 
 type TableData = {
   id: number;
+  [key: string]: any;
 };
 
 type TableRowProps<T extends TableData, K extends keyof T> = {

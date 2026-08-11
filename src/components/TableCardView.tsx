@@ -4,7 +4,7 @@ import { SearchBar } from "../components/SearchBar";
 import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
 import { filterTable } from "../helpers/tableHelpers";
-import { TableColumn } from "../helpers/types";
+import { TableColumn, TCard } from "../helpers/types";
 
 type dataType = {
   id: number;
@@ -20,8 +20,8 @@ type dataType = {
 };
 
 type TableCardViewProps<T extends dataType, K extends keyof T> = {
-  columns: Array<TableColumn<T, K>>;
-  data: Array<T>;
+  columns: TableColumn<T, K>[];
+  data: T[];
   route: string;
   tableClass: string;
 };
@@ -92,7 +92,8 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     }, fadeDelay);
   };
 
-  const cards = dataItem?.cards.map((card, index) => {
+  const cards = dataItem?.cards.map((card: TCard
+    , index: number) => {
     return <ItemCard key={index} title={card.header} desc={card.content} />;
   });
 

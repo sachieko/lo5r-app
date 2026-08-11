@@ -9,13 +9,17 @@ the object of arr, it will be included in the result array. This allows the clie
 
 Note: Not case sensitive because it's inconvenient for mobile users
 */
+type dataType = {
+  id: number;
+  [key: string]: any;
+};
 
-export const filterTable = <T extends {}, K extends keyof T>(
+export const filterTable = <T extends dataType, K extends keyof T>(
   arr: T[],
   keywords: string[],
   columns: TableColumn<T, K>[],
   strictWords?: T[K][] | undefined,
-  strictKey?: K
+  strictKey?: K,
 ): T[] => {
   // Early convert all keywords to lowercase
   keywords = keywords.map((word) => {
@@ -29,33 +33,32 @@ export const filterTable = <T extends {}, K extends keyof T>(
       strictKeyword = strictKeyword[0].toUpperCase() + strictKeyword.slice(1);
     }
   }
-  return arr.filter((row: T) => {
+  return arr.filter((dataObject: T) => {
     // Check if any keywords match scrictKey, remove any rows that do not match strictKeyword
-    if (strictKeyword && strictKey && strictKeyword !== row[strictKey]) {
+    if (strictKeyword && strictKey && strictKeyword !== dataObject[strictKey]) {
       return false;
     }
-    // Check if all keywords are contained in at least one of the array fields
     return keywords.every((keyword) => {
       const lcKeyword: number | string = keyword;
       const isWholeN = /^\d+$/.test(lcKeyword);
       return columns.some((column) => {
-        const columnValue = row[column.key];
-          // If the column's property is a string, check if it includes the keyword
-          if (
-            typeof columnValue === "string" &&
-            !isWholeN && // If the keyword is a number, skip
-            columnValue.toLowerCase().includes(lcKeyword)
-          ) {
-            return true;
-          }
-          if (
-            typeof columnValue === "number" &&
-            isWholeN &&
-            columnValue === Number(lcKeyword)
-          ) {
-            return true;
-          }
-          return false;
+        const columnValue = dataObject[column.key];
+        // If the column's property is a string, check if it includes the keyword
+        if (
+          typeof columnValue === "string" &&
+          !isWholeN && // If the keyword is a number, skip
+          columnValue.toLowerCase().includes(lcKeyword)
+        ) {
+          return true;
+        }
+        if (
+          typeof columnValue === "number" &&
+          isWholeN &&
+          columnValue === Number(lcKeyword)
+        ) {
+          return true;
+        }
+        return false;
       });
     });
   });
