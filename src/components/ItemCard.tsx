@@ -6,7 +6,7 @@ interface IitemProps {
   title: string;
   desc: string;
   url?: string;
-  children?: JSX.Element[];
+  children?: React.ReactNode;
   book?: string;
   pg?: number;
   noLink?: boolean;

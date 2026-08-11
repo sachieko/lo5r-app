@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
 import { filterTable } from "../helpers/tableHelpers";
 import { TableColumn } from "../helpers/types";
-import { Helmet } from "react-helmet-async";
 
 type dataType = {
   id: number;
@@ -35,7 +34,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
   data,
   route,
   tableClass,
-}: TableCardViewProps<T, K>): JSX.Element => {
+}: TableCardViewProps<T, K>) => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
@@ -76,7 +75,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
         prev.set("filter", newFilterWord);
         return prev;
       },
-      { replace: true }
+      { replace: true },
     );
   };
 
@@ -89,7 +88,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
     setFadeIn(false); // Hide the current element
     setTimeout(() => {
       setFadeIn(true);
-      navigate(`/${route}/${row.id}`, { replace: true}); // change to the clicked url
+      navigate(`/${route}/${row.id}`, { replace: true }); // change to the clicked url
     }, fadeDelay);
   };
 
@@ -102,9 +101,7 @@ export const TableCardView = <T extends dataType, K extends keyof T>({
   }: ${dataItem.detail.slice(0, 20)}...`;
   return (
     <>
-      <Helmet>
-        <meta property="og:description" content={ogDescription} />
-      </Helmet>
+      <meta property="og:description" content={ogDescription} />
       <div className={`${tableClass} table-container`}>
         <SearchBar
           title="🔎"

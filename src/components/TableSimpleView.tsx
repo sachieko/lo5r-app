@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Table } from "../components/Table";
 import { filterTable } from "../helpers/tableHelpers";
 import { TableColumn } from "../helpers/types";
-import { Helmet } from "react-helmet-async";
 
 type colDataType = {
   id: number;
@@ -30,7 +29,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
   data,
   route,
   tableClass,
-}: TableSimpleViewProps<T, K>): JSX.Element => {
+}: TableSimpleViewProps<T, K>) => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams({
     filter: "",
@@ -71,7 +70,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
         prev.set("filter", newFilterWord);
         return prev;
       },
-      { replace: true }
+      { replace: true },
     );
   };
 
@@ -93,9 +92,7 @@ export const TableSimpleView = <T extends colDataType, K extends keyof T>({
   }: ${dataItem.detail.slice(0, 20)}...`;
   return (
     <>
-      <Helmet>
-        <meta property="og:description" content={ogDescription} />
-      </Helmet>
+      <meta property="og:description" content={ogDescription} />
       <div className={`${tableClass} table-container`}>
         <SearchBar
           title="🔎"

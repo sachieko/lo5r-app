@@ -1,7 +1,7 @@
 import { TableColumn } from "./types";
 
 /*
-This function takes in an array of object (usually from the API), a string of keywords to filter by, and columns array to search in
+This function takes in an array of objects (usually from the API), a string of keywords to filter by, and columns array to search in
 The generic type is because the objects in the API change for different routes.
 
 It then looks at each property in the objects that matches a table column and if there is a match for the keyword in
@@ -34,28 +34,28 @@ export const filterTable = <T extends {}, K extends keyof T>(
     if (strictKeyword && strictKey && strictKeyword !== row[strictKey]) {
       return false;
     }
-    // Check if all keywords are contained in at least one of the columns
+    // Check if all keywords are contained in at least one of the array fields
     return keywords.every((keyword) => {
       const lcKeyword: number | string = keyword;
       const isWholeN = /^\d+$/.test(lcKeyword);
       return columns.some((column) => {
         const columnValue = row[column.key];
-        // If the column's property is a string, check if it includes the keyword
-        if (
-          typeof columnValue === "string" &&
-          !isWholeN && // If the keyword is a number, skip
-          columnValue.toLowerCase().includes(lcKeyword)
-        ) {
-          return true;
-        }
-        if (
-          typeof columnValue === "number" &&
-          isWholeN &&
-          columnValue === Number(lcKeyword)
-        ) {
-          return true;
-        }
-        return false;
+          // If the column's property is a string, check if it includes the keyword
+          if (
+            typeof columnValue === "string" &&
+            !isWholeN && // If the keyword is a number, skip
+            columnValue.toLowerCase().includes(lcKeyword)
+          ) {
+            return true;
+          }
+          if (
+            typeof columnValue === "number" &&
+            isWholeN &&
+            columnValue === Number(lcKeyword)
+          ) {
+            return true;
+          }
+          return false;
       });
     });
   });

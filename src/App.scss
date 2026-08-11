@@ -206,6 +206,11 @@ a:hover {
     align-items: center;
   }
 
+  .row {
+    height: max-content;
+    padding: 10px 0;
+  }
+
   .focusRow {
     background-color: variables.$darkAccent3;
   }

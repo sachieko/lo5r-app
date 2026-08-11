@@ -14,10 +14,6 @@
     min-width: max-content;
   }
 
-  .row {
-    height: 3rem;
-  }
-
   .row-0,
   .col-0 {
     width: 10rem;
@@ -49,12 +45,6 @@
   flex-direction: column;
   .card-bookRef {
     align-self: center;
-  }
-}
-
-@media only screen and (min-width: 780px) {
-  .tech-table .row {
-    height: 4rem;
   }
 }
 

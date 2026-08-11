@@ -12,7 +12,7 @@ export const SearchBar = ({
   onChange,
   onFocus,
   onBlur,
-}: ISearchBarProps): JSX.Element => {
+}: ISearchBarProps) => {
   return (
     <>
       <div className={"searchbar-container"}>{title as React.ReactNode} 
