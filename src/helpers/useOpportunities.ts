@@ -9,7 +9,7 @@ export const useOpportunities = function () {
   useEffect(() => {
     const getOpps = async function () {
       try {
-        const results = await axios.get(`${APIURL}/opportunities/`);
+        const results = await axios.get(`${APIURL}/opportunities/general`);
         const data: TOpportunity[] = results.data; // Assuming the API response is an array of IOpportunity
         setOpportunities(data); // Update the state with the resolved data
       } catch (error) {
@@ -38,9 +38,5 @@ export const columns: TableColumn<TOpportunity, keyof TOpportunity>[] = [
   {
     key: "effect",
     header: "Effect",
-  },
-  {
-    key: "name",
-    header: "Technique",
   },
 ];
