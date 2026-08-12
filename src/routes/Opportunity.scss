@@ -1,14 +1,12 @@
 @use "../styles/variables";
 
 .opp-table {
-  margin-bottom: 2rem;
-  font-size: 0.5rem;
-  height: 85dvh;
-  .table,
-  .column-container {
-    width: max-content;
+  .opp-note {
+    min-height: max-content;
+    color: variables.$brightAccent2;
+    padding-left: 10px;
+    padding-top: 10px;
   }
-
   .column-container {
     p:hover {
       color: variables.$brightAccent;
@@ -18,37 +16,19 @@
 
   .row {
     border-bottom: 1px solid variables.$darkAccent2;
-    min-height: 4rem;
+    min-height: 3rem;
     &:hover {
       background-color: variables.$darkAccent;
       cursor: default;
     }
   }
 
-  .row-0,
-  .col-0 {
-    width: 4rem;
+  .row-0, .row-1, .row-2, .col-0, .col-1, .col-2 {
+    width: 5rem;
   }
 
-  .row-1,
-  .col-1 {
-    width: 6rem;
-  }
-
-  .row-2,
-  .col-2 {
-    width: 3rem;
-  }
-
-  .row-3,
-  .col-3 {
-    width: 22rem;
-  }
-
-  .row-4,
-  .col-4 {
-    margin-left: 1rem;
-    width: 6rem;
+  .row-3, .col-3 {
+    width: 10rem;
   }
 }
 
@@ -57,44 +37,19 @@
     & > span {
       font-size: 1.4rem;
     }
-    .row-0,
-    .col-0 {
-      width: 5rem;
-    }
 
-    .row-1,
-    .col-1 {
-      width: 7rem;
-    }
-
-    .row-2,
-    .col-2 {
-      width: 6rem;
-    }
-
-    .row-3,
-    .col-3 {
-      width: 28rem;
-    }
-
-    .row-4,
-    .col-4 {
-      width: 10rem;
+    .col-3, .row-3 {
+      width: 15rem;
     }
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .opp-table {
-    width: 90dvw;
-    overflow-x: hidden;
-    .table,
-    .column-container {
-      width: 100%;
-    }
-    .row-3,
-    .col-3 {
-      width: 34rem;
+    width: 90%;
+
+    .row-3, .col-3 {
+      width: 28rem;
     }
   }
 }

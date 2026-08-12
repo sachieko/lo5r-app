@@ -162,7 +162,6 @@ a:hover {
   .table {
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
     width: 100%;
   }
 
@@ -200,15 +199,15 @@ a:hover {
   .column-container {
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
     justify-content: space-around;
     text-align: center;
     align-items: center;
+    min-width: max-content;
+    padding: 10px 0;
   }
 
   .row {
-    height: max-content;
-    padding: 10px 0;
+    min-height: max-content;
   }
 
   .focusRow {
