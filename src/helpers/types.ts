@@ -49,7 +49,7 @@ export type TSearch = {
 
 export type TOpportunity = {
   id: number;
-  technique_id: number;
+  technique_id: number | null;
   ring: string;
   category: string;
   cost: string;

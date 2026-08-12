@@ -43,7 +43,7 @@ const router = createBrowserRouter(
               errorElement: <ErrorPage />,
             },
             {
-              path: "opps/",
+              path: "opps/:dataId",
               element: <Opportunity />,
               errorElement: <ErrorPage />,
             },

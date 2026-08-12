@@ -4,18 +4,30 @@ import { Table } from "../components/Table";
 import "./Opportunity.scss";
 import { SearchBar } from "../components/SearchBar";
 import { filterTable } from "../helpers/tableHelpers";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { TOpportunity } from "../helpers/types";
 const url = "techniques/63" // This is the technique at the top of the table when sorted.
+const topOpp = 39 // This is the top of the general opp table when sorted.
 
 export const Opportunity = function () {
   const [filterWord, setFilterWord] = useState<string>("");
   const opps = useOpportunities();
+  const navigate = useNavigate();
+  const { dataId } = useParams() ?? topOpp ;
 
   // Grab the string from the event value to make typescript happy about types
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newFilterWord = event.target.value;
     setFilterWord(newFilterWord);
   };
+
+  const handleRowClick = (row: TOpportunity) => {
+        const oppId = row.id;
+        if (oppId === Number(dataId)) {
+          return;
+        }
+        navigate(`/opps/${oppId}`, { replace: true });
+      };
 
   return (
     <>
@@ -50,6 +62,8 @@ export const Opportunity = function () {
               : opps
           }
           columns={columns}
+          rowClick={handleRowClick}
+          selected={Number(dataId)}
         />
       </div>
     </>
