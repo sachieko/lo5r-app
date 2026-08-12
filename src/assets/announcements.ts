@@ -18,7 +18,7 @@ const announcements: announcement[] = [
     \n[Advantages] and [Disadvantages] are still on the docket, but before that I will be creating some quick buttons to help manage the filters on tables better.
     
     まだまだファイティング!!! - 清子`,
-    date: "11/8/2026",
+    date: "12/8/2026",
   },
   {
     title: "Sneaky Update!",
