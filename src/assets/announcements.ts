@@ -6,11 +6,13 @@ type announcement = {
 
 const announcements: announcement[] = [
   {
-    title: "Fields of Victory Update!",
+    title: "Fields of Victory Update! まだまだファイティング!",
     text: `A second update? Yes! Fields of Victory [Techniques] added! This means you can get your [Mass Battle]s on with more convenience!
     
     A few tables have had some adjustments, namely the [Opportunity] table which no longer has piles and piles of opportunities attached to [Techniques].
     Instead, now you just have more general [Opportunity] spends not attached to a [Technique]. Extra [Opportunity] spends from books will be added eventually.
+    Also, it's possible to link to specific [Opportunity] spends on the table now, which will be more useful when I add page numbers so you can refer to the
+    ones suggested by rulebooks!
     \n Some issues with the [Opportunity] table has been fixed, and spacing is a bit better on all tables, search bars lost the magnifying glass but a 
     styles overhaul might be further down the road yet. 
     \n[Advantages] and [Disadvantages] are still on the docket, but before that I will be creating some quick buttons to help manage the filters on tables better.
