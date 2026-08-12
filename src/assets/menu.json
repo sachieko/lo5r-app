@@ -2,7 +2,7 @@
   {
     "title": "Rules and Mechanics",
     "desc": "Contains rules or mechanics of the game, such as how dice rolls work or skills do.\nThis section helps figure out the how of playing Legend of the Five Rings.",
-    "url": "/rules/1"
+    "url": "/rules/2"
   },
   {
     "title": "Opportunities",
@@ -22,22 +22,22 @@
   {
     "title": "Item Qualities",
     "desc": "Contains a list of qualities an item can have.",
-    "url": "/qualities/1"
+    "url": "/qualities/25"
   },
   {
     "title": "Weapons",
     "desc": "A table listing common weapons and their qualities.",
-    "url": "/weapons/1"
+    "url": "/weapons/73"
   },
   {
     "title": "Armors",
     "desc": "A list of things to help you die slower",
-    "url": "/armors/1"
+    "url": "/armors/7"
   },
     {
     "title": "Terrain Qualities",
     "desc": "Contains a list of Terrain qualities.",
-    "url": "/terrains/1"
+    "url": "/terrains/7"
   },
   {
     "title": "Lore and Setting",
