@@ -1,7 +1,7 @@
 {
   "name": "l5rsrd",
   "private": true,
-  "version": "3.0.0",
+  "version": "3.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -29,8 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "typescript": "^5.0.2",
-    "vite": "^8.2.1",
-    "wrangler": "^4.120.1"
+    "vite": "^8.2.1"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true,

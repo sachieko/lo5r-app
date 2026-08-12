@@ -1,4 +1,4 @@
-# L5R Standard Reference Document App v2.2
+# L5R Standard Reference Document App v3.1
 
 This app is to contain useful reference information for players while playing the tabletop roleplaying game: [Legend of the Five Rings (Edge Studio under Fantasy Flight Games)](https://www.edge-studio.net/games/l5r-core-rulebook/).
 
@@ -46,7 +46,7 @@ Current Priorities: Create Advantage and Disadvantage Tables, Refactor 20 Questi
   * Site has technique pages where techniques are sorted by type ✅
     1. Techniques can be quickly filtered by type  ✅
     2. Can be searched for in a box, and clicking one allows you to view the details for the technique. ✅
-    3. Techniques associated with a particular Ring can be filtered for.
+    3. Techniques associated with a particular Ring can be filtered for. ✅
   * Site has opportunities page where opportunities are displayed in a table ✅
     1. Allow users to filter results in the table by ring, category, etc. ✅
     2. Allow users to view techniques related to opportunities on this page by clicking it in the table. ✅
@@ -63,12 +63,15 @@ Current Priorities: Create Advantage and Disadvantage Tables, Refactor 20 Questi
     1. Update link filters for conditions ✅
   * Site has terrain qualities page for terrain ✅
     1. Update link filters for terrain qualities ✅
+  * Site has Advantages and Disadvantages Page
+    1. Allow both NPC and PC Advantages or Disadvantages
+    2. Have a quick filter button to limit to PC or NPC only.
   * Site has announcement page for dev updates ✅
 * Advanced features
   * Some tables have specific keywords for strict filtering, such as the ring names for opportunities only showing opportunities of that type ✅
   * Keywords can be mapped to their RESTful route for quick navigation ✅
     1. Automated the mapping for keywords via the backend. ✅
-    2. Cache these keywords in localStorage for fast and reliable lookups after the first pageload, even for refreshes or new tabs
+    2. Cache these keywords in localStorage for fast and reliable lookups after the first pageload, even for refreshes or new tabs ✅
   * Create admin suite for quick insertion of new values into database (This is not a priority, and would just make it easier for non-developers to contribute to my project)
     1. Use authorization via username & password
     2. Allow admin to insert resources
@@ -78,14 +81,13 @@ Current Priorities: Create Advantage and Disadvantage Tables, Refactor 20 Questi
 
   ![An icon of fire on a pool of water with mountains reflecting below on a dark background](/public/android-chrome-192x192.png)
 
-  ### Dependencies - Version 2.0.2
+  ### Dependencies - Version 3.1
 
 Frontend:
-  * Currently using: node v23.6.1, VITE v6.3.5 using React 18.2.0 + Typescript 5.0.2
+  * Currently using: node v24.11.1, VITE v8.2.1 using React 19.2.8 + Typescript 5.0.2
   * Axios 1.4.0
   * Sass 1.66.1
-  * React-Router 6.29.0
-  * React-helmet-async 2.0.5
+  * React-Router 7.18.2
   * Relies on localStorage for caching
 
 Backend [Repo Located here](https://github.com/sachieko/lo5r-back):
