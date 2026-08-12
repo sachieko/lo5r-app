@@ -31,7 +31,7 @@ export const Armors = function () {
       <section className="armors">
         <div className="armors-table table-container">
           <SearchBar
-            title="🔎"
+            title=""
             value={filterWord}
             onChange={handleChange}
             onFocus={() => {}}
