@@ -1,6 +1,7 @@
 @use "../styles/variables";
 
 .opp-table {
+  height: 85dvh;
   .opp-note {
     min-height: max-content;
     color: variables.$brightAccent2;
